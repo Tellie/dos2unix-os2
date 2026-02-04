@@ -1,3 +1,19 @@
+2026-01-30 Erwin Waterlander <waterlan@xs4all.nl>
+	* Version 7.5.4
+
+2026-01-30 Erwin Waterlander <waterlan@xs4all.nl>
+	* Don't return an error code if a binary file is skipped.
+	  Reverting change in 7.5.3, bug
+	  https://sourceforge.net/p/dos2unix/bugs/21/
+	  Aborting conversion to skip a binary file is not an error.
+	* Refactored code. Simpler dos2unix algorithm.
+
+2025-12-19 Erwin Waterlander <waterlan@xs4all.nl>
+	* Refactored code. Split conversion functions.
+
+2025-10-15 Erwin Waterlander <waterlan@xs4all.nl>
+	* Makefile: Fix make dependencies for man pages generation.
+
 2025-10-14 Erwin Waterlander <waterlan@xs4all.nl>
 	* Version 7.5.3
 

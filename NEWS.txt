@@ -1,3 +1,8 @@
+2026-01-30: Version 7.5.4
+  * Don't return an error code if a binary file is skipped.
+    Reverting change in 7.5.3.
+  * Refactored code.
+
 2025-10-14: Version 7.5.3
 
   * Fix: Exit with non-zero code if the conversion is aborted

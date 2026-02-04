@@ -43,11 +43,11 @@ ok( $exists == 0, 'unix2dos skip binary file.' );
 
 system("$DOS2UNIX -v -n utf16len.txt out.txt");
 $result = ($? >> 8);
-ok( $result == 1, 'Dos2unix returns error on binary input.' );
+ok( $result == 0, 'Dos2unix returns zero on skipping binary input.' );
 
 system("$UNIX2DOS -v -n utf16len.txt out.txt");
 $result = ($? >> 8);
-ok( $result == 1, 'Unix2dos returns error on binary input.' );
+ok( $result == 0, 'Unix2dos returns zero on skipping binary input.' );
 
 system("$DOS2UNIX -v -f -n utf16len.txt out.txt");
 $result = ($? >> 8);
