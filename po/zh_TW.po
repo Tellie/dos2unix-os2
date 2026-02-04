@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 21:33+0200\n"
+"POT-Creation-Date: 2026-01-30 19:36+0000\n"
 "PO-Revision-Date: 2024-11-30 14:15+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@lists.slat.org>\n"
@@ -36,37 +36,32 @@ msgstr ""
 "保留所有權利。\n"
 "\n"
 
-#: dos2unix.c:213 dos2unix.c:262 unix2dos.c:163 unix2dos.c:234
+#: dos2unix.c:106 dos2unix.c:122 dos2unix.c:199 unix2dos.c:143 unix2dos.c:223
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "在第 %2$u 找到二進位符號 0x00%1$02X\n"
 
-#: dos2unix.c:237 dos2unix.c:314 dos2unix.c:445 dos2unix.c:522 unix2dos.c:210
-#: unix2dos.c:281 unix2dos.c:432 unix2dos.c:503
+#: dos2unix.c:172 dos2unix.c:253 dos2unix.c:389 dos2unix.c:469 unix2dos.c:192
+#: unix2dos.c:272 unix2dos.c:388 unix2dos.c:466
 msgid "Added line break to last line.\n"
 msgstr "已在最後一列加上斷行字元。\n"
 
-#: dos2unix.c:330 dos2unix.c:538 unix2dos.c:297 unix2dos.c:519
+#: dos2unix.c:300 dos2unix.c:553 unix2dos.c:317 unix2dos.c:550
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "程式錯誤，不合法的轉換模式 %d\n"
 
-#: dos2unix.c:338 dos2unix.c:544 unix2dos.c:305 unix2dos.c:525
-#, c-format
-msgid "Converted %u out of %u line breaks.\n"
-msgstr "已轉換 %u 個，共 %u 個換行符號。\n"
-
-#: dos2unix.c:397 unix2dos.c:363
-#, c-format
-msgid "using code page %d.\n"
-msgstr "使用 %d 編碼頁。\n"
-
-#: dos2unix.c:421 dos2unix.c:470 unix2dos.c:385 unix2dos.c:456
+#: dos2unix.c:327 dos2unix.c:343 dos2unix.c:415 unix2dos.c:339 unix2dos.c:417
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "在第 %2$u 找到二進位符號 0x%1$02X\n"
 
-#: dos2unix.c:580 unix2dos.c:561
+#: dos2unix.c:532 unix2dos.c:531
+#, c-format
+msgid "using code page %d.\n"
+msgstr "使用 %d 編碼頁。\n"
+
+#: dos2unix.c:591 unix2dos.c:588
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "錯誤：環境變數 DOS2UNIX_LOCALEDIR 的值太長。\n"
 
@@ -691,6 +686,11 @@ msgstr "錯誤：代理 (surrogate) 配對無效。缺少低代理。\n"
 #: common.c:2869
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "錯誤：代理 (surrogate) 配對無效。缺少高代理。\n"
+
+#: common.c:2972
+#, c-format
+msgid "Converted %u out of %u line breaks.\n"
+msgstr "已轉換 %u 個，共 %u 個換行符號。\n"
 
 #~ msgid "Skipping UTF-16 file %s, the current locale character encoding is not UTF-8.\n"
 #~ msgstr "略過 UTF-16 檔案 %s，目前語言字元編碼並非UTF-8。\n"

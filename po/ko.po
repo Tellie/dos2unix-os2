@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 21:33+0200\n"
+"POT-Creation-Date: 2026-01-30 19:36+0000\n"
 "PO-Revision-Date: 2025-05-18 14:24+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <translation-team-ko@googlegroups.com>\n"
@@ -36,37 +36,32 @@ msgstr ""
 "All rights reserved.\n"
 "\n"
 
-#: dos2unix.c:213 dos2unix.c:262 unix2dos.c:163 unix2dos.c:234
+#: dos2unix.c:106 dos2unix.c:122 dos2unix.c:199 unix2dos.c:143 unix2dos.c:223
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "이진 심볼 0x00%02X을(를) %u번재 행에서 찾았습니다\n"
 
-#: dos2unix.c:237 dos2unix.c:314 dos2unix.c:445 dos2unix.c:522 unix2dos.c:210
-#: unix2dos.c:281 unix2dos.c:432 unix2dos.c:503
+#: dos2unix.c:172 dos2unix.c:253 dos2unix.c:389 dos2unix.c:469 unix2dos.c:192
+#: unix2dos.c:272 unix2dos.c:388 unix2dos.c:466
 msgid "Added line break to last line.\n"
 msgstr "개행 문자를 줄 마지막에 넣습니다.\n"
 
-#: dos2unix.c:330 dos2unix.c:538 unix2dos.c:297 unix2dos.c:519
+#: dos2unix.c:300 dos2unix.c:553 unix2dos.c:317 unix2dos.c:550
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "프로그램 오류, 부적절한 %d번 변환 모드입니다\n"
 
-#: dos2unix.c:338 dos2unix.c:544 unix2dos.c:305 unix2dos.c:525
-#, c-format
-msgid "Converted %u out of %u line breaks.\n"
-msgstr "%u 행을 개행 문자 %u에 대해 변환했습니다.\n"
-
-#: dos2unix.c:397 unix2dos.c:363
-#, c-format
-msgid "using code page %d.\n"
-msgstr "%d 코드 페이지를 사용합니다.\n"
-
-#: dos2unix.c:421 dos2unix.c:470 unix2dos.c:385 unix2dos.c:456
+#: dos2unix.c:327 dos2unix.c:343 dos2unix.c:415 unix2dos.c:339 unix2dos.c:417
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "이진 심볼 0x%02X을(를) %u번째 행에서 찾았습니다\n"
 
-#: dos2unix.c:580 unix2dos.c:561
+#: dos2unix.c:532 unix2dos.c:531
+#, c-format
+msgid "using code page %d.\n"
+msgstr "%d 코드 페이지를 사용합니다.\n"
+
+#: dos2unix.c:591 unix2dos.c:588
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "오류: DOS2UNIX_LOCALEDIR 환경 변수 값이 너무 깁니다.\n"
 
@@ -692,3 +687,8 @@ msgstr "오류: 부적절한 대리 쌍. 하위 대리자가 빠졌습니다.\n"
 #: common.c:2869
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "오류: 부적절한 대리 쌍. 상위 대리자가 빠졌습니다.\n"
+
+#: common.c:2972
+#, c-format
+msgid "Converted %u out of %u line breaks.\n"
+msgstr "%u 행을 개행 문자 %u에 대해 변환했습니다.\n"

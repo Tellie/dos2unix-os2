@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2009-2025 Erwin Waterlander
+ *   Copyright (C) 2009-2026 Erwin Waterlander
  *   All rights reserved.
  *
  *   Redistribution and use in source and binary forms, with or without
@@ -2965,3 +2965,36 @@ wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname)
    return(wc);
 }
 #endif
+
+void logConverted(int RetVal, int verbose, const char *progname, unsigned int converted, int unsigned line_nr) {
+    if ((RetVal == 0) && (verbose > 1)) {
+      D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
+      D2U_UTF8_FPRINTF(stderr, _("Converted %u out of %u line breaks.\n"),converted, line_nr -1);
+    }
+}
+
+#ifdef D2U_UNICODE
+/* Return 1 when c is a binary character */
+int binaryCharW(wint_t c) {
+    if ((c < 32) &&
+        (c != 0x0a) && /* Not an LF */
+        (c != 0x0d) && /* Not a CR */
+        (c != 0x09) && /* Not a TAB */
+        (c != 0x0c))   /* Not a form feed */
+        return 1;
+    else
+        return 0;
+}
+#endif
+
+/* Return 1 when c is a binary character */
+int binaryChar(int c) {
+    if ((c < 32) &&
+        (c != '\x0a') && /* Not an LF */
+        (c != '\x0d') && /* Not a CR */
+        (c != '\x09') && /* Not a TAB */
+        (c != '\x0c'))   /* Not a form feed */
+        return 1;
+    else
+        return 0;
+}

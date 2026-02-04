@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 21:33+0200\n"
+"POT-Creation-Date: 2026-01-30 19:36+0000\n"
 "PO-Revision-Date: 2024-08-18 22:02+0200\n"
 "Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -34,38 +34,33 @@ msgstr ""
 "Tots els drets reservats.\n"
 "\n"
 
-#: dos2unix.c:213 dos2unix.c:262 unix2dos.c:163 unix2dos.c:234
+#: dos2unix.c:106 dos2unix.c:122 dos2unix.c:199 unix2dos.c:143 unix2dos.c:223
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "S'ha trobat un símbol binari 0x00%02X a la línia %u\n"
 
-#: dos2unix.c:237 dos2unix.c:314 dos2unix.c:445 dos2unix.c:522 unix2dos.c:210
-#: unix2dos.c:281 unix2dos.c:432 unix2dos.c:503
+#: dos2unix.c:172 dos2unix.c:253 dos2unix.c:389 dos2unix.c:469 unix2dos.c:192
+#: unix2dos.c:272 unix2dos.c:388 unix2dos.c:466
 msgid "Added line break to last line.\n"
 msgstr "S'ha afegit un salt de línia a l'última línia.\n"
 
-#: dos2unix.c:330 dos2unix.c:538 unix2dos.c:297 unix2dos.c:519
+#: dos2unix.c:300 dos2unix.c:553 unix2dos.c:317 unix2dos.c:550
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "error del programa, mode de conversió %d no vàlid\n"
 
-#: dos2unix.c:338 dos2unix.c:544 unix2dos.c:305 unix2dos.c:525
-#, c-format
-msgid "Converted %u out of %u line breaks.\n"
-msgstr "S'ha convertit %u de %u salts de línia.\n"
-
-#: dos2unix.c:397 unix2dos.c:363
-#, c-format
-msgid "using code page %d.\n"
-msgstr "s'està utilitzant la pàgina de codis %d.\n"
-
-#: dos2unix.c:421 dos2unix.c:470 unix2dos.c:385 unix2dos.c:456
+#: dos2unix.c:327 dos2unix.c:343 dos2unix.c:415 unix2dos.c:339 unix2dos.c:417
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "S'ha trobat un símbol binari 0x%02X a la línia %u\n"
 
+#: dos2unix.c:532 unix2dos.c:531
+#, c-format
+msgid "using code page %d.\n"
+msgstr "s'està utilitzant la pàgina de codis %d.\n"
+
 #
-#: dos2unix.c:580 unix2dos.c:561
+#: dos2unix.c:591 unix2dos.c:588
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "error: el valor de la variable d'entorn DOS2UNIX_LOCALEDIR és massa llarg.\n"
 
@@ -763,3 +758,8 @@ msgstr "error: parella suplent invàlida. Manca un substitut baix.\n"
 #: common.c:2869
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "error: parella suplent invàlida. Manca un gran substitut.\n"
+
+#: common.c:2972
+#, c-format
+msgid "Converted %u out of %u line breaks.\n"
+msgstr "S'ha convertit %u de %u salts de línia.\n"

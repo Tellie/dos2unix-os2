@@ -431,7 +431,7 @@ po/%.po : $(POT)
 	# change timestamp in case .po file was not updated.
 	touch $@
 
-$(MANPOFILES) &: man/man1/dos2unix.pod
+$(MANPODFILES) &: $(MANPOFILES) man/man1/dos2unix.pod
 	$(MAKE) -C man/man1
 
 man/%/man1/dos2unix.pod : po-man/%.po

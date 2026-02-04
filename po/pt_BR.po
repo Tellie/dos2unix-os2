@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 21:33+0200\n"
+"POT-Creation-Date: 2026-01-30 19:36+0000\n"
 "PO-Revision-Date: 2025-05-19 15:51-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge.net>\n"
@@ -38,37 +38,32 @@ msgstr ""
 "Todos os direitos reservados.\n"
 "\n"
 
-#: dos2unix.c:213 dos2unix.c:262 unix2dos.c:163 unix2dos.c:234
+#: dos2unix.c:106 dos2unix.c:122 dos2unix.c:199 unix2dos.c:143 unix2dos.c:223
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "Símbolo binário 0x00%02X localizado na linha %u\n"
 
-#: dos2unix.c:237 dos2unix.c:314 dos2unix.c:445 dos2unix.c:522 unix2dos.c:210
-#: unix2dos.c:281 unix2dos.c:432 unix2dos.c:503
+#: dos2unix.c:172 dos2unix.c:253 dos2unix.c:389 dos2unix.c:469 unix2dos.c:192
+#: unix2dos.c:272 unix2dos.c:388 unix2dos.c:466
 msgid "Added line break to last line.\n"
 msgstr "Adicionada quebra de liha à última linha.\n"
 
-#: dos2unix.c:330 dos2unix.c:538 unix2dos.c:297 unix2dos.c:519
+#: dos2unix.c:300 dos2unix.c:553 unix2dos.c:317 unix2dos.c:550
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "erro do programa, modo de conversão %d é inválido\n"
 
-#: dos2unix.c:338 dos2unix.c:544 unix2dos.c:305 unix2dos.c:525
-#, c-format
-msgid "Converted %u out of %u line breaks.\n"
-msgstr "Convertidas %u de %u quebras de linha.\n"
-
-#: dos2unix.c:397 unix2dos.c:363
-#, c-format
-msgid "using code page %d.\n"
-msgstr "usando a página de código %d.\n"
-
-#: dos2unix.c:421 dos2unix.c:470 unix2dos.c:385 unix2dos.c:456
+#: dos2unix.c:327 dos2unix.c:343 dos2unix.c:415 unix2dos.c:339 unix2dos.c:417
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "Símbolo binário 0x%02X localizado na linha %u\n"
 
-#: dos2unix.c:580 unix2dos.c:561
+#: dos2unix.c:532 unix2dos.c:531
+#, c-format
+msgid "using code page %d.\n"
+msgstr "usando a página de código %d.\n"
+
+#: dos2unix.c:591 unix2dos.c:588
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "erro: O valor da variável de ambiente DOS2UNIX_LOCALEDIR é muito comprido.\n"
 
@@ -698,6 +693,11 @@ msgstr "erro: par de substitutos inválido. Faltando substituto baixo.\n"
 #: common.c:2869
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "erro: par de substitutos inválido. Faltando substituto alto.\n"
+
+#: common.c:2972
+#, c-format
+msgid "Converted %u out of %u line breaks.\n"
+msgstr "Convertidas %u de %u quebras de linha.\n"
 
 #~ msgid "Skipping UTF-16 file %s, the current locale character encoding is not UTF-8.\n"
 #~ msgstr "Ignorando o arquivo UTF-16 %s, a atual codificação local de caractere não é UTF-8.\n"
