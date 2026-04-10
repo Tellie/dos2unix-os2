@@ -138,9 +138,7 @@ int unix2dosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
         if (ipFlag->verbose) {
-          if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
-          D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-          D2U_UTF8_FPRINTF(stderr, _("Binary symbol 0x00%02X found at line %u\n"), TempChar, line_nr);
+          logBinaryCharW(ipFlag, TempChar, line_nr, progname);
         }
         break;
       }
@@ -218,9 +216,7 @@ int unix2macW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
         if (ipFlag->verbose) {
-          if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
-          D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-          D2U_UTF8_FPRINTF(stderr, _("Binary symbol 0x00%02X found at line %u\n"), TempChar, line_nr);
+          logBinaryCharW(ipFlag, TempChar, line_nr, progname);
         }
         break;
       }
@@ -334,9 +330,7 @@ int unix2dos(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
         if (ipFlag->verbose) {
-          if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
-          D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-          D2U_UTF8_FPRINTF(stderr, _("Binary symbol 0x%02X found at line %u\n"), TempChar, line_nr);
+          logBinaryChar(ipFlag, TempChar, line_nr, progname);
         }
         break;
       }
@@ -412,9 +406,7 @@ int unix2mac(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
         if (ipFlag->verbose) {
-          if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
-          D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-          D2U_UTF8_FPRINTF(stderr, _("Binary symbol 0x%02X found at line %u\n"), TempChar, line_nr);
+          logBinaryChar(ipFlag, TempChar, line_nr, progname);
         }
         break;
       }

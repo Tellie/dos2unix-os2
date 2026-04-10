@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 19:36+0000\n"
+"POT-Creation-Date: 2026-03-15 21:19+0100\n"
 "PO-Revision-Date: 2024-08-18 22:02+0200\n"
 "Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -34,33 +34,23 @@ msgstr ""
 "Tots els drets reservats.\n"
 "\n"
 
-#: dos2unix.c:106 dos2unix.c:122 dos2unix.c:199 unix2dos.c:143 unix2dos.c:223
-#, c-format
-msgid "Binary symbol 0x00%02X found at line %u\n"
-msgstr "S'ha trobat un símbol binari 0x00%02X a la línia %u\n"
-
-#: dos2unix.c:172 dos2unix.c:253 dos2unix.c:389 dos2unix.c:469 unix2dos.c:192
-#: unix2dos.c:272 unix2dos.c:388 unix2dos.c:466
+#: dos2unix.c:168 dos2unix.c:247 dos2unix.c:379 dos2unix.c:457 unix2dos.c:190
+#: unix2dos.c:268 unix2dos.c:382 unix2dos.c:458
 msgid "Added line break to last line.\n"
 msgstr "S'ha afegit un salt de línia a l'última línia.\n"
 
-#: dos2unix.c:300 dos2unix.c:553 unix2dos.c:317 unix2dos.c:550
+#: dos2unix.c:294 dos2unix.c:541 unix2dos.c:313 unix2dos.c:542
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "error del programa, mode de conversió %d no vàlid\n"
 
-#: dos2unix.c:327 dos2unix.c:343 dos2unix.c:415 unix2dos.c:339 unix2dos.c:417
-#, c-format
-msgid "Binary symbol 0x%02X found at line %u\n"
-msgstr "S'ha trobat un símbol binari 0x%02X a la línia %u\n"
-
-#: dos2unix.c:532 unix2dos.c:531
+#: dos2unix.c:520 unix2dos.c:523
 #, c-format
 msgid "using code page %d.\n"
 msgstr "s'està utilitzant la pàgina de codis %d.\n"
 
 #
-#: dos2unix.c:591 unix2dos.c:588
+#: dos2unix.c:579 unix2dos.c:580
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "error: el valor de la variable d'entorn DOS2UNIX_LOCALEDIR és massa llarg.\n"
 
@@ -222,23 +212,27 @@ msgstr ""
 msgid " -e, --add-eol         add a line break to the last line if there isn't one\n"
 msgstr " -e, --add-eol         afegeix un salt de línia a l'última línia si no n'hi ha\n"
 
-#
 #: common.c:672
+msgid " --error-binary        return an error when a binary file is skipped\n"
+msgstr ""
+
+#
+#: common.c:673
 msgid " -f, --force           force conversion of binary files\n"
 msgstr " -f, --force           força conversió de fitxers binaris\n"
 
 #
-#: common.c:675
+#: common.c:676
 msgid " -gb, --gb18030        convert UTF-16 to GB18030\n"
 msgstr " -gb, --gb18030        converteix UTF-16 a GB18030\n"
 
 #
-#: common.c:678
+#: common.c:679
 msgid " -h, --help            display this help text\n"
 msgstr " -h, --help            mostra aquest text d'ajuda\n"
 
 #
-#: common.c:679
+#: common.c:680
 msgid ""
 " -i, --info[=FLAGS]    display file information\n"
 "   file ...            files to analyze\n"
@@ -247,27 +241,27 @@ msgstr ""
 "   fitxer ...          fitxers a analitzar\n"
 
 #
-#: common.c:681
+#: common.c:682
 msgid " -k, --keepdate        keep output file date\n"
 msgstr " -k, --keepdate        manté la data del fitxer de sortida\n"
 
 #
-#: common.c:682
+#: common.c:683
 msgid " -L, --license         display software license\n"
 msgstr " -L, --license         mostra la llicència del programari\n"
 
 #
-#: common.c:683
+#: common.c:684
 msgid " -l, --newline         add additional newline\n"
 msgstr " -l, --newline         afegeix una línia nova addicional\n"
 
 #
-#: common.c:684
+#: common.c:685
 msgid " -m, --add-bom         add Byte Order Mark (default UTF-8)\n"
 msgstr " -m, --add-bom         afegeix la marca d'ordre de bytes (per defecte UTF-8)\n"
 
 #
-#: common.c:685
+#: common.c:686
 msgid ""
 " -n, --newfile         write to new file\n"
 "   infile              original file in new-file mode\n"
@@ -278,20 +272,24 @@ msgstr ""
 "   fitxer de sortida   fitxer de sortida en mode fitxer nou\n"
 
 #
-#: common.c:689
+#: common.c:690
 msgid " --no-allow-chown      don't allow file ownership change (default)\n"
 msgstr " --no-allow-chown      no permetis canviar la propietat del fitxer (per defecte)\n"
 
-#: common.c:691
+#: common.c:692
 msgid " --no-add-eol          don't add a line break to the last line if there isn't one (default)\n"
 msgstr " --no-add-eol          no afegeixis un salt de línia a l'última línia si no n'hi ha cap (predeterminat)\n"
 
-#: common.c:692
+#: common.c:693
+msgid " --no-error-binary     don't return an error when a binary file is skipped (default)\n"
+msgstr ""
+
+#: common.c:694
 msgid " -O, --to-stdout       write to standard output\n"
 msgstr " -O, --to-stdout       escriu a la sortida estàndard\n"
 
 #
-#: common.c:693
+#: common.c:695
 msgid ""
 " -o, --oldfile         write to old file (default)\n"
 "   file ...            files to convert in old-file mode\n"
@@ -300,54 +298,54 @@ msgstr ""
 "   fitxer ...          fitxers a convertir en el mode de fitxer antic\n"
 
 #
-#: common.c:695
+#: common.c:697
 msgid " -q, --quiet           quiet mode, suppress all warnings\n"
 msgstr " -q, --quiet           mode silenciós, suprimeix tots els avisos\n"
 
 #
-#: common.c:697
+#: common.c:699
 msgid " -r, --remove-bom      remove Byte Order Mark (default)\n"
 msgstr " -r, --remove-bom      suprimeix la marca d'ordre de bytes (per defecte)\n"
 
 #
-#: common.c:699
+#: common.c:701
 msgid " -r, --remove-bom      remove Byte Order Mark\n"
 msgstr " -r, --remove-bom      suprimeix la marca d'ordre de bytes\n"
 
 #
-#: common.c:700
+#: common.c:702
 msgid " -s, --safe            skip binary files (default)\n"
 msgstr " -s, --safe            omet els fitxers binaris (per defecte)\n"
 
 #
-#: common.c:702
+#: common.c:704
 msgid " -u,  --keep-utf16     keep UTF-16 encoding\n"
 msgstr " -u,  --keep-utf16     manté la codificació UTF-16\n"
 
 #
-#: common.c:703
+#: common.c:705
 msgid " -ul, --assume-utf16le assume that the input format is UTF-16LE\n"
 msgstr " -ul, --assume-utf16le assumeix que el format d'entrada és UTF-16LE\n"
 
 #
-#: common.c:704
+#: common.c:706
 msgid " -ub, --assume-utf16be assume that the input format is UTF-16BE\n"
 msgstr " -ub, --assume-utf16be assumeix que el format d'entrada és UTF-16BE\n"
 
 #
-#: common.c:706
+#: common.c:708
 msgid " -v,  --verbose        verbose operation\n"
 msgstr " -v,  --verbose        operació detallada\n"
 
 #
-#: common.c:708
+#: common.c:710
 msgid " -F, --follow-symlink  follow symbolic links and convert the targets\n"
 msgstr ""
 " -F, --follow-symlink  segueix els enllaços simbòlics i converteix els\n"
 "                       objectius\n"
 
 #
-#: common.c:711
+#: common.c:713
 msgid ""
 " -R, --replace-symlink replace symbolic links with converted files\n"
 "                         (original target files remain unchanged)\n"
@@ -356,299 +354,299 @@ msgstr ""
 "                         (no es canvien els fitxers de destí originals)\n"
 
 #
-#: common.c:713
+#: common.c:715
 msgid " -S, --skip-symlink    keep symbolic links and targets unchanged (default)\n"
 msgstr ""
 " -S, --skip-symlink    manté sense canvis els enllaços simbòlics i els\n"
 "                       objectius (per defecte)\n"
 
 #
-#: common.c:715
+#: common.c:717
 msgid " -V, --version         display version number\n"
 msgstr " -V, --version         mostra el número de versió\n"
 
 #
-#: common.c:727
+#: common.c:729
 #, fuzzy
 msgid "DOS 16 bit version (Watcom C).\n"
 msgstr "Versió de 16 bits DOS (WATCOMC).\n"
 
 #
-#: common.c:729
+#: common.c:731
 #, fuzzy
 msgid "DOS 16 bit version (Turbo C).\n"
 msgstr "Versió de 16 bits DOS (TURBOC).\n"
 
 #
-#: common.c:731
+#: common.c:733
 #, fuzzy
 msgid "DOS 32 bit version (Watcom C).\n"
 msgstr "Versió de 32 bits DOS (WATCOMC).\n"
 
 #
-#: common.c:733
+#: common.c:735
 msgid "DOS 32 bit version (DJGPP).\n"
 msgstr "Versió de 32 bits DOS (DJGPP).\n"
 
 #
-#: common.c:735
+#: common.c:737
 msgid "MSYS version.\n"
 msgstr "Versió de MSYS.\n"
 
 #
-#: common.c:737
+#: common.c:739
 msgid "Cygwin version.\n"
 msgstr "Versió de Cygwin.\n"
 
 #
-#: common.c:739
+#: common.c:741
 msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Versió de 64 bits de Windows (MinGW-w64).\n"
 
 #
-#: common.c:741
+#: common.c:743
 #, fuzzy
 msgid "Windows 32 bit version (Watcom C).\n"
 msgstr "Versió de Windows 32 bits (WATCOMC).\n"
 
 #
-#: common.c:743
+#: common.c:745
 msgid "Windows 32 bit version (MinGW-w64).\n"
 msgstr "Versió de Windows 32 bits (MinGW-w64).\n"
 
 #
-#: common.c:745
+#: common.c:747
 msgid "Windows 32 bit version (MinGW).\n"
 msgstr "Versió de 32 bits del Windows (MinGW).\n"
 
-#: common.c:747
+#: common.c:749
 #, c-format
 msgid "Windows 64 bit version (MSVC %d).\n"
 msgstr "Versió de 64 bits de Windows (MSVC %d).\n"
 
-#: common.c:749
+#: common.c:751
 #, c-format
 msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Versió de Windows 32 bits (MSVC %d).\n"
 
 #
-#: common.c:751
+#: common.c:753
 #, fuzzy
 msgid "OS/2 version (Watcom C).\n"
 msgstr "Versió OS/2 (WATCOMC).\n"
 
 #
-#: common.c:753
+#: common.c:755
 msgid "OS/2 version (EMX).\n"
 msgstr "Versió OS/2 (EMX).\n"
 
-#: common.c:755
+#: common.c:757
 #, c-format
 msgid "%s version.\n"
 msgstr "%s versió.\n"
 
 #
-#: common.c:761
+#: common.c:763
 msgid "With Unicode UTF-16 support.\n"
 msgstr "Amb suport Unicode UTF-16.\n"
 
 #
-#: common.c:763
+#: common.c:765
 msgid "Without Unicode UTF-16 support.\n"
 msgstr "Sense suport Unicode UTF-16.\n"
 
 #
-#: common.c:767
+#: common.c:769
 msgid "With Unicode file name support.\n"
 msgstr "Amb suport de noms de fitxer Unicode.\n"
 
 #
-#: common.c:769
+#: common.c:771
 msgid "Without Unicode file name support.\n"
 msgstr "Sense suport de noms de fitxer Unicode.\n"
 
 #
-#: common.c:773
+#: common.c:775
 msgid "With native language support.\n"
 msgstr "Amb suport de llengua nativa.\n"
 
 #
-#: common.c:778
+#: common.c:780
 msgid "With support to preserve the user and group ownership of files.\n"
 msgstr "Amb suport per conservar l'usuari i la propietat de grup dels fitxers.\n"
 
 #
-#: common.c:780
+#: common.c:782
 msgid "Without support to preserve the user and group ownership of files.\n"
 msgstr "Sense suport per conservar l'usuari i la propietat de grup dels fitxers.\n"
 
 #
-#: common.c:915
+#: common.c:917
 msgid "Path for temporary output file is too long:"
 msgstr "El camí per al fitxer de sortida temporal és massa llarg:"
 
-#: common.c:1201 common.c:1208 common.c:1215 common.c:1222 common.c:1234
-#: common.c:1241
+#: common.c:1203 common.c:1210 common.c:1217 common.c:1224 common.c:1236
+#: common.c:1243
 #, c-format
 msgid "Writing %s BOM.\n"
 msgstr "S'està escrivint %s BOM.\n"
 
 #
-#: common.c:1201 common.c:1254 common.c:1879 common.c:1900
+#: common.c:1203 common.c:1256 common.c:1881 common.c:1902
 msgid "UTF-16LE"
 msgstr "UTF-16LE"
 
 #
-#: common.c:1208 common.c:1257 common.c:1881 common.c:1902
+#: common.c:1210 common.c:1259 common.c:1883 common.c:1904
 msgid "UTF-16BE"
 msgstr "UTF-16BE"
 
 #
-#: common.c:1215 common.c:1234 common.c:1263 common.c:1892
+#: common.c:1217 common.c:1236 common.c:1265 common.c:1894
 msgid "GB18030"
 msgstr "GB18030"
 
 #
-#: common.c:1222 common.c:1241 common.c:1260 common.c:1894
+#: common.c:1224 common.c:1243 common.c:1262 common.c:1896
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: common.c:1286
+#: common.c:1288
 #, c-format
 msgid "Input file %s has %s BOM.\n"
 msgstr "El fitxer d'entrada %s té %s BOM.\n"
 
 #
-#: common.c:1327 common.c:1369
+#: common.c:1329 common.c:1371
 msgid "Assuming UTF-16LE encoding.\n"
 msgstr "S'assumeix la codificació UTF-16LE.\n"
 
 #
-#: common.c:1331 common.c:1373
+#: common.c:1333 common.c:1375
 msgid "Assuming UTF-16BE encoding.\n"
 msgstr "S'assumeix la codificació UTF-16BE.\n"
 
-#: common.c:1521
+#: common.c:1523
 #, c-format
 msgid "problems resolving symbolic link '%s'\n"
 msgstr "problemes en resoldre l'enllaç simbòlic «%s»\n"
 
-#: common.c:1539
+#: common.c:1541
 #, c-format
 msgid "Failed to open temporary output file: %s\n"
 msgstr "No s'ha pogut obrir el fitxer de sortida temporal: %s\n"
 
-#: common.c:1551
+#: common.c:1553
 #, c-format
 msgid "using %s as temporary file\n"
 msgstr "s'està usant %s com a fitxer temporal\n"
 
-#: common.c:1605 common.c:1633
+#: common.c:1607 common.c:1635
 #, c-format
 msgid "Failed to change the permissions of temporary output file %s:"
 msgstr "No s'han pogut canviar els permisos del fitxer de sortida temporal %s:"
 
-#: common.c:1621
+#: common.c:1623
 #, c-format
 msgid "The user and/or group ownership of file %s is not preserved.\n"
 msgstr "No es conserva la propietat d'usuari i/o grup del fitxer %s.\n"
 
-#: common.c:1643
+#: common.c:1645
 #, c-format
 msgid "Failed to change the owner and group of temporary output file %s:"
 msgstr "No s'ha pogut canviar el propietari i el grup del fitxer de sortida temporal %s:"
 
-#: common.c:1700
+#: common.c:1702
 #, c-format
 msgid "problems renaming '%s' to '%s':"
 msgstr "problemes reanomenant «%s» a «%s»:"
 
-#: common.c:1704
+#: common.c:1706
 #, c-format
 msgid "          which is the target of symbolic link '%s'\n"
 msgstr "          quin és l'objectiu de l'enllaç simbòlic «%s»\n"
 
-#: common.c:1706
+#: common.c:1708
 #, c-format
 msgid "          output file remains in '%s'\n"
 msgstr "          el fitxer de sortida roman a «%s»\n"
 
-#: common.c:1854 common.c:1949
+#: common.c:1856 common.c:1951
 #, c-format
 msgid "Skipping binary file %s\n"
 msgstr "S'està ometent el fitxer binari %s\n"
 
-#: common.c:1857 common.c:1952
+#: common.c:1859 common.c:1954
 #, c-format
 msgid "code page %d is not supported.\n"
 msgstr "la pàgina de codis %d no està suportada.\n"
 
-#: common.c:1861 common.c:1956 common.c:2044
+#: common.c:1863 common.c:1958 common.c:2046
 #, c-format
 msgid "Skipping UTF-16 file %s, the size of wchar_t is %d bytes.\n"
 msgstr "S'omet el fitxer UTF-16 %s, la mida del wchart és de %d bytes.\n"
 
-#: common.c:1864 common.c:1959
+#: common.c:1866 common.c:1961
 #, c-format
 msgid "Skipping UTF-16 file %s, an UTF-16 conversion error occurred on line %u.\n"
 msgstr "S'omet el fitxer UTF-16 %s, s'ha produït un error de conversió UTF-16 a la línia %u.\n"
 
-#: common.c:1868 common.c:1963
+#: common.c:1870 common.c:1965
 #, c-format
 msgid "Skipping UTF-16 file %s, UTF-16 conversion is not supported in this version of %s.\n"
 msgstr "S'omet el fitxer UTF-16 %s, la conversió UTF-16 no està suportada en aquesta versió de %s.\n"
 
-#: common.c:1934 common.c:2033
+#: common.c:1936 common.c:2035
 #, c-format
 msgid "Skipping %s, not a regular file.\n"
 msgstr "S'omet %s, no és un fitxer normal.\n"
 
-#: common.c:1938
+#: common.c:1940
 #, c-format
 msgid "Skipping %s, output file %s is a symbolic link.\n"
 msgstr "S'està ometent %s, el fitxer de sortida %s és un enllaç simbòlic.\n"
 
-#: common.c:1940
+#: common.c:1942
 #, c-format
 msgid "Skipping symbolic link %s.\n"
 msgstr "S'està ometent l'enllaç simbòlic %s.\n"
 
-#: common.c:1943 common.c:2038
+#: common.c:1945 common.c:2040
 #, c-format
 msgid "Skipping symbolic link %s, target is not a regular file.\n"
 msgstr "S'està ometent l'enllaç simbòlic %s, la destinació no és un fitxer normal.\n"
 
-#: common.c:1946
+#: common.c:1948
 #, c-format
 msgid "Skipping %s, target of symbolic link %s is not a regular file.\n"
 msgstr "S'està ometent %s, l'objectiu de l'enllaç simbòlic %s no és un fitxer normal.\n"
 
-#: common.c:1971
+#: common.c:1973
 #, c-format
 msgid "converting file %s to file %s in Unix format...\n"
 msgstr "s'està convertint el fitxer %s al fitxer %s en format Unix...\n"
 
-#: common.c:1973
+#: common.c:1975
 #, c-format
 msgid "converting file %s to Unix format...\n"
 msgstr "s'està convertint el fitxer %s al format Unix...\n"
 
-#: common.c:1977
+#: common.c:1979
 #, c-format
 msgid "converting file %s to file %s in Mac format...\n"
 msgstr "s'està convertint el fitxer %s al fitxer %s en format Mac...\n"
 
-#: common.c:1979
+#: common.c:1981
 #, c-format
 msgid "converting file %s to Mac format...\n"
 msgstr "s'està convertint el fitxer %s al format Mac...\n"
 
-#: common.c:1982
+#: common.c:1984
 #, c-format
 msgid "converting file %s to file %s in DOS format...\n"
 msgstr "s'està convertint el fitxer %s al fitxer %s en format DOS...\n"
 
-#: common.c:1984
+#: common.c:1986
 #, c-format
 msgid "converting file %s to DOS format...\n"
 msgstr "s'està convertint el fitxer %s al format DOS...\n"
@@ -659,7 +657,7 @@ msgstr "s'està convertint el fitxer %s al format DOS...\n"
 #. 3rd %s is encoding of output file.
 #. 4th %s is name of output file.
 #. E.g.: converting UTF-16LE file in.txt to UTF-8 file out.txt in Unix format...
-#: common.c:1996
+#: common.c:1998
 #, c-format
 msgid "converting %s file %s to %s file %s in Unix format...\n"
 msgstr "s'està convertint %s fitxer %s a %s fitxer %s en format Unix...\n"
@@ -669,97 +667,107 @@ msgstr "s'està convertint %s fitxer %s a %s fitxer %s en format Unix...\n"
 #. 2nd %s is name of input file.
 #. 3rd %s is encoding of output (input file is overwritten).
 #. E.g.: converting UTF-16LE file foo.txt to UTF-8 Unix format...
-#: common.c:2003
+#: common.c:2005
 #, c-format
 msgid "converting %s file %s to %s Unix format...\n"
 msgstr "s'està convertint el fitxer %s %s al format %s Unix...\n"
 
-#: common.c:2007
+#: common.c:2009
 #, c-format
 msgid "converting %s file %s to %s file %s in Mac format...\n"
 msgstr "s'està convertint %s fitxer %s a %s fitxer %s en format Mac...\n"
 
-#: common.c:2009
+#: common.c:2011
 #, c-format
 msgid "converting %s file %s to %s Mac format...\n"
 msgstr "s'està convertint el fitxer %s %s al format Mac %s...\n"
 
-#: common.c:2012
+#: common.c:2014
 #, c-format
 msgid "converting %s file %s to %s file %s in DOS format...\n"
 msgstr "s'està convertint %s fitxer %s a %s fitxer %s en format DOS...\n"
 
-#: common.c:2014
+#: common.c:2016
 #, c-format
 msgid "converting %s file %s to %s DOS format...\n"
 msgstr "s'està convertint el fitxer %s %s al format %s DOS...\n"
 
-#: common.c:2021
+#: common.c:2023
 #, c-format
 msgid "problems converting file %s to file %s\n"
 msgstr "problemes en convertir el fitxer %s al fitxer %s\n"
 
-#: common.c:2023
+#: common.c:2025
 #, c-format
 msgid "problems converting file %s\n"
 msgstr "problemes en convertir el fitxer %s\n"
 
-#: common.c:2186 common.c:2243
+#: common.c:2188 common.c:2245
 #, c-format
 msgid "can not read from input file %s:"
 msgstr "no es pot llegir del fitxer d'entrada %s:"
 
-#: common.c:2403
+#: common.c:2405
 #, c-format
 msgid "wrong flag '%c' for option -i or --info\n"
 msgstr "senyalador incorrecte «%c» per a l'opció -i o --info\n"
 
-#: common.c:2539 common.c:2582
+#: common.c:2546 common.c:2589
 #, c-format
 msgid "active code page: %d\n"
 msgstr "pàgina de codis activa: %d\n"
 
-#: common.c:2594
+#: common.c:2601
 #, c-format
 msgid "invalid %s conversion mode specified\n"
 msgstr "s'ha especificat un mode de conversió %s no vàlid\n"
 
-#: common.c:2602 common.c:2632
+#: common.c:2609 common.c:2639
 #, c-format
 msgid "option '%s' requires an argument\n"
 msgstr "l'opció «%s» requereix un argument\n"
 
-#: common.c:2624
+#: common.c:2631
 #, c-format
 msgid "invalid %s display encoding specified\n"
 msgstr "s'ha especificat una codificació de pantalla %s no vàlida\n"
 
-#: common.c:2644 common.c:2658 common.c:2670
+#: common.c:2651 common.c:2665 common.c:2677
 #, c-format
 msgid "target of file %s not specified in new-file mode\n"
 msgstr "no s'ha especificat l'objectiu del fitxer %s en el mode de fitxer nou\n"
 
-#: common.c:2753
+#: common.c:2760
 #, c-format
 msgid "can not read from input file: %s\n"
 msgstr "no es pot llegir del fitxer d'entrada: %s\n"
 
-#: common.c:2763 common.c:2775
+#: common.c:2770 common.c:2782
 #, c-format
 msgid "can not write to output file: %s\n"
 msgstr "no es pot escriure al fitxer de sortida: %s\n"
 
 #
-#: common.c:2851
+#: common.c:2858
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "error: parella suplent invàlida. Manca un substitut baix.\n"
 
 #
-#: common.c:2869
+#: common.c:2876
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "error: parella suplent invàlida. Manca un gran substitut.\n"
 
-#: common.c:2972
+#: common.c:2979
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "S'ha convertit %u de %u salts de línia.\n"
+
+#: common.c:2993
+#, c-format
+msgid "Binary symbol 0x00%02X found at line %u\n"
+msgstr "S'ha trobat un símbol binari 0x00%02X a la línia %u\n"
+
+#: common.c:3017
+#, c-format
+msgid "Binary symbol 0x%02X found at line %u\n"
+msgstr "S'ha trobat un símbol binari 0x%02X a la línia %u\n"

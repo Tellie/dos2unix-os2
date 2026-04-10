@@ -242,6 +242,7 @@ typedef struct
   int stdio_mode;                       /* if TRUE, stdio mode */
   int to_stdout;                        /* write output to stdout in old file mode */
   int error;                            /* an error occurred */
+  int error_binary;                     /* if TRUE, return an error if a binary file is detected. */
   int bomtype;                          /* byte order mark */
   int add_bom;                          /* 1: write BOM */
   int keep_bom;                         /* 1: write BOM if input file has BOM. 0: Do not write BOM */
@@ -321,8 +322,10 @@ int glob_warg(int argc, wchar_t *wargv[], char ***argv, CFlag *ipFlag, const cha
 #endif
 void logConverted(int RetVal, int verbose, const char *progname, unsigned int converted, int unsigned line_nr);
 #ifdef D2U_UNICODE
+void logBinaryCharW(CFlag *ipFlag, wint_t c, unsigned int line_nr, const char *progname);
 int binaryCharW(wint_t c);
 #endif
+void logBinaryChar(CFlag *ipFlag, int c, unsigned int line_nr, const char *progname);
 int binaryChar(int c);
 
 #endif

@@ -18,7 +18,7 @@ If the PO get lost, keeping this translation up-to-date will be harder.
 
 dos2unix - Convertor de format de fișier text din DOS/Mac în Unix și viceversa
 
-=head1 REZUMAT
+=head1 SINOPSIS
 
     dos2unix [opțiuni] [FIȘIER ...] [-n FIȘIER_INTRARE FIȘIER_IEȘIRE ...]
     unix2dos [opțiuni] [FIȘIER ...] [-n FIȘIER_INTRARE FIȘIER_IEȘIRE ...]
@@ -154,6 +154,10 @@ Codificarea implicită poate fi schimbată cu variabila de mediu DOS2UNIX_DISPLA
 Adaugă o întrerupere de linie la ultima linie, dacă nu există una. Acest lucru funcționează pentru fiecare conversie.
 
 Un fișier convertit din formatul DOS în formatul Unix poate să nu aibă o întrerupere de linie pe ultima linie. Există editoare de text care scriu fișiere de text fără o întrerupere de linie pe ultima linie. Unele programe Unix au probleme în procesarea acestor fișiere, deoarece standardul POSIX definește că fiecare linie dintr-un fișier text trebuie să se încheie cu un caracter de sfârșit de linie nouă. De exemplu, concatenarea fișierelor poate să nu dea rezultatul așteptat.
+
+=item B<--error-binary>
+
+Returnează o eroare atunci când un fișier binar este omis.
 
 =item B<-f, --force>
 
@@ -319,7 +323,11 @@ Anulează conversia atunci când utilizatorul și/sau grupul proprietar al fiși
 
 =item B<--no-add-eol>
 
-Nu adaugă o întrerupere de linie la ultima linie, dacă nu există una.
+Nu adaugă o întrerupere de linie la ultima linie, dacă nu există una (implicit).
+
+=item B<--no-error-binary>
+
+Nu returnează o eroare atunci când un fișier binar este omis (implicit).
 
 =item B<-O, --to-stdout>
 
@@ -360,6 +368,8 @@ Elimină marcajul de ordine a octeților (BOM). Nu scrie un marcaj de ordine a o
 Omite fișierele binare (implicit).
 
 Omiterea fișierelor binare se face pentru a evita greșelile accidentale. Rețineți că detectarea fișierelor binare nu este 100% sigură. Fișierele de intrare sunt scanate pentru simboluri binare care de obicei nu se găsesc în fișierele text. Este posibil ca un fișier binar să conțină doar caractere de text normale. Un astfel de fișier binar va fi văzut din greșeală ca un fișier text.
+
+În mod implicit, nu se returnează nicio eroare atunci când un fișier binar este omis. Atunci când se utilizează opțiunea C<--error-binary>, se returnează o eroare.
 
 =item B<-u, --keep-utf16>
 

@@ -155,6 +155,10 @@ Add a line break to the last line if there isn't one. This works for every conve
 
 A file converted from DOS to Unix format may lack a line break on the last line. There are text editors that write text files without a line break on the last line. Some Unix programs have problems processing these files, because the POSIX standard defines that every line in a text file must end with a terminating newline character. For instance concatenating files may not give the expected result.
 
+=item B<--error-binary>
+
+Return an error if a binary file is skipped.
+
 =item B<-f, --force>
 
 Fuerza la conversión de archivos binarios.
@@ -319,7 +323,11 @@ Abort conversion when the user and/or group ownership of the original file can't
 
 =item B<--no-add-eol>
 
-Do not add a line break to the last line if there isn't one.
+Do not add a line break to the last line if there isn't one (default).
+
+=item B<--no-error-binary>
+
+Do not return an error if a binary file is skipped (default).
 
 =item B<-O, --to-stdout>
 
@@ -360,6 +368,8 @@ Elimina la Marca de Orden de Byte (BOM). No escribe el BOM en el archivo de sali
 Ignora los archivos binarios (por defecto).
 
 The skipping of binary files is done to avoid accidental mistakes. Be aware that the detection of binary files is not 100% foolproof. Input files are scanned for binary symbols which are typically not found in text files. It is possible that a binary file contains only normal text characters. Such a binary file will mistakenly be seen as a text file.
+
+By default, no error is returned when a binary file is skipped. When the C<--error-binary> option is used, an error is returned.
 
 =item B<-u, --keep-utf16>
 

@@ -185,6 +185,9 @@ OPCJE
         tekstowego musi kończyć się znakiem końca linii. Na przykład
         łączenie plików może nie dać oczekiwanego wyniku.
 
+    --error-binary
+        Zwrócenie błędu, jeśli pominięto plik binarny.
+
     -f, --force
         Wymuszenie konwersji plików binarnych.
 
@@ -348,7 +351,10 @@ OPCJE
 
     --no-add-eol
         Bez dodawania znaku końca linii do ostatniego wiersza, jeśli ten go
-        nie zawiera.
+        nie zawiera (domyślne).
+
+    --no-error-binary
+        Bez zwracania błędu, jeśli pominięto plik binarny (domyślne).
 
     -O, --to-stdout
         Zapis na standardowe wyjście, jak filtr uniksowy. Opcja "-o"
@@ -372,7 +378,7 @@ OPCJE
         zachowanie oryginalnych wartości. Zmiana właściciela mogłaby
         oznaczać, że pierwotny właściciel nie może już odczytać pliku.
         Zmiana grupy mogłaby być zagrożeniem bezpieczeństwa, plik mógłby być
-        czytelny dla nie zamierzonych osób. Zachowanie właściciela, grupy i
+        czytelny dla niezamierzonych osób. Zachowanie właściciela, grupy i
         praw odczytu/zapisu jest obsługiwane tylko na Uniksie.
 
         Aby sprawdzić, czy doswunix ma obsługę zachowywania użytkownika i
@@ -415,6 +421,10 @@ OPCJE
         binarnych, które zwykle nie występują w plikach tekstowych. Może się
         zdarzyć, że plik binarny zawiera tylko zwykłe znaki tekstowe. Taki
         plik binarny będzie błędnie widziany jako plik tekstowy.
+
+        Domyślnie nie jest zwacany błąd, kiedy zostaje pominięty plik
+        binarny. Jeśli użyta zostanie opcja "--error-binary", błąd jest
+        zwracany.
 
     -u, --keep-utf16
         Zachowanie oryginalnego kodowania pliku wejściowego UTF-16. Plik
@@ -490,7 +500,7 @@ TRYBY KONWERSJI
 
     iso W tym trybie znaki są konwertowane między zestawem znaków DOS
         (stroną kodową) a zestawem znaków ISO-8859-1 (Latin-1) używanym na
-        Uniksie. Znaki DOS-owe nie mające odpowiednika w ISO-8859-1, których
+        Uniksie. Znaki DOS-owe niemające odpowiednika w ISO-8859-1, których
         nie da się przekonwertować, są zamieniane na kropkę. To samo dotyczy
         znaków ISO-8859-1 bez odpowiednika w DOS-ie.
 

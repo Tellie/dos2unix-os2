@@ -37,7 +37,7 @@ Arquivos não regulares, tais como diretórios e FIFOs, são ignorados automatic
 
 Ligações simbólicas e seus alvos são por padrão mantidas intocáveis. Ligações simbólicas podem opcionalmente ser substituídas, ou a saída pode ser escrita para o alvo das ligações simbólicas. Não há suporte às ligações simbólicas do Windows.
 
-O dos2unix foi modelado seguindo dos2unix do SunOS/Solaris. Há uma diferença importante em relação à versão original do SunOS/Solaris. Essa versão faz conversão no-lugar (modo de arquivo antigo) por padrão, enquanto a versão original do SunOS/Solaris fornecia suporte apenas a conversão pareada (modo de novo arquivo). Veja também as opções C<-o> e C<-n>. Uma outra diferença é que a versão SunOS/Solaris usa, por padrão, a conversão de modo do I<iso> enquanto esta versão usa o do I<ascii>.
+O dos2unix foi modelado seguindo dos2unix do SunOS/Solaris. Há uma diferença importante em relação à versão original do SunOS/Solaris. Por padrão, essa versão faz conversão no-lugar (modo de arquivo antigo), enquanto a versão original do SunOS/Solaris fornecia suporte apenas a conversão pareada (modo de novo arquivo). Veja também as opções C<-o> e C<-n>. Uma outra diferença é que a versão do SunOS/Solaris usa, por padrão, a conversão de modo do I<iso> enquanto esta versão usa o do I<ascii>.
 
 =head1 OPÇÕES
 
@@ -154,6 +154,10 @@ A codificação padrão pode ser alterada com a variável de ambiente DOS2UNIX_D
 Adiciona uma quebra de linha à última linha se não houver uma. Isso funciona para todas as conversões.
 
 Um arquivo convertido do formato DOS para Unix pode não ter uma quebra de linha na última linha. Existem editores de texto que escrevem arquivos de texto sem uma quebra de linha na última linha. Alguns programas Unix têm problemas para processar esses arquivos, porque o padrão POSIX define que cada linha em um arquivo de texto deve terminar com um caractere de nova linha de terminação. Por exemplo, concatenar arquivos pode não dar o resultado esperado.
+
+=item B<--error-binary>
+
+Retorna um erro se um arquivo binário for ignorado.
 
 =item B<-f, --force>
 
@@ -319,7 +323,11 @@ Aborta a conversão quando a propriedade do usuário e/ou do grupo do arquivo or
 
 =item B<--no-add-eol>
 
-Não adiciona uma quebra de linha à última linha se não houver uma.
+Não adiciona uma quebra de linha à última linha se não houver uma (padrão).
+
+=item B<--no-error-binary>
+
+Não retorna um erro se um arquivo binário é ignorado (padrão).
 
 =item B<-O, --to-stdout>
 
@@ -360,6 +368,8 @@ Remove marca de ordem de bytes (BOM). Não escreve um BOM no arquivo de saída. 
 Ignora arquivo binários (padrão).
 
 A ação de ignorar arquivos binários é feita para evitar equívocos acidentais. Fique ciente de que a detecção de arquivos binários não é 100% à prova de erros. Arquivos de entrada são analisados por símbolos binários que, geralmente, não são encontrados em arquivos textos. É possível que um arquivo binário contenha apenas caracteres de texto normais. tal arquivo binário pode ser acidentalmente visto como um arquivo de texto.
+
+Por padrão, não é retornado nenhum erro quando um arquivo binário é ignorado. Quando a opção C <--error-binary> é usada, é retornado um erro.
 
 =item B<-u, --keep-utf16>
 

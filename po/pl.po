@@ -1,13 +1,13 @@
 # Polish translation for dos2unix.
 # This file is distributed under the same license as the dos2unix package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2014-2025.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2014-2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix 7.5.3-beta8\n"
+"Project-Id-Version: dos2unix 7.5.5-beta3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 19:36+0000\n"
-"PO-Revision-Date: 2025-05-17 21:15+0200\n"
+"POT-Creation-Date: 2026-03-23 22:45+0100\n"
+"PO-Revision-Date: 2026-03-26 19:45+0100\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -33,32 +33,22 @@ msgstr ""
 "Wszelkie prawa zastrzeżone.\n"
 "\n"
 
-#: dos2unix.c:106 dos2unix.c:122 dos2unix.c:199 unix2dos.c:143 unix2dos.c:223
-#, c-format
-msgid "Binary symbol 0x00%02X found at line %u\n"
-msgstr "Napotkano symbol binarny 0x00%02X w linii %u\n"
-
-#: dos2unix.c:172 dos2unix.c:253 dos2unix.c:389 dos2unix.c:469 unix2dos.c:192
-#: unix2dos.c:272 unix2dos.c:388 unix2dos.c:466
+#: dos2unix.c:168 dos2unix.c:247 dos2unix.c:379 dos2unix.c:457 unix2dos.c:190
+#: unix2dos.c:268 unix2dos.c:382 unix2dos.c:458
 msgid "Added line break to last line.\n"
 msgstr "Dodani znak końca linii do ostatniej linii.\n"
 
-#: dos2unix.c:300 dos2unix.c:553 unix2dos.c:317 unix2dos.c:550
+#: dos2unix.c:294 dos2unix.c:541 unix2dos.c:313 unix2dos.c:542
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "błąd programu, błędny tryb konwersji %d\n"
 
-#: dos2unix.c:327 dos2unix.c:343 dos2unix.c:415 unix2dos.c:339 unix2dos.c:417
-#, c-format
-msgid "Binary symbol 0x%02X found at line %u\n"
-msgstr "Napotkano symbol binarny 0x%02X w linii %u\n"
-
-#: dos2unix.c:532 unix2dos.c:531
+#: dos2unix.c:520 unix2dos.c:523
 #, c-format
 msgid "using code page %d.\n"
 msgstr "użycie strony kodowej %d.\n"
 
-#: dos2unix.c:591 unix2dos.c:588
+#: dos2unix.c:579 unix2dos.c:580
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "błąd: wartość zmiennej środowiskowej DOS2UNIX_LOCALEDIR jest zbyt długa.\n"
 
@@ -207,18 +197,22 @@ msgid " -e, --add-eol         add a line break to the last line if there isn't o
 msgstr " -e, --add-eol         dodawanie brakującego znaku końca linii do ostatniej linii\n"
 
 #: common.c:672
+msgid " --error-binary        return an error when a binary file is skipped\n"
+msgstr " --error-binary        zwrócenie błędu przy pominięciu pliku binarnego\n"
+
+#: common.c:673
 msgid " -f, --force           force conversion of binary files\n"
 msgstr " -f, --force           wymuszenie konwersji plików binarnych\n"
 
-#: common.c:675
+#: common.c:676
 msgid " -gb, --gb18030        convert UTF-16 to GB18030\n"
 msgstr " -gb, --gb18030        konwersja UTF-16 do GB18030\n"
 
-#: common.c:678
+#: common.c:679
 msgid " -h, --help            display this help text\n"
 msgstr " -h, --help            wyświetlenie tego opisu\n"
 
-#: common.c:679
+#: common.c:680
 msgid ""
 " -i, --info[=FLAGS]    display file information\n"
 "   file ...            files to analyze\n"
@@ -226,23 +220,23 @@ msgstr ""
 " -i, --info[=FLAGI]    wyświetlenie informacji o pliku\n"
 "   plik ...            pliki do analizy\n"
 
-#: common.c:681
+#: common.c:682
 msgid " -k, --keepdate        keep output file date\n"
 msgstr " -k, --keepdate        zachowanie daty pliku wyjściowego\n"
 
-#: common.c:682
+#: common.c:683
 msgid " -L, --license         display software license\n"
 msgstr " -L, --license         wyświetlenie licencji oprogramowania\n"
 
-#: common.c:683
+#: common.c:684
 msgid " -l, --newline         add additional newline\n"
 msgstr " -l, --newline         dodanie dodatkowego znaku nowej linii\n"
 
-#: common.c:684
+#: common.c:685
 msgid " -m, --add-bom         add Byte Order Mark (default UTF-8)\n"
 msgstr " -m, --add-bom         dodanie znacznika BOM (domyślnie UTF-8)\n"
 
-#: common.c:685
+#: common.c:686
 msgid ""
 " -n, --newfile         write to new file\n"
 "   infile              original file in new-file mode\n"
@@ -252,19 +246,23 @@ msgstr ""
 "   plik_wej            plik oryginalny w trybie nowego pliku\n"
 "   plik_wyj            plik wyjściowy w trybie nowego pliku\n"
 
-#: common.c:689
+#: common.c:690
 msgid " --no-allow-chown      don't allow file ownership change (default)\n"
 msgstr " --no-allow-chown      bez zezwolenia na zmianę właściciela pliku (domyślne)\n"
 
-#: common.c:691
+#: common.c:692
 msgid " --no-add-eol          don't add a line break to the last line if there isn't one (default)\n"
 msgstr " --no-add-eol          bez dodawania brakującego znaku końca do ostatniej linii (domyślne)\n"
 
-#: common.c:692
+#: common.c:693
+msgid " --no-error-binary     don't return an error when a binary file is skipped (default)\n"
+msgstr " --no-error-binary     bez zwracania błędu przy pominięciu pliku binarnego (domyślne)\n"
+
+#: common.c:694
 msgid " -O, --to-stdout       write to standard output\n"
 msgstr " -O, --to-stdout       zapis na standardowe wyjście\n"
 
-#: common.c:693
+#: common.c:695
 msgid ""
 " -o, --oldfile         write to old file (default)\n"
 "   file ...            files to convert in old-file mode\n"
@@ -272,43 +270,43 @@ msgstr ""
 " -o, --oldfile         zapis do starego pliku (domyślne)\n"
 "   plik ...            pliki do konwersji w trybie starego pliku\n"
 
-#: common.c:695
+#: common.c:697
 msgid " -q, --quiet           quiet mode, suppress all warnings\n"
 msgstr " -q, --quiet           tryb cichy, pominięcie wszystkich ostrzeżeń\n"
 
-#: common.c:697
+#: common.c:699
 msgid " -r, --remove-bom      remove Byte Order Mark (default)\n"
 msgstr " -r, --remove-bom      usunięcie znacznika BOM (Byte Order Mark) (domyślne)\n"
 
-#: common.c:699
+#: common.c:701
 msgid " -r, --remove-bom      remove Byte Order Mark\n"
 msgstr " -r, --remove-bom      usunięcie znacznika BOM (Byte Order Mark)\n"
 
-#: common.c:700
+#: common.c:702
 msgid " -s, --safe            skip binary files (default)\n"
 msgstr " -s, --safe            pomijanie plików binarnych (domyślne)\n"
 
-#: common.c:702
+#: common.c:704
 msgid " -u,  --keep-utf16     keep UTF-16 encoding\n"
 msgstr " -u,  --keep-utf16     zachowanie kodowania UTF-16\n"
 
-#: common.c:703
+#: common.c:705
 msgid " -ul, --assume-utf16le assume that the input format is UTF-16LE\n"
 msgstr " -ul, --assume-utf16le przyjęcie formatu pliku wejściowego UTF-16LE\n"
 
-#: common.c:704
+#: common.c:706
 msgid " -ub, --assume-utf16be assume that the input format is UTF-16BE\n"
 msgstr " -ub, --assume-utf16be przyjęcie formatu pliku wejściowego UTF-16BE\n"
 
-#: common.c:706
+#: common.c:708
 msgid " -v,  --verbose        verbose operation\n"
 msgstr " -v,  --verbose        działanie ze szczegółowym opisem\n"
 
-#: common.c:708
+#: common.c:710
 msgid " -F, --follow-symlink  follow symbolic links and convert the targets\n"
 msgstr " -F, --follow-symlink  podążanie za dowiązaniami symbolicznymi i konwersja celów\n"
 
-#: common.c:711
+#: common.c:713
 msgid ""
 " -R, --replace-symlink replace symbolic links with converted files\n"
 "                         (original target files remain unchanged)\n"
@@ -316,265 +314,265 @@ msgstr ""
 " -R, --replace-symlink zastępowanie dowiązań symbolicznych plikami wynikowymi\n"
 "                         (oryginalne pliki docelowe pozostają bez zmian)\n"
 
-#: common.c:713
+#: common.c:715
 msgid " -S, --skip-symlink    keep symbolic links and targets unchanged (default)\n"
 msgstr " -S, --skip-symlink    bez zmian dowiązań symbolicznych i celów (domyślne)\n"
 
-#: common.c:715
+#: common.c:717
 msgid " -V, --version         display version number\n"
 msgstr " -V, --version         wyświetlenie numeru wersji\n"
 
-#: common.c:727
+#: common.c:729
 msgid "DOS 16 bit version (Watcom C).\n"
 msgstr "Wersja 16-bitowa DOS (Watcom C).\n"
 
-#: common.c:729
+#: common.c:731
 msgid "DOS 16 bit version (Turbo C).\n"
 msgstr "Wersja 16-bitowa DOS (Turbo C).\n"
 
-#: common.c:731
+#: common.c:733
 msgid "DOS 32 bit version (Watcom C).\n"
 msgstr "Wersja 32-bitowa DOS (Watcom C).\n"
 
-#: common.c:733
+#: common.c:735
 msgid "DOS 32 bit version (DJGPP).\n"
 msgstr "Wersja 32-bitowa DOS (DJGPP).\n"
 
-#: common.c:735
+#: common.c:737
 msgid "MSYS version.\n"
 msgstr "Wersja MSYS.\n"
 
-#: common.c:737
+#: common.c:739
 msgid "Cygwin version.\n"
 msgstr "Wersja Cygwin.\n"
 
-#: common.c:739
+#: common.c:741
 msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Wersja 64-bitowa Windows (MinGW-w64).\n"
 
-#: common.c:741
+#: common.c:743
 msgid "Windows 32 bit version (Watcom C).\n"
 msgstr "Wersja 32-bitowa Windows (Watcom C).\n"
 
-#: common.c:743
+#: common.c:745
 msgid "Windows 32 bit version (MinGW-w64).\n"
 msgstr "Wersja 32-bitowa Windows (MinGW-w64).\n"
 
-#: common.c:745
+#: common.c:747
 msgid "Windows 32 bit version (MinGW).\n"
 msgstr "Wersja 32-bitowa Windows (MinGW).\n"
 
-#: common.c:747
+#: common.c:749
 #, c-format
 msgid "Windows 64 bit version (MSVC %d).\n"
 msgstr "Wersja 64-bitowa Windows (MSVC %d).\n"
 
-#: common.c:749
+#: common.c:751
 #, c-format
 msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Wersja 32-bitowa Windows (MSVC %d).\n"
 
-#: common.c:751
+#: common.c:753
 msgid "OS/2 version (Watcom C).\n"
 msgstr "Wersja OS/2 (Watcom C).\n"
 
-#: common.c:753
+#: common.c:755
 msgid "OS/2 version (EMX).\n"
 msgstr "Wersja OS/2 (EMX).\n"
 
-#: common.c:755
+#: common.c:757
 #, c-format
 msgid "%s version.\n"
 msgstr "Wersja %s.\n"
 
-#: common.c:761
+#: common.c:763
 msgid "With Unicode UTF-16 support.\n"
 msgstr "Z obsługą Unicode UTF-16.\n"
 
-#: common.c:763
+#: common.c:765
 msgid "Without Unicode UTF-16 support.\n"
 msgstr "Bez obsługi Unicode UTF-16.\n"
 
-#: common.c:767
+#: common.c:769
 msgid "With Unicode file name support.\n"
 msgstr "Z obsługą nazw plików w Unicode.\n"
 
-#: common.c:769
+#: common.c:771
 msgid "Without Unicode file name support.\n"
 msgstr "Bez obsługi nazw plików w Unicode.\n"
 
-#: common.c:773
+#: common.c:775
 msgid "With native language support.\n"
 msgstr "Z obsługą języków narodowych.\n"
 
-#: common.c:778
+#: common.c:780
 msgid "With support to preserve the user and group ownership of files.\n"
 msgstr "Z obsługą zachowywania właściciela i grupy plików.\n"
 
-#: common.c:780
+#: common.c:782
 msgid "Without support to preserve the user and group ownership of files.\n"
 msgstr "Bez obsługi zachowywania właściciela i grupy plików.\n"
 
-#: common.c:915
+#: common.c:917
 msgid "Path for temporary output file is too long:"
 msgstr "Ścieżka do tymczasowego pliku wyjściowego jest zbyt długa:"
 
-#: common.c:1201 common.c:1208 common.c:1215 common.c:1222 common.c:1234
-#: common.c:1241
+#: common.c:1203 common.c:1210 common.c:1217 common.c:1224 common.c:1236
+#: common.c:1243
 #, c-format
 msgid "Writing %s BOM.\n"
 msgstr "Zapis znacznika BOM %s.\n"
 
-#: common.c:1201 common.c:1254 common.c:1879 common.c:1900
+#: common.c:1203 common.c:1256 common.c:1881 common.c:1902
 msgid "UTF-16LE"
 msgstr "UTF-16LE"
 
-#: common.c:1208 common.c:1257 common.c:1881 common.c:1902
+#: common.c:1210 common.c:1259 common.c:1883 common.c:1904
 msgid "UTF-16BE"
 msgstr "UTF-16BE"
 
-#: common.c:1215 common.c:1234 common.c:1263 common.c:1892
+#: common.c:1217 common.c:1236 common.c:1265 common.c:1894
 msgid "GB18030"
 msgstr "GB18030"
 
-#: common.c:1222 common.c:1241 common.c:1260 common.c:1894
+#: common.c:1224 common.c:1243 common.c:1262 common.c:1896
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: common.c:1286
+#: common.c:1288
 #, c-format
 msgid "Input file %s has %s BOM.\n"
 msgstr "Plik wejściowy %s zawiera znacznik BOM %s.\n"
 
-#: common.c:1327 common.c:1369
+#: common.c:1329 common.c:1371
 msgid "Assuming UTF-16LE encoding.\n"
 msgstr "Przyjęto kodowanie UTF-16LE.\n"
 
-#: common.c:1331 common.c:1373
+#: common.c:1333 common.c:1375
 msgid "Assuming UTF-16BE encoding.\n"
 msgstr "Przyjęto kodowanie UTF-16BE.\n"
 
-#: common.c:1521
+#: common.c:1523
 #, c-format
 msgid "problems resolving symbolic link '%s'\n"
 msgstr "problemy z rozwiązaniem dowiązania symbolicznego '%s'\n"
 
-#: common.c:1539
+#: common.c:1541
 #, c-format
 msgid "Failed to open temporary output file: %s\n"
 msgstr "Nie udało się otworzyć tymczasowego pliku wyjściowego: %s\n"
 
-#: common.c:1551
+#: common.c:1553
 #, c-format
 msgid "using %s as temporary file\n"
 msgstr "użycie %s jako pliku tymczasowego\n"
 
-#: common.c:1605 common.c:1633
+#: common.c:1607 common.c:1635
 #, c-format
 msgid "Failed to change the permissions of temporary output file %s:"
 msgstr "Nie udało się zmienić uprawnień tymczasowego pliku wyjściowego %s:"
 
-#: common.c:1621
+#: common.c:1623
 #, c-format
 msgid "The user and/or group ownership of file %s is not preserved.\n"
 msgstr "Właściciel i/lub grupa pliku %s nie została zachowana.\n"
 
-#: common.c:1643
+#: common.c:1645
 #, c-format
 msgid "Failed to change the owner and group of temporary output file %s:"
 msgstr "Nie udało się zmienić właściciela i grupy tymczasowego pliku wyjściowego %s:"
 
-#: common.c:1700
+#: common.c:1702
 #, c-format
 msgid "problems renaming '%s' to '%s':"
 msgstr "problemy ze zmianą nazwy '%s' na '%s':"
 
-#: common.c:1704
+#: common.c:1706
 #, c-format
 msgid "          which is the target of symbolic link '%s'\n"
 msgstr "          (czyli cel dowiązania symbolicznego '%s')\n"
 
-#: common.c:1706
+#: common.c:1708
 #, c-format
 msgid "          output file remains in '%s'\n"
 msgstr "          plik wyjściowy pozostaje w '%s'\n"
 
-#: common.c:1854 common.c:1949
+#: common.c:1856 common.c:1951
 #, c-format
 msgid "Skipping binary file %s\n"
 msgstr "Pominięto plik binarny %s\n"
 
-#: common.c:1857 common.c:1952
+#: common.c:1859 common.c:1954
 #, c-format
 msgid "code page %d is not supported.\n"
 msgstr "strona kodowa %d nie jest obsługiwana.\n"
 
-#: common.c:1861 common.c:1956 common.c:2044
+#: common.c:1863 common.c:1958 common.c:2046
 #, c-format
 msgid "Skipping UTF-16 file %s, the size of wchar_t is %d bytes.\n"
 msgstr "Pominięto plik UTF-16 %s, rozmiar wchar_t to %d bajt(y).\n"
 
-#: common.c:1864 common.c:1959
+#: common.c:1866 common.c:1961
 #, c-format
 msgid "Skipping UTF-16 file %s, an UTF-16 conversion error occurred on line %u.\n"
 msgstr "Pominięto plik UTF-16 %s, wystąpił błąd konwersji UTF-16 w linii %u.\n"
 
-#: common.c:1868 common.c:1963
+#: common.c:1870 common.c:1965
 #, c-format
 msgid "Skipping UTF-16 file %s, UTF-16 conversion is not supported in this version of %s.\n"
 msgstr "Pominięto plik UTF-16 %s, konwersja UTF-16 nie jest obsługiwana w tej wersji programu %s.\n"
 
-#: common.c:1934 common.c:2033
+#: common.c:1936 common.c:2035
 #, c-format
 msgid "Skipping %s, not a regular file.\n"
 msgstr "Pominięto %s, nie jest zwykłym plikiem.\n"
 
-#: common.c:1938
+#: common.c:1940
 #, c-format
 msgid "Skipping %s, output file %s is a symbolic link.\n"
 msgstr "Pominięto %s, plik wyjściowy %s jest dowiązaniem symbolicznym.\n"
 
-#: common.c:1940
+#: common.c:1942
 #, c-format
 msgid "Skipping symbolic link %s.\n"
 msgstr "Pominięto dowiązanie symboliczne %s.\n"
 
-#: common.c:1943 common.c:2038
+#: common.c:1945 common.c:2040
 #, c-format
 msgid "Skipping symbolic link %s, target is not a regular file.\n"
 msgstr "Pominięto dowiązanie symboliczne %s, cel nie jest zwykłym plikiem.\n"
 
-#: common.c:1946
+#: common.c:1948
 #, c-format
 msgid "Skipping %s, target of symbolic link %s is not a regular file.\n"
 msgstr "Pominięto %s, cel dowiązania symbolicznego %s nie jest zwykłym plikiem.\n"
 
-#: common.c:1971
+#: common.c:1973
 #, c-format
 msgid "converting file %s to file %s in Unix format...\n"
 msgstr "konwersja pliku %s do pliku %s w formacie uniksowym...\n"
 
-#: common.c:1973
+#: common.c:1975
 #, c-format
 msgid "converting file %s to Unix format...\n"
 msgstr "konwersja pliku %s do formatu uniksowego...\n"
 
-#: common.c:1977
+#: common.c:1979
 #, c-format
 msgid "converting file %s to file %s in Mac format...\n"
 msgstr "konwersja pliku %s do pliku %s w formacie Mac...\n"
 
-#: common.c:1979
+#: common.c:1981
 #, c-format
 msgid "converting file %s to Mac format...\n"
 msgstr "konwersja pliku %s do formatu Mac...\n"
 
-#: common.c:1982
+#: common.c:1984
 #, c-format
 msgid "converting file %s to file %s in DOS format...\n"
 msgstr "konwersja pliku %s do pliku %s w formacie DOS...\n"
 
-#: common.c:1984
+#: common.c:1986
 #, c-format
 msgid "converting file %s to DOS format...\n"
 msgstr "konwersja pliku %s do formatu DOS...\n"
@@ -585,7 +583,7 @@ msgstr "konwersja pliku %s do formatu DOS...\n"
 #. 3rd %s is encoding of output file.
 #. 4th %s is name of output file.
 #. E.g.: converting UTF-16LE file in.txt to UTF-8 file out.txt in Unix format...
-#: common.c:1996
+#: common.c:1998
 #, c-format
 msgid "converting %s file %s to %s file %s in Unix format...\n"
 msgstr "konwersja pliku %s %s do pliku %s %s w formacie uniksowym...\n"
@@ -595,95 +593,105 @@ msgstr "konwersja pliku %s %s do pliku %s %s w formacie uniksowym...\n"
 #. 2nd %s is name of input file.
 #. 3rd %s is encoding of output (input file is overwritten).
 #. E.g.: converting UTF-16LE file foo.txt to UTF-8 Unix format...
-#: common.c:2003
+#: common.c:2005
 #, c-format
 msgid "converting %s file %s to %s Unix format...\n"
 msgstr "konwersja pliku %s %s do formatu uniksowego %s...\n"
 
-#: common.c:2007
+#: common.c:2009
 #, c-format
 msgid "converting %s file %s to %s file %s in Mac format...\n"
 msgstr "konwersja pliku %s %s do pliku %s %s w formacie Mac...\n"
 
-#: common.c:2009
+#: common.c:2011
 #, c-format
 msgid "converting %s file %s to %s Mac format...\n"
 msgstr "konwersja pliku %s %s do formatu Mac %s...\n"
 
-#: common.c:2012
+#: common.c:2014
 #, c-format
 msgid "converting %s file %s to %s file %s in DOS format...\n"
 msgstr "konwersja pliku %s %s do pliku %s %s w formacie DOS...\n"
 
-#: common.c:2014
+#: common.c:2016
 #, c-format
 msgid "converting %s file %s to %s DOS format...\n"
 msgstr "konwersja pliku %s %s do formatu DOS %s...\n"
 
-#: common.c:2021
+#: common.c:2023
 #, c-format
 msgid "problems converting file %s to file %s\n"
 msgstr "problemy z konwersją pliku %s do pliku %s\n"
 
-#: common.c:2023
+#: common.c:2025
 #, c-format
 msgid "problems converting file %s\n"
 msgstr "problemy z konwersją pliku %s\n"
 
-#: common.c:2186 common.c:2243
+#: common.c:2188 common.c:2245
 #, c-format
 msgid "can not read from input file %s:"
 msgstr "nie można czytać z pliku wejściowego %s:"
 
-#: common.c:2403
+#: common.c:2405
 #, c-format
 msgid "wrong flag '%c' for option -i or --info\n"
 msgstr "błędna flaga '%c' dla opcji -i lub --info\n"
 
-#: common.c:2539 common.c:2582
+#: common.c:2546 common.c:2589
 #, c-format
 msgid "active code page: %d\n"
 msgstr "aktywna strona kodowa: %d\n"
 
-#: common.c:2594
+#: common.c:2601
 #, c-format
 msgid "invalid %s conversion mode specified\n"
 msgstr "podano błędny tryb konwersji %s\n"
 
-#: common.c:2602 common.c:2632
+#: common.c:2609 common.c:2639
 #, c-format
 msgid "option '%s' requires an argument\n"
 msgstr "opcja '%s' wymaga argumentu\n"
 
-#: common.c:2624
+#: common.c:2631
 #, c-format
 msgid "invalid %s display encoding specified\n"
 msgstr "podano błędne kodowanie wyświetlania %s\n"
 
-#: common.c:2644 common.c:2658 common.c:2670
+#: common.c:2651 common.c:2665 common.c:2677
 #, c-format
 msgid "target of file %s not specified in new-file mode\n"
 msgstr "nie podano celu pliku %s w trybie nowego pliku\n"
 
-#: common.c:2753
+#: common.c:2760
 #, c-format
 msgid "can not read from input file: %s\n"
 msgstr "nie można czytać z pliku wejściowego: %s\n"
 
-#: common.c:2763 common.c:2775
+#: common.c:2770 common.c:2782
 #, c-format
 msgid "can not write to output file: %s\n"
 msgstr "nie można zapisać do pliku wyjściowego: %s\n"
 
-#: common.c:2851
+#: common.c:2858
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "błąd: Błędna para zamienna. Brak młodszego zamiennika.\n"
 
-#: common.c:2869
+#: common.c:2876
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "błąd: Błędna para zamienna. Brak starszego zamiennika.\n"
 
-#: common.c:2972
+#: common.c:2979
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "Przekonwertowano znaków końca linii: %u z %u.\n"
+
+#: common.c:2993
+#, c-format
+msgid "Binary symbol 0x00%02X found at line %u\n"
+msgstr "Napotkano symbol binarny 0x00%02X w linii %u\n"
+
+#: common.c:3017
+#, c-format
+msgid "Binary symbol 0x%02X found at line %u\n"
+msgstr "Napotkano symbol binarny 0x%02X w linii %u\n"

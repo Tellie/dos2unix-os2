@@ -155,6 +155,10 @@ utf8的优点在于它与ASCII兼容。你需要设置终端的字体为TrueType
 
 从DOS转换至Unix格式的文件的末尾可能缺少换行符；部分文本编辑器也会主动忽略文本文件末尾的换行符。由于POSIX规范要求文本文件中的每一行必须以换行符结尾，部分Unix程序在处理此类缺少末尾换行符的文件时可能存在问题，例如：拼接两个文本文件时，第一个文件的最后一行会直接与第二个文件的第一行相连，从而产生非预期的结果。
 
+=item B<--error-binary>
+
+Return an error if a binary file is skipped.
+
 =item B<-f, --force>
 
 强制转换二进制文件。
@@ -319,7 +323,11 @@ B<unix2dos>：只有Unix断行符会被转换为两个DOS断行符。在Mac模�
 
 =item B<--no-add-eol>
 
-即使文件末尾缺少换行符，也不要追加换行符。
+Do not add a line break to the last line if there isn't one (default).
+
+=item B<--no-error-binary>
+
+Do not return an error if a binary file is skipped (default).
 
 =item B<-O, --to-stdout>
 
@@ -360,6 +368,8 @@ dos2unix 在转换格式时会生成一个临时文件。如果在转换时出�
 跳过二进制文件（默认）。
 
 跳过二进制文件是为了避免可能的错误。请注意，对二进制文件的探测并不能做到100%准确。程序通过扫描二进制文件所特有的标记来将其与文本文件区分开来，但有的二进制文件可能只包含普通的文本字符，这样的文件就会被误判为文本文件。
+
+By default, no error is returned when a binary file is skipped. When the C<--error-binary> option is used, an error is returned.
 
 =item B<-u, --keep-utf16>
 

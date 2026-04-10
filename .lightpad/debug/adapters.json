@@ -1,0 +1,69 @@
+{
+    "_comment": "Debug adapter configuration. Customize adapter settings and paths here.",
+    "adapters": {
+        "cppdbg-gdb": {
+            "_comment": "GDB debug adapter settings",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                },
+                {
+                    "description": "Disable pagination",
+                    "ignoreFailures": true,
+                    "text": "set pagination off"
+                }
+            ]
+        },
+        "cppdbg-lldb": {
+            "_comment": "LLDB debug adapter settings",
+            "miDebuggerPath": "lldb-vscode"
+        },
+        "go-delve": {
+            "_comment": "Go Delve debug adapter settings",
+            "dlvPath": "dlv",
+            "goExecutable": "go"
+        },
+        "node-debug": {
+            "_comment": "Node.js debug adapter settings",
+            "adapterCommand": "js-debug-adapter",
+            "console": "integratedTerminal",
+            "runtimeExecutable": "node",
+            "sourceMaps": true
+        },
+        "python-debugpy": {
+            "_comment": "Python debugpy settings",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "python3",
+            "showReturnValue": true
+        },
+        "rust-codelldb": {
+            "_comment": "Rust CodeLLDB debug adapter settings",
+            "adapterCommand": "codelldb",
+            "cargoExecutable": "cargo"
+        }
+    },
+    "defaultAdapters": {
+        ".c": "cppdbg-gdb",
+        ".cc": "cppdbg-gdb",
+        ".cpp": "cppdbg-gdb",
+        ".cxx": "cppdbg-gdb",
+        ".go": "go-delve",
+        ".js": "node-debug",
+        ".mjs": "node-debug",
+        ".py": "python-debugpy",
+        ".pyw": "python-debugpy",
+        ".rs": "rust-codelldb",
+        ".ts": "node-debug",
+        "_comment": "Map file extensions to debug adapter IDs"
+    },
+    "remote": {
+        "_comment": "Remote debugging configuration",
+        "defaultHost": "localhost",
+        "defaultPort": 0
+    },
+    "version": "1.0.0"
+}

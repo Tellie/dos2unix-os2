@@ -199,6 +199,9 @@ OPTIONEN
         Aneinanderhängen von solche Dateien zu unerwarteten Ergebnissen
         kommen.
 
+    --error-binary
+        liefert einen Fehler zurück, wenn eine Binärdatei übersprungen wird.
+
     -f, --force
         erzwingt die Umwandlung von Binärdateien.
 
@@ -370,7 +373,11 @@ OPTIONEN
 
     --no-add-eol
         fügt keinen Zeilenumbruch nach der letzten Zeile hinzu, falls ein
-        solcher nicht existiert.
+        solcher nicht existiert (Vorgabe).
+
+    --no-error-binary
+        liefert keinen Fehler zurück, wenn eine Binärdatei übersprungen wird
+        (Vorgabe).
 
     -O, --to-stdout
         schreibt wie ein Unix-Filter in die Standardausgabe. Mit der Option
@@ -423,14 +430,14 @@ OPTIONEN
 
             dos2unix -n foo.txt foo.txt
 
-        Der Vorteil der Option "--allow-chown" ist, dass Sie Platzhalter
+        Der Vorteil der Option --allow-chown ist, dass Sie Platzhalter
         verwenden können und die Eigentumsverhältnisse bewahrt bleiben,
         sofern möglich.
 
     -q, --quiet
-        Stiller Modus, in dem alle Warnungen und sonstige Meldungen
-        unterdrückt werden. Der Rückgabewert ist 0, außer wenn fehlerhafte
-        Befehlszeilenoptionen angegeben werden.
+        aktiviert den stillen Modus, in dem alle Warnungen und sonstigen
+        Meldungen unterdrückt werden. Der Rückgabewert ist 0, außer wenn
+        fehlerhafte Befehlszeilenoptionen angegeben werden.
 
     -r, --remove-bom
         entfernt die Markierung der Bytereihenfolge (BOM). Es wird keine BOM
@@ -447,6 +454,10 @@ OPTIONEN
         jedoch möglich, dass eine Binärdatei ausschließlich gewöhnliche
         Textzeichen enthält. Eine solche Binärdatei wird dann
         fälschlicherweise als Textdatei angesehen.
+
+        Standardmäßig wird kein Fehler zurückgeliefert, wenn eine Binärdatei
+        übersprungen wird. Bei Verwendung der Option --error-binary wird ein
+        Fehler zurückgeliefert.
 
     -u, --keep-utf16
         erhält die originale UTF-16-Kodierung der Eingabedatei. Die

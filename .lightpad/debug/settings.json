@@ -1,0 +1,49 @@
+{
+    "_comment": "General debugger settings. All options are user-configurable.",
+    "exceptions": {
+        "_comment": "Exception breakpoint default settings",
+        "breakOnRaised": false,
+        "breakOnUncaught": true,
+        "breakOnUserUnhandled": false
+    },
+    "general": {
+        "autoReload": true,
+        "confirmOnExit": true,
+        "externalConsole": false,
+        "focusEditorOnBreak": true,
+        "inlineValues": true,
+        "justMyCode": true,
+        "openDebugConsoleOnStart": false,
+        "showHexValues": false,
+        "showReturnValue": true,
+        "stopOnEntry": false
+    },
+    "logging": {
+        "enabled": false,
+        "logFilePath": "${workspaceFolder}/.lightpad/debug/debug.log",
+        "verbosity": "info"
+    },
+    "sourceMaps": {
+        "enabled": true,
+        "pathOverrides": {
+        }
+    },
+    "timeouts": {
+        "_comment": "Timeout values in milliseconds",
+        "attachTimeout": 10000,
+        "disconnectTimeout": 3000,
+        "evaluateTimeout": 5000,
+        "launchTimeout": 10000
+    },
+    "ui": {
+        "expandArraysLength": 100,
+        "expandObjectDepth": 3,
+        "showBreakpointsPanel": true,
+        "showCallStackPanel": true,
+        "showDebugConsole": true,
+        "showVariablesPanel": true,
+        "showWatchPanel": true,
+        "variablesSortOrder": "alphabetical"
+    },
+    "version": "1.0.0"
+}

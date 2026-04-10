@@ -1,13 +1,12 @@
 # Serbian translation for dos2unix-man
 # Copyright @ 2020 Erwin Waterlander (msgids).
 # This file is distributed under the same license as the dos2unix package.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020-2025.
-#
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020-2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man 7.5.3-beta8\n"
-"POT-Creation-Date: 2025-05-16 23:04+0200\n"
-"PO-Revision-Date: 2025-05-20 06:17+0200\n"
+"Project-Id-Version: dos2unix-man 7.5.5-beta3\n"
+"POT-Creation-Date: 2026-03-23 22:44+0100\n"
+"PO-Revision-Date: 2026-04-05 09:15+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
 "Language: sr\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 
 #. type: =head1
@@ -357,56 +356,66 @@ msgstr "Датотеци претвореној из ДОС у Јуникс фо
 
 #. type: =item
 #: dos2unix.pod:252
+msgid "B<--error-binary>"
+msgstr "B<--error-binary>"
+
+#. type: textblock
+#: dos2unix.pod:254
+msgid "Return an error if a binary file is skipped."
+msgstr "Враћа грешку ако је бинарна датотека прескочена."
+
+#. type: =item
+#: dos2unix.pod:256
 msgid "B<-f, --force>"
 msgstr "B<-f, --force>"
 
 #. type: textblock
-#: dos2unix.pod:254
+#: dos2unix.pod:258
 msgid "Force conversion of binary files."
 msgstr "Присиљава претварање бинарних датотека."
 
 #. type: =item
-#: dos2unix.pod:256
+#: dos2unix.pod:260
 msgid "B<-gb, --gb18030>"
 msgstr "B<-gb, --gb18030>"
 
 #. type: textblock
-#: dos2unix.pod:258
+#: dos2unix.pod:262
 msgid "On Windows UTF-16 files are by default converted to UTF-8, regardless of the locale setting. Use this option to convert UTF-16 files to GB18030. This option is only available on Windows. See also section GB18030."
 msgstr "У Виндоузу УТФ-16 датотеке се подразумевано претварају у УТФ-8, без обзира на поставке језика. Користите ову опцију за претварање УТФ-16 датотека у „GB18030“. Ова опција је доступна само у Виндоузу. Такође погледајте одељак „GB18030“."
 
 #. type: =item
-#: dos2unix.pod:262
+#: dos2unix.pod:266
 msgid "B<-h, --help>"
 msgstr "B<-h, --help>"
 
 #. type: textblock
-#: dos2unix.pod:264
+#: dos2unix.pod:268
 msgid "Display help and exit."
 msgstr "Приказује помоћ и излази."
 
 #. type: =item
-#: dos2unix.pod:266
+#: dos2unix.pod:270
 msgid "B<-i[FLAGS], --info[=FLAGS] FILE ...>"
 msgstr "B<-i[ЗАСТАВИЦЕ], --info[=ЗАСТАВИЦЕ] ДАТОТЕКА ...>"
 
 #. type: textblock
-#: dos2unix.pod:268
+#: dos2unix.pod:272
 msgid "Display file information. No conversion is done."
 msgstr "Приказује податке о датотеци. Претварање се не ради."
 
 #. type: textblock
-#: dos2unix.pod:270
+#: dos2unix.pod:274
 msgid "The following information is printed, in this order: number of DOS line breaks, number of Unix line breaks, number of Mac line breaks, byte order mark, text or binary, file name."
 msgstr "Следеће информације се исписују, овим редом: број ДОС прелома реда, број Јуникс прелома реда, број Мек прелома реда, ознака редоследа бајтова, текст или бинарна, назив датотеке."
 
 #. type: textblock
-#: dos2unix.pod:274 dos2unix.pod:290
+#: dos2unix.pod:278 dos2unix.pod:294
 msgid "Example output:"
 msgstr "Пример излаза:"
 
 #. type: verbatim
-#: dos2unix.pod:276
+#: dos2unix.pod:280
 #, no-wrap
 msgid ""
 "     6       0       0  no_bom    text    dos.txt\n"
@@ -430,17 +439,17 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:285
+#: dos2unix.pod:289
 msgid "Note that sometimes a binary file can be mistaken for a text file. See also option C<-s>."
 msgstr "Знајте да понекад бинарна датотека може грешком бити узета за текстуалну датотеку. Видите такође опцију „C<-s>“."
 
 #. type: textblock
-#: dos2unix.pod:287
+#: dos2unix.pod:291
 msgid "If in addition option C<-e> or C<--add-eol> is used also the type of the line break of the last line is printed, or C<noeol> if there is none."
 msgstr "Ако се у додатној опцији користи C<-e> или C<--add-eol> такође се исписује и врста прекида реда последњег реда, или C<noeol> ако нема ничега."
 
 #. type: verbatim
-#: dos2unix.pod:292
+#: dos2unix.pod:296
 #, no-wrap
 msgid ""
 "     6       0       0  no_bom    text   dos     dos.txt\n"
@@ -456,224 +465,224 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:297
+#: dos2unix.pod:301
 msgid "Optionally extra flags can be set to change the output. One or more flags can be added."
 msgstr "Изборне додатне заставице се могу поставити да измене излаз. Могу се додати једна или више заставица."
 
 #. type: =item
-#: dos2unix.pod:302
+#: dos2unix.pod:306
 msgid "B<0>"
 msgstr "B<0>"
 
 #. type: textblock
-#: dos2unix.pod:304
+#: dos2unix.pod:308
 msgid "Print the file information lines followed by a null character instead of a newline character. This enables correct interpretation of file names with spaces or quotes when flag c is used. Use this flag in combination with xargs(1) option C<-0> or C<--null>."
 msgstr "Исписује редове информација о датотеци за којима следи нулти знак уместо знака новог реда. Ово омогућава тачно тумачење назива датотека с размацима или наводницима када се користи заставица „c“. Користите ову заставицу у комбинацији са „xargs(1)“ опцијом „C<-0>“ или „C<--null>“."
 
 #. type: =item
-#: dos2unix.pod:309
+#: dos2unix.pod:313
 msgid "B<d>"
 msgstr "B<d>"
 
 #. type: textblock
-#: dos2unix.pod:311
+#: dos2unix.pod:315
 msgid "Print number of DOS line breaks."
 msgstr "Исписује број ДОС преламања реда."
 
 #. type: =item
-#: dos2unix.pod:313
+#: dos2unix.pod:317
 msgid "B<u>"
 msgstr "B<u>"
 
 #. type: textblock
-#: dos2unix.pod:315
+#: dos2unix.pod:319
 msgid "Print number of Unix line breaks."
 msgstr "Исписује број Јуникс преламања реда."
 
 #. type: =item
-#: dos2unix.pod:317
+#: dos2unix.pod:321
 msgid "B<m>"
 msgstr "B<m>"
 
 #. type: textblock
-#: dos2unix.pod:319
+#: dos2unix.pod:323
 msgid "Print number of Mac line breaks."
 msgstr "Исписује број Мек преламања реда."
 
 #. type: =item
-#: dos2unix.pod:321
+#: dos2unix.pod:325
 msgid "B<b>"
 msgstr "B<b>"
 
 #. type: textblock
-#: dos2unix.pod:323
+#: dos2unix.pod:327
 msgid "Print the byte order mark."
 msgstr "Исписује ознаку редоследа бајтова."
 
 #. type: =item
-#: dos2unix.pod:325
+#: dos2unix.pod:329
 msgid "B<t>"
 msgstr "B<t>"
 
 #. type: textblock
-#: dos2unix.pod:327
+#: dos2unix.pod:331
 msgid "Print if file is text or binary."
 msgstr "Исписује да ли је датотека текстуална или бинарна."
 
 #. type: =item
-#: dos2unix.pod:329
+#: dos2unix.pod:333
 msgid "B<e>"
 msgstr "B<e>"
 
 #. type: textblock
-#: dos2unix.pod:331
+#: dos2unix.pod:335
 msgid "Print the type of the line break of the last line, or C<noeol> if there is none."
 msgstr "Исписује врсту прекида реда последњег реда, или C<noeol> ако га нема."
 
 #. type: =item
-#: dos2unix.pod:333
+#: dos2unix.pod:337
 msgid "B<c>"
 msgstr "B<c>"
 
 #. type: textblock
-#: dos2unix.pod:335
+#: dos2unix.pod:339
 msgid "Print only the files that would be converted."
 msgstr "Исписује само датотеке које ће бити претворене."
 
 #. type: textblock
-#: dos2unix.pod:337
+#: dos2unix.pod:341
 msgid "With the C<c> flag dos2unix will print only the files that contain DOS line breaks, unix2dos will print only file names that have Unix line breaks."
 msgstr "Са заставицом „C<c>“ „dos2unix“ ће исписати само датотеке које садрже ДОС преламања реда, „unix2dos“ ће исписат само називе датотека које имају Јуникс преламања реда."
 
 #. type: textblock
-#: dos2unix.pod:340
+#: dos2unix.pod:344
 msgid "If in addition option C<-e> or C<--add-eol> is used also the files that lack a line break on the last line will be printed."
 msgstr "Ако се у додатној опцији користи C<-e> или C<--add-eol> такође се исписују и датотеке којима недостаје прекид реда у последњем реду."
 
 #. type: =item
-#: dos2unix.pod:343
+#: dos2unix.pod:347
 msgid "B<h>"
 msgstr "B<h>"
 
 #. type: textblock
-#: dos2unix.pod:345
+#: dos2unix.pod:349
 msgid "Print a header."
 msgstr "Исписује заглавље."
 
 #. type: =item
-#: dos2unix.pod:347
+#: dos2unix.pod:351
 msgid "B<p>"
 msgstr "B<p>"
 
 #. type: textblock
-#: dos2unix.pod:349
+#: dos2unix.pod:353
 msgid "Show file names without path."
 msgstr "Приказује називе датотека без путање."
 
 #. type: textblock
-#: dos2unix.pod:353
+#: dos2unix.pod:357
 msgid "Examples:"
 msgstr "Примери:"
 
 #. type: textblock
-#: dos2unix.pod:355
+#: dos2unix.pod:359
 msgid "Show information for all *.txt files:"
 msgstr "Приказује податке за све „*.txt“ датотеке:"
-
-#. type: verbatim
-#: dos2unix.pod:357
-#, no-wrap
-msgid ""
-"    dos2unix -i *.txt\n"
-"\n"
-msgstr ""
-"    dos2unix -i *.txt\n"
-"\n"
-
-#. type: textblock
-#: dos2unix.pod:359
-msgid "Show only the number of DOS line breaks and Unix line breaks:"
-msgstr "Приказује само број ДОС преламања реда и број Јуникс преламања реда:"
 
 #. type: verbatim
 #: dos2unix.pod:361
 #, no-wrap
 msgid ""
-"    dos2unix -idu *.txt\n"
+"    dos2unix -i *.txt\n"
 "\n"
 msgstr ""
-"    dos2unix -idu *.txt\n"
+"    dos2unix -i *.txt\n"
 "\n"
 
 #. type: textblock
 #: dos2unix.pod:363
-msgid "Show only the byte order mark:"
-msgstr "Приказује само ознаку редоследа бајтова:"
+msgid "Show only the number of DOS line breaks and Unix line breaks:"
+msgstr "Приказује само број ДОС преламања реда и број Јуникс преламања реда:"
 
 #. type: verbatim
 #: dos2unix.pod:365
 #, no-wrap
 msgid ""
-"    dos2unix --info=b *.txt\n"
+"    dos2unix -idu *.txt\n"
 "\n"
 msgstr ""
-"    dos2unix --info=b *.txt\n"
+"    dos2unix -idu *.txt\n"
 "\n"
 
 #. type: textblock
 #: dos2unix.pod:367
-msgid "List the files that have DOS line breaks:"
-msgstr "Исписује датотеке које имају ДОС преламање реда:"
+msgid "Show only the byte order mark:"
+msgstr "Приказује само ознаку редоследа бајтова:"
 
 #. type: verbatim
 #: dos2unix.pod:369
 #, no-wrap
 msgid ""
-"    dos2unix -ic *.txt\n"
+"    dos2unix --info=b *.txt\n"
 "\n"
 msgstr ""
-"    dos2unix -ic *.txt\n"
+"    dos2unix --info=b *.txt\n"
 "\n"
 
 #. type: textblock
 #: dos2unix.pod:371
-msgid "List the files that have Unix line breaks:"
-msgstr "Исписује датотеке које имају Јуникс преламање реда:"
+msgid "List the files that have DOS line breaks:"
+msgstr "Исписује датотеке које имају ДОС преламање реда:"
 
 #. type: verbatim
 #: dos2unix.pod:373
 #, no-wrap
 msgid ""
-"    unix2dos -ic *.txt\n"
+"    dos2unix -ic *.txt\n"
 "\n"
 msgstr ""
-"    unix2dos -ic *.txt\n"
+"    dos2unix -ic *.txt\n"
 "\n"
 
 #. type: textblock
 #: dos2unix.pod:375
-msgid "List the files that have DOS line breaks or lack a line break on the last line:"
-msgstr "Исписује датотеке које имају ДОС преламања реда или им недостаје прекид реда у последњем реду:"
+msgid "List the files that have Unix line breaks:"
+msgstr "Исписује датотеке које имају Јуникс преламање реда:"
 
 #. type: verbatim
 #: dos2unix.pod:377
 #, no-wrap
 msgid ""
-"    dos2unix -e -ic *.txt\n"
+"    unix2dos -ic *.txt\n"
 "\n"
 msgstr ""
-"    dos2unix -e -ic *.txt\n"
+"    unix2dos -ic *.txt\n"
 "\n"
 
 #. type: textblock
 #: dos2unix.pod:379
-msgid "Convert only files that have DOS line breaks and leave the other files untouched:"
-msgstr "Претвара само датотеке које имају ДОС преламање реда и оставља друге датотеке нетакнутим:"
+msgid "List the files that have DOS line breaks or lack a line break on the last line:"
+msgstr "Исписује датотеке које имају ДОС преламања реда или им недостаје прекид реда у последњем реду:"
 
 #. type: verbatim
 #: dos2unix.pod:381
 #, no-wrap
 msgid ""
+"    dos2unix -e -ic *.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -e -ic *.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:383
+msgid "Convert only files that have DOS line breaks and leave the other files untouched:"
+msgstr "Претвара само датотеке које имају ДОС преламање реда и оставља друге датотеке нетакнутим:"
+
+#. type: verbatim
+#: dos2unix.pod:385
+#, no-wrap
+msgid ""
 "    dos2unix -ic0 *.txt | xargs -0 dos2unix\n"
 "\n"
 msgstr ""
@@ -681,12 +690,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:383
+#: dos2unix.pod:387
 msgid "Find text files that have DOS line breaks:"
 msgstr "Налази текстуалне датотеке које имају ДОС преламање реда:"
 
 #. type: verbatim
-#: dos2unix.pod:385
+#: dos2unix.pod:389
 #, no-wrap
 msgid ""
 "    find -name '*.txt' -print0 | xargs -0 dos2unix -ic\n"
@@ -696,122 +705,132 @@ msgstr ""
 "\n"
 
 #. type: =item
-#: dos2unix.pod:387
+#: dos2unix.pod:391
 msgid "B<-k, --keepdate>"
 msgstr "B<-k, --keepdate>"
 
 #. type: textblock
-#: dos2unix.pod:389
+#: dos2unix.pod:393
 msgid "Keep the date stamp of output file same as input file."
 msgstr "Задржава печат датума излазне датотеке истим као код улазне."
 
 #. type: =item
-#: dos2unix.pod:391
+#: dos2unix.pod:395
 msgid "B<-L, --license>"
 msgstr "B<-L, --license>"
 
 #. type: textblock
-#: dos2unix.pod:393
+#: dos2unix.pod:397
 msgid "Display program's license."
 msgstr "Приказује лиценцу програма."
 
 #. type: =item
-#: dos2unix.pod:395
+#: dos2unix.pod:399
 msgid "B<-l, --newline>"
 msgstr "B<-l, --newline>"
 
 #. type: textblock
-#: dos2unix.pod:397
+#: dos2unix.pod:401
 msgid "Add additional newline."
 msgstr "Додаје додатни нови ред."
 
 #. type: textblock
-#: dos2unix.pod:399
+#: dos2unix.pod:403
 msgid "B<dos2unix>: Only DOS line breaks are changed to two Unix line breaks.  In Mac mode only Mac line breaks are changed to two Unix line breaks."
 msgstr "B<dos2unix>: Само ДОС преламања реда се мењају у два Јуникс преламања реда.  У Мек режиму само Мек преламања реда се мењају у два Јуникс преламања реда."
 
 #. type: textblock
-#: dos2unix.pod:403
+#: dos2unix.pod:407
 msgid "B<unix2dos>: Only Unix line breaks are changed to two DOS line breaks.  In Mac mode Unix line breaks are changed to two Mac line breaks."
 msgstr "B<unix2dos>: Само Јуникс преламања реда се мењају у два ДОС преламања реда.  У Мек режиму Јуникс преламања реда се мењају у два Мек преламања реда."
 
 #. type: =item
-#: dos2unix.pod:406
+#: dos2unix.pod:410
 msgid "B<-m, --add-bom>"
 msgstr "B<-m, --add-bom>"
 
 #. type: textblock
-#: dos2unix.pod:408
+#: dos2unix.pod:412
 msgid "Write a Byte Order Mark (BOM) in the output file. By default an UTF-8 BOM is written."
 msgstr "Пише Ознаку редоследа бајтова (BOM) у излазну датотеку. Подразумевано се записује УТФ-8 ОРБ."
 
 #. type: textblock
-#: dos2unix.pod:411
+#: dos2unix.pod:415
 msgid "When the input file is UTF-16, and the option C<-u> is used, an UTF-16 BOM will be written."
 msgstr "Када је улазна датотека УТФ-16, и користи се опција „C<-u>“, биће записана УТФ-16 ОРБ."
 
 #. type: textblock
-#: dos2unix.pod:414
+#: dos2unix.pod:418
 msgid "Never use this option when the output encoding is other than UTF-8, UTF-16, or GB18030. See also section UNICODE."
 msgstr "Никада не користите ову опцију када је излазно кодирање другачије од „UTF-8“, „UTF-16“, или „GB18030“. Видите такође одељак ЈУНИКОД."
 
 #. type: =item
-#: dos2unix.pod:418
+#: dos2unix.pod:422
 msgid "B<-n, --newfile INFILE OUTFILE ...>"
 msgstr "B<-n, --newfile УЛАЗНА_ДАТОТЕКА ИЗЛАЗНА_ДАТОТЕКА ...>"
 
 #. type: textblock
-#: dos2unix.pod:420
+#: dos2unix.pod:424
 msgid "New file mode. Convert file INFILE and write output to file OUTFILE.  File names must be given in pairs and wildcard names should I<not> be used or you I<will> lose your files."
 msgstr "Нови режим датотеке. Претвара датотеку УЛ_ДАТОТЕКА и пише излаз у датотеку ИЗЛ_ДАТОТЕКА.  Називи датотека морају бити дати у паровима и називи џокера се „I<не>“ могу користити или „I<ћете>“ изгубити своје датотеке."
 
 #. type: textblock
-#: dos2unix.pod:424
+#: dos2unix.pod:428
 msgid "The person who starts the conversion in new file (paired) mode will be the owner of the converted file. The read/write permissions of the new file will be the permissions of the original file minus the umask(1) of the person who runs the conversion."
 msgstr "Особа која започне претварање у режиму нове (упарене) датотеке биће власник претворене датотеке. Овлашћења за читање/писање нове датотеке биће овлашћење изворне датотеке мање „umask(1)“ особе која покреће претварање."
 
 #. type: =item
-#: dos2unix.pod:429
+#: dos2unix.pod:433
 msgid "B<--no-allow-chown>"
 msgstr "B<--no-allow-chown>"
 
 #. type: textblock
-#: dos2unix.pod:431
+#: dos2unix.pod:435
 msgid "Don't allow file ownership change in old file mode (default)."
 msgstr "Не дозвољава да се власништва датотеке промене у режиму старе датотеке."
 
 #. type: textblock
-#: dos2unix.pod:433
+#: dos2unix.pod:437
 msgid "Abort conversion when the user and/or group ownership of the original file can't be preserved in old file mode. See also options C<-o> and C<-n>. This option is only available if dos2unix has support for preserving the user and group ownership of files."
 msgstr "Прекида претварање када власништво корисника и/или групе изворне датотеке не може бити очувано у старом режиму датотеке. Такође видите опције „C<-o>“ и „C<-n>“. Ова опција је доступна само ако „dos2unix“ има подршку за очување власништва корисника и група над датотекама."
 
 #. type: =item
-#: dos2unix.pod:438
+#: dos2unix.pod:442
 msgid "B<--no-add-eol>"
 msgstr "B<--no-add-eol>"
 
 #. type: textblock
-#: dos2unix.pod:440
-msgid "Do not add a line break to the last line if there isn't one."
-msgstr "Не додаје прекид реда у последњи ред ако га нема."
+#: dos2unix.pod:444
+msgid "Do not add a line break to the last line if there isn't one (default)."
+msgstr "Не додаје прекид реда у последњи ред ако га нема (основно)."
 
 #. type: =item
-#: dos2unix.pod:442
+#: dos2unix.pod:446
+msgid "B<--no-error-binary>"
+msgstr "B<--no-error-binary>"
+
+#. type: textblock
+#: dos2unix.pod:448
+msgid "Do not return an error if a binary file is skipped (default)."
+msgstr "Не враћа грешку ако је бинарна датотека прескочена (основно)."
+
+#. type: =item
+#: dos2unix.pod:450
 msgid "B<-O, --to-stdout>"
 msgstr "B<-O, --to-stdout>"
 
 #. type: textblock
-#: dos2unix.pod:444
+#: dos2unix.pod:452
 msgid "Write to standard output, like a Unix filter. Use option C<-o> to go back to old file (in-place) mode."
 msgstr "Пише на стандардни излаз, као Јуникс филтер. Користите опцију „-o“ да се вратите на режим старе датотеке (одмах)."
 
 #. type: textblock
-#: dos2unix.pod:447
+#: dos2unix.pod:455
 msgid "Combined with option C<-e> files can be properly concatenated. No merged last and first lines, and no Unicode byte order marks in the middle of the concatenated file. Example:"
 msgstr "Заједно са опцијом „-e“ датотеке се могу исправно надовезати. Нема стопљеног првог и последњег реда, и нема ознаке поретка Јуникод бајта по средини надовезане датотеке. Пример:"
 
 #. type: verbatim
-#: dos2unix.pod:451
+#: dos2unix.pod:459
 #, no-wrap
 msgid ""
 "    dos2unix -e -O file1.txt file2.txt > output.txt\n"
@@ -821,32 +840,32 @@ msgstr ""
 "\n"
 
 #. type: =item
-#: dos2unix.pod:453
+#: dos2unix.pod:461
 msgid "B<-o, --oldfile FILE ...>"
 msgstr "B<-o, --oldfile ДАТОТЕКА ...>"
 
 #. type: textblock
-#: dos2unix.pod:455
+#: dos2unix.pod:463
 msgid "Old file mode. Convert file FILE and overwrite output to it. The program defaults to run in this mode. Wildcard names may be used."
 msgstr "Режим старе датотеке. Претвара датотеку ДАТОТЕКА и преписује излаз у њу. Програм подразумевано ради у овом режиму. Џокери назива се могу користити."
 
 #. type: textblock
-#: dos2unix.pod:458
+#: dos2unix.pod:466
 msgid "In old file (in-place) mode the converted file gets the same owner, group, and read/write permissions as the original file. Also when the file is converted by another user who has write permissions on the file (e.g. user root).  The conversion will be aborted when it is not possible to preserve the original values.  Change of owner could mean that the original owner is not able to read the file any more. Change of group could be a security risk, the file could be made readable for persons for whom it is not intended.  Preservation of owner, group, and read/write permissions is only supported on Unix."
 msgstr "У режиму старе датотеке (у месту) претворена датотека добија иста овлашћења власника, групе и читања/писања као и изворна датотека. Такође када датотеку претвори други корисник који има овлашћење писања над датотеком (нпр. корисник администратор).  Претварање ће се прекинути када не буде било могуће очувати изворне вредности.  Промена власника може значити да првобитни власник више не може да чита датотеку. Промена групе може представљати безбедносни ризик, датотека може постати читљива од стране особа којима није намењена. Очување овлашћења власника, групе и читања/писања подржано је само на Јуниксу."
 
 #. type: textblock
-#: dos2unix.pod:467
+#: dos2unix.pod:475
 msgid "To check if dos2unix has support for preserving the user and group ownership of files type C<dos2unix -V>."
 msgstr "Да проверите да ли „dos2unix“ има подршку очувања власништва корисника и групе над датотеком упишите „C<dos2unix -V>“."
 
 #. type: textblock
-#: dos2unix.pod:470
+#: dos2unix.pod:478
 msgid "Conversion is always done via a temporary file. When an error occurs halfway the conversion, the temporary file is deleted and the original file stays intact. When the conversion is successful, the original file is replaced with the temporary file. You may have write permission on the original file, but no permission to put the same user and/or group ownership properties on the temporary file as the original file has. This means you are not able to preserve the user and/or group ownership of the original file. In this case you can use option C<--allow-chown> to continue with the conversion:"
 msgstr "Претварање се увек врши путем привремене датотеке. Када се на пола претварања догоди грешка, привремена датотека се брише а изворна датотека остаје нетакнута. Када претварање успе, изворна датотека се замењује привременом датотеком. Можете имати дозволу за писање над изворном датотеком, али немате дозволу да ставите иста својстава овлашћења корисника и/или груп у привремену датотеку као што има и изворна датотека. То значи да нисте у могућности да сачувате власништво корисника и/или групе над изворном датотеком. У овом случају можете користити опцију „C<--allow-chown>“ да наставите са претварањем:"
 
 #. type: verbatim
-#: dos2unix.pod:479
+#: dos2unix.pod:487
 #, no-wrap
 msgid ""
 "    dos2unix --allow-chown foo.txt\n"
@@ -856,12 +875,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:481
+#: dos2unix.pod:489
 msgid "Another option is to use new file mode:"
 msgstr "Друга могућност је да користи режим нове датотеке:"
 
 #. type: verbatim
-#: dos2unix.pod:483
+#: dos2unix.pod:491
 #, no-wrap
 msgid ""
 "    dos2unix -n foo.txt foo.txt\n"
@@ -871,227 +890,232 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:485
+#: dos2unix.pod:493
 msgid "The advantage of the C<--allow-chown> option is that you can use wildcards, and the ownership properties will be preserved when possible."
 msgstr "Предност опције „C<--allow-chown>“ је да можете користити џокере, а својства власништва биће очувана када је могуће."
 
 #. type: =item
-#: dos2unix.pod:488
+#: dos2unix.pod:496
 msgid "B<-q, --quiet>"
 msgstr "B<-q, --quiet>"
 
 #. type: textblock
-#: dos2unix.pod:490
+#: dos2unix.pod:498
 msgid "Quiet mode. Suppress all warnings and messages. The return value is zero.  Except when wrong command-line options are used."
 msgstr "Тихи режим. Потискује сва упозорења и поруке. Резултантна вредност је нула.  Осим када се користе погрешне опције линије наредби."
 
 #. type: =item
-#: dos2unix.pod:493
+#: dos2unix.pod:501
 msgid "B<-r, --remove-bom>"
 msgstr "B<-r, --remove-bom>"
 
 #. type: textblock
-#: dos2unix.pod:495
+#: dos2unix.pod:503
 msgid "Remove Byte Order Mark (BOM). Do not write a BOM in the output file.  This is the default behavior when converting to Unix line breaks.  See also option C<-b>."
 msgstr "Уклања Ознаку редоследа бајтова (BOM). Не пише ОРБ у излазну датотеку.  Ово је основно понашање приликом претварања у Јуникс преламање реда.  Видите такође опцију „C<-b>“."
 
 #. type: =item
-#: dos2unix.pod:499
+#: dos2unix.pod:507
 msgid "B<-s, --safe>"
 msgstr "B<-s, --safe>"
 
 #. type: textblock
-#: dos2unix.pod:501
+#: dos2unix.pod:509
 msgid "Skip binary files (default)."
 msgstr "Прескаче извршне датотеке (основно)."
 
 #. type: textblock
-#: dos2unix.pod:503
+#: dos2unix.pod:511
 msgid "The skipping of binary files is done to avoid accidental mistakes. Be aware that the detection of binary files is not 100% foolproof. Input files are scanned for binary symbols which are typically not found in text files. It is possible that a binary file contains only normal text characters. Such a binary file will mistakenly be seen as a text file."
 msgstr "Прескакање бинарних датотека врши се како би се избегле случајне грешке. Имајте на уму да откривање бинарних датотека није 100% поуздано. У улазним датотекама се траже бинарни симболи који се обично не налазе у текстуалним датотекама. Могуће је да бинарна датотека садржи само обичне текстуалне знакове. Таква бинарна датотека ће се погрешно сматрати текстуалном датотеком."
 
+#. type: textblock
+#: dos2unix.pod:517
+msgid "By default, no error is returned when a binary file is skipped. When the C<--error-binary> option is used, an error is returned."
+msgstr "По основи, никаква грешка се не враћа када је бинарна датотека прескочена. Када се користи опција C<--error-binary>, враћа се грешка."
+
 #. type: =item
-#: dos2unix.pod:509
+#: dos2unix.pod:520
 msgid "B<-u, --keep-utf16>"
 msgstr "B<-u, --keep-utf16>"
 
 #. type: textblock
-#: dos2unix.pod:511
+#: dos2unix.pod:522
 msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgstr "Задржава изворно УТФ-16 кодирање улазне датотеке. Излазна датотека биће записана у истом УТФ-16 кодирању, малом или великом крајношћу, као и улазна датотека.  Ово спречава преображај у УТФ-8. УТФ-16 ОРБ биће записан у складу с тим. Ова опција се може онемогућити помоћу опције „C<-ascii>“."
 
 #. type: =item
-#: dos2unix.pod:516
+#: dos2unix.pod:527
 msgid "B<-ul, --assume-utf16le>"
 msgstr "B<-ul, --assume-utf16le>"
 
 #. type: textblock
-#: dos2unix.pod:518
+#: dos2unix.pod:529
 msgid "Assume that the input file format is UTF-16LE."
 msgstr "Подразумева да је формат улазне датотеке „UTF-16LE“."
 
 #. type: textblock
-#: dos2unix.pod:520
+#: dos2unix.pod:531
 msgid "When there is a Byte Order Mark in the input file the BOM has priority over this option."
 msgstr "Када постоји Ознака редоследа бајтова у улазној датотеци ОРБ има предност над овом опцијом."
 
 #. type: textblock
-#: dos2unix.pod:523
+#: dos2unix.pod:534
 msgid "When you made a wrong assumption (the input file was not in UTF-16LE format) and the conversion succeeded, you will get an UTF-8 output file with wrong text.  You can undo the wrong conversion with iconv(1) by converting the UTF-8 output file back to UTF-16LE. This will bring back the original file."
 msgstr "Када сте погрешно претпоставили (улазна датотека није била у УТФ-16ЛЕ формату) а претварање је успело, добићете УТФ-8 излазну датотеку са погрешним текстом.  Погрешно претварање можете да опозовете помоћу „iconv(1)“ претварањем УТФ-8 излазне датотеке назад у УТФ-16ЛЕ. Ово ће вратити изворну датотеку."
 
 #. type: textblock
-#: dos2unix.pod:528
+#: dos2unix.pod:539
 msgid "The assumption of UTF-16LE works as a I<conversion mode>. By switching to the default I<ascii> mode the UTF-16LE assumption is turned off."
 msgstr "Претпоставка УТФ-16ЛЕ ради као „I<conversion mode>“. Пребацивањем на основни „I<ascii>“ режим УТФ-16ЛЕ претпоставка се искључује."
 
 #. type: =item
-#: dos2unix.pod:531
+#: dos2unix.pod:542
 msgid "B<-ub, --assume-utf16be>"
 msgstr "B<-ub, --assume-utf16be>"
 
 #. type: textblock
-#: dos2unix.pod:533
+#: dos2unix.pod:544
 msgid "Assume that the input file format is UTF-16BE."
 msgstr "Подразумева да је формат улазне датотеке „UTF-16BE“."
 
 #. type: textblock
-#: dos2unix.pod:535
+#: dos2unix.pod:546
 msgid "This option works the same as option C<-ul>."
 msgstr "Ова опција ради исто као и опција „C<-ul>“."
 
 #. type: =item
-#: dos2unix.pod:537
+#: dos2unix.pod:548
 msgid "B<-v, --verbose>"
 msgstr "B<-v, --verbose>"
 
 #. type: textblock
-#: dos2unix.pod:539
+#: dos2unix.pod:550
 msgid "Display verbose messages. Extra information is displayed about Byte Order Marks and the amount of converted line breaks."
 msgstr "Приказује опширне поруке. Додатне информације се приказују о Ознаци редоследа бајтова и количини претворених преламања реда."
 
 #. type: =item
-#: dos2unix.pod:542
+#: dos2unix.pod:553
 msgid "B<-F, --follow-symlink>"
 msgstr "B<-F, --follow-symlink>"
 
 #. type: textblock
-#: dos2unix.pod:544
+#: dos2unix.pod:555
 msgid "Follow symbolic links and convert the targets."
 msgstr "Прати симболичке везе и претвара циљеве."
 
 #. type: =item
-#: dos2unix.pod:546
+#: dos2unix.pod:557
 msgid "B<-R, --replace-symlink>"
 msgstr "B<-R, --replace-symlink>"
 
 #. type: textblock
-#: dos2unix.pod:548
+#: dos2unix.pod:559
 msgid "Replace symbolic links with converted files (original target files remain unchanged)."
 msgstr "Замењује симболичке везе претвореним датотекама (изворне циљне датотеке остају непромењене)."
 
 #. type: =item
-#: dos2unix.pod:551
+#: dos2unix.pod:562
 msgid "B<-S, --skip-symlink>"
 msgstr "B<-S, --skip-symlink>"
 
 #. type: textblock
-#: dos2unix.pod:553
+#: dos2unix.pod:564
 msgid "Keep symbolic links and targets unchanged (default)."
 msgstr "Задржава неизмењеним симболичке везе и циљеве (основно)."
 
 #. type: =item
-#: dos2unix.pod:555
+#: dos2unix.pod:566
 msgid "B<-V, --version>"
 msgstr "B<-V, --version>"
 
 #. type: textblock
-#: dos2unix.pod:557
+#: dos2unix.pod:568
 msgid "Display version information and exit."
 msgstr "Приказује податке о издању и излази."
 
 #. type: =head1
-#: dos2unix.pod:561
+#: dos2unix.pod:572
 msgid "MAC MODE"
 msgstr "МЕК РЕЖИМ"
 
 #. type: textblock
-#: dos2unix.pod:563
+#: dos2unix.pod:574
 msgid "By default line breaks are converted from DOS to Unix and vice versa.  Mac line breaks are not converted."
 msgstr "По основи преламања реда се претварају из DOS-а у Unix и обратно.  Mac-ова преламања реда се не претварају."
 
 #. type: textblock
-#: dos2unix.pod:566
+#: dos2unix.pod:577
 msgid "In Mac mode line breaks are converted from Mac to Unix and vice versa. DOS line breaks are not changed."
 msgstr "У Мек режиму преламања реда се претварју из Мек-а у Јуникс и обратно.  ДОС преламања реда се не мењају."
 
 #. type: textblock
-#: dos2unix.pod:569
+#: dos2unix.pod:580
 msgid "To run in Mac mode use the command-line option C<-c mac> or use the commands C<mac2unix> or C<unix2mac>."
 msgstr "Да покренете у Мек режиму користите опцију „C<-c mac>“ или користите наредбе „C<mac2unix>“ или „C<unix2mac>“."
 
 #. type: =head1
-#: dos2unix.pod:572
+#: dos2unix.pod:583
 msgid "CONVERSION MODES"
 msgstr "РЕЖИМИ ПРЕТВАРАЊА"
 
 #. type: =item
-#: dos2unix.pod:576
+#: dos2unix.pod:587
 msgid "B<ascii>"
 msgstr "B<ascii>"
 
 #. type: textblock
-#: dos2unix.pod:578
+#: dos2unix.pod:589
 msgid "This is the default conversion mode. This mode is for converting ASCII and ASCII-compatible encoded files, like UTF-8. Enabling B<ascii> mode disables B<7bit> and B<iso> mode."
 msgstr "Ово је основни режим претварања. Овај режим је за претварање ASCII и ASCII-сагласних кодираних датотека, као UTF-8. Укључивање B<ascii> режима искључује B<7bit> и B<iso>."
 
 #. type: textblock
-#: dos2unix.pod:582
+#: dos2unix.pod:593
 msgid "If dos2unix has UTF-16 support, UTF-16 encoded files are converted to the current locale character encoding on POSIX systems and to UTF-8 on Windows.  Enabling B<ascii> mode disables the option to keep UTF-16 encoding (C<-u>) and the options to assume UTF-16 input (C<-ul> and C<-ub>).  To see if dos2unix has UTF-16 support type C<dos2unix -V>. See also section UNICODE."
 msgstr "Ако dos2unix има UTF-16 подршку, UTF-16 кодиране датотеке се претварају у кодирање знакова текућег језика на  POSIX системима и у UTF-8 на Виндоузу.  Укључивањем B<ascii> режима искључује се опција за задржавање UTF-16 кодирања (C<-u>) и опције за прихват UTF-16 улаза (C<-ul> и C<-ub>).  Да видите да ли dos2unix има UTF-16 подршку укуцајте C<dos2unix -V>. Видите такође одељак UNICODE."
 
 #. type: =item
-#: dos2unix.pod:588
+#: dos2unix.pod:599
 msgid "B<7bit>"
 msgstr "B<7bit>"
 
 #. type: textblock
-#: dos2unix.pod:590
+#: dos2unix.pod:601
 msgid "In this mode all 8 bit non-ASCII characters (with values from 128 to 255)  are converted to a 7 bit space."
 msgstr "У овом режиму сви 8 битни не-АСКРИ знаци (са вредностима од 128 до 255) се претварају у 7 битне размаке."
 
 #. type: =item
-#: dos2unix.pod:593
+#: dos2unix.pod:604
 msgid "B<iso>"
 msgstr "B<iso>"
 
 #. type: textblock
-#: dos2unix.pod:595
+#: dos2unix.pod:606
 msgid "Characters are converted between a DOS character set (code page) and ISO character set ISO-8859-1 (Latin-1) on Unix. DOS characters without ISO-8859-1 equivalent, for which conversion is not possible, are converted to a dot. The same counts for ISO-8859-1 characters without DOS counterpart."
 msgstr "Знакови се претварају између ДОС скупа знакова (кодна страница) и ИСО скупа знакова ИСО-8859-1 (Latin-1) на Јуниксу. ДОС знакови без ИСО-8859-1 еквивалента, за које претварање није могуће, претварају се у тачку. Исто се рачуна и за ИСО-8859-1 знакове без ДОС-а."
 
 #. type: textblock
-#: dos2unix.pod:600
+#: dos2unix.pod:611
 msgid "When only option C<-iso> is used dos2unix will try to determine the active code page. When this is not possible dos2unix will use default code page CP437, which is mainly used in the USA.  To force a specific code page use options C<-437> (US), C<-850> (Western European), C<-860> (Portuguese), C<-863> (French Canadian), or C<-865> (Nordic).  Windows code page CP1252 (Western European) is also supported with option C<-1252>. For other code pages use dos2unix in combination with iconv(1).  Iconv can convert between a long list of character encodings."
 msgstr "Када се користи само опција „C<-iso>“, „dos2unix“ ће покушати да одреди активну кодну страницу. Када то није могуће, „dos2unix“ ће користити подразумевану кодну страницу ЦП437, која се углавном користи у САД-у. Да бисте приморали одређену кодну страницу, користите опције „C<-437>“ (САД), „C<-850>“ (западноевропски), „C<-860>“ (португалски), „C<-863>“ (француски канадски) или „C<-865>“ (нордијски).  Виндоуз кодна страница ЦП1252 (западноевропски) је такође подржана опцијом „C<-1252>“. За остале кодне странице користите „dos2unix“ у комбинацији са „iconv(1)“.  Иконв може да претвара између дугог списка кодирања знакова."
 
 #. type: textblock
-#: dos2unix.pod:609
+#: dos2unix.pod:620
 msgid "Never use ISO conversion on Unicode text files. It will corrupt UTF-8 encoded files."
 msgstr "Никада не користите ИСО претварање над Јуникод текстуалним датотекама. Оштетиће УТФ-8 кодиране датотеке."
 
 #. type: textblock
-#: dos2unix.pod:611
+#: dos2unix.pod:622
 msgid "Some examples:"
 msgstr "Неки примери:"
 
 #. type: textblock
-#: dos2unix.pod:613
+#: dos2unix.pod:624
 msgid "Convert from DOS default code page to Unix Latin-1:"
 msgstr "Претворите из ДОС основне кодне странице у Јуникс Latin-1:"
 
 #. type: verbatim
-#: dos2unix.pod:615
+#: dos2unix.pod:626
 #, no-wrap
 msgid ""
 "    dos2unix -iso -n in.txt out.txt\n"
@@ -1101,12 +1125,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:617
+#: dos2unix.pod:628
 msgid "Convert from DOS CP850 to Unix Latin-1:"
 msgstr "Претворите из ДОС CP850 у Јуникс Latin-1:"
 
 #. type: verbatim
-#: dos2unix.pod:619
+#: dos2unix.pod:630
 #, no-wrap
 msgid ""
 "    dos2unix -850 -n in.txt out.txt\n"
@@ -1116,12 +1140,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:621
+#: dos2unix.pod:632
 msgid "Convert from Windows CP1252 to Unix Latin-1:"
 msgstr "Претворите из Виндоуз CP1252 у Јуникс Latin-1:"
 
 #. type: verbatim
-#: dos2unix.pod:623
+#: dos2unix.pod:634
 #, no-wrap
 msgid ""
 "    dos2unix -1252 -n in.txt out.txt\n"
@@ -1131,12 +1155,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:625
+#: dos2unix.pod:636
 msgid "Convert from Windows CP1252 to Unix UTF-8 (Unicode):"
 msgstr "Претворите из Виндоуз CP1252 у Јуникс УТФ-8 (Јуникод):"
 
 #. type: verbatim
-#: dos2unix.pod:627
+#: dos2unix.pod:638
 #, no-wrap
 msgid ""
 "    iconv -f CP1252 -t UTF-8 in.txt | dos2unix > out.txt\n"
@@ -1146,12 +1170,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:629
+#: dos2unix.pod:640
 msgid "Convert from Unix Latin-1 to DOS default code page:"
 msgstr "Претворите из Јуникс Latin-1 у ДОС основну кодну страницу:"
 
 #. type: verbatim
-#: dos2unix.pod:631
+#: dos2unix.pod:642
 #, no-wrap
 msgid ""
 "    unix2dos -iso -n in.txt out.txt\n"
@@ -1161,12 +1185,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:633
+#: dos2unix.pod:644
 msgid "Convert from Unix Latin-1 to DOS CP850:"
 msgstr "Претворите из Јуникс Latin-1 у ДОС CP850:"
 
 #. type: verbatim
-#: dos2unix.pod:635
+#: dos2unix.pod:646
 #, no-wrap
 msgid ""
 "    unix2dos -850 -n in.txt out.txt\n"
@@ -1176,12 +1200,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:637
+#: dos2unix.pod:648
 msgid "Convert from Unix Latin-1 to Windows CP1252:"
 msgstr "Претворите из Јуникс Latin-1 у Вондоуз CP1252:"
 
 #. type: verbatim
-#: dos2unix.pod:639
+#: dos2unix.pod:650
 #, no-wrap
 msgid ""
 "    unix2dos -1252 -n in.txt out.txt\n"
@@ -1191,12 +1215,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:641
+#: dos2unix.pod:652
 msgid "Convert from Unix UTF-8 (Unicode) to Windows CP1252:"
 msgstr "Претворите из Јуникс УТФ-8 (Јуникод) у Вондоуз CP1252:"
 
 #. type: verbatim
-#: dos2unix.pod:643
+#: dos2unix.pod:654
 #, no-wrap
 msgid ""
 "    unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > out.txt\n"
@@ -1206,142 +1230,142 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:645
+#: dos2unix.pod:656
 msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
 msgstr "Видите такође L<http://czyborra.com/charsets/codepages.html> и L<http://czyborra.com/charsets/iso8859.html>."
 
 #. type: =head1
-#: dos2unix.pod:650
+#: dos2unix.pod:661
 msgid "UNICODE"
 msgstr "УНИКОД"
 
 #. type: =head2
-#: dos2unix.pod:652
+#: dos2unix.pod:663
 msgid "Encodings"
 msgstr "Кодирања"
 
 #. type: textblock
-#: dos2unix.pod:654
+#: dos2unix.pod:665
 msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
 msgstr "Постоје различита Јуникод кодирања. На Јуниксу и Линуксу Јуникод датотеке су обично кодиране у УТФ-8 кодирању. На Виндоузу Јуникод текстуалне датотеке могу бити кодиране у УТФ-8, УТФ-16 или УТФ-16 великој крајности, али су углавном кодиране у УТФ-16 формату."
 
 #. type: =head2
-#: dos2unix.pod:659
+#: dos2unix.pod:670
 msgid "Conversion"
 msgstr "Претварање"
 
 #. type: textblock
-#: dos2unix.pod:661
+#: dos2unix.pod:672
 msgid "Unicode text files can have DOS, Unix or Mac line breaks, like ASCII text files."
 msgstr "Јуникод текстуалне датотеке могу имати DOS, Unix или Mac преломе реда, као ASCII текстуалне датотеке."
 
 #. type: textblock
-#: dos2unix.pod:664
+#: dos2unix.pod:675
 msgid "All versions of dos2unix and unix2dos can convert UTF-8 encoded files, because UTF-8 was designed for backward compatibility with ASCII."
 msgstr "Сва издања „dos2unix“-а и „unix2do“-а могу претворити УТФ-8 кодиране датотеке, јер је УТФ-8 дизајниран за повратну сагласност са АСКРИ-ијем."
 
 #. type: textblock
-#: dos2unix.pod:667
+#: dos2unix.pod:678
 msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr "„dos2unix“ и „unix2dos“ са Јуникод УТФ-16 подршком, може читати УТФ-16 кодиране текстуалне датотеке мале и велике крајности. Да видите да ли је „dos2unix“ изграђен са УТФ-16 подршком упишите „C<dos2unix -V>“."
 
 #. type: textblock
-#: dos2unix.pod:671
+#: dos2unix.pod:682
 msgid "On Unix/Linux UTF-16 encoded files are converted to the locale character encoding. Use the locale(1) command to find out what the locale character encoding is. When conversion is not possible a conversion error will occur and the file will be skipped."
 msgstr "На Јуниксу/Линуксу УТФ-16 кодиране датотеке се претварају у локално кодирање знакова. Користите наредбу „locale(1)“ да сазнате које је кодирање знакова локализације. Када претварање није могуће, десиће се грешка претварања а датотека ће бити прескочена."
 
 #. type: textblock
-#: dos2unix.pod:676
+#: dos2unix.pod:687
 msgid "On Windows UTF-16 files are by default converted to UTF-8. UTF-8 formatted text files are well supported on both Windows and Unix/Linux."
 msgstr "На Виндоузу УТФ-16 датотеке се подразумевано претварају у УТФ-8. УТФ-8 форматиране текстуалне датотеке су добро подржане и на Виндоузу и на Јуникс/Линуксу."
 
 #. type: textblock
-#: dos2unix.pod:679
+#: dos2unix.pod:690
 msgid "UTF-16 and UTF-8 encoding are fully compatible, there will no text be lost in the conversion. When an UTF-16 to UTF-8 conversion error occurs, for instance when the UTF-16 input file contains an error, the file will be skipped."
 msgstr "УТФ-16 и УТФ-8 кодирања су у потпуности сагласна, у претварању се неће изгубити никакав текст. Када се догоди грешка претварања УТФ-16 у УТФ-8, на пример када улазна УТФ-16 датотека садржи грешку, датотека ће бити прескочена."
 
 #. type: textblock
-#: dos2unix.pod:683
+#: dos2unix.pod:694
 msgid "When option C<-u> is used, the output file will be written in the same UTF-16 encoding as the input file. Option C<-u> prevents conversion to UTF-8."
 msgstr "Када се користи опција „C<-u>“, излазна датотека ће бити записана у истом УТФ-16 кодирању као и улазна датотека. Опција „C<-u>“ спречава претварање у УТФ-8."
 
 #. type: textblock
-#: dos2unix.pod:686
+#: dos2unix.pod:697
 msgid "dos2unix and unix2dos have no option to convert UTF-8 files to UTF-16."
 msgstr "„dos2unix“ и „unix2dos“ немају могућности да претворе УТФ-8 датотеке у УТФ-16."
 
 #. type: textblock
-#: dos2unix.pod:688
+#: dos2unix.pod:699
 msgid "ISO and 7-bit mode conversion do not work on UTF-16 files."
 msgstr "ИСО и 7-битни режим претварања не ради на УТФ-16 датотекама."
 
 #. type: =head2
-#: dos2unix.pod:690
+#: dos2unix.pod:701
 msgid "Byte Order Mark"
 msgstr "Ознака редоследа бајтова"
 
 #. type: textblock
-#: dos2unix.pod:692
+#: dos2unix.pod:703
 msgid "On Windows Unicode text files typically have a Byte Order Mark (BOM), because many Windows programs (including Notepad) add BOMs by default. See also L<https://en.wikipedia.org/wiki/Byte_order_mark>."
 msgstr "На Виндоузу Јуникод текстуалне датотеке обично имају Ознаку редоследа бајтова (BOM), јер многи Виндоуз програми (укључујући Бележницу) подразумевано додају ОРБ. Видите такође L<https://en.wikipedia.org/wiki/Byte_order_mark>."
 
 #. type: textblock
-#: dos2unix.pod:696
+#: dos2unix.pod:707
 msgid "On Unix Unicode files typically don't have a BOM. It is assumed that text files are encoded in the locale character encoding."
 msgstr "На Јуниксу Јуникод датотеке обично немају ОРБ. Претпоставља се да су текстуалне датотеке кодиране у језичком кодирању знака."
 
 #. type: textblock
-#: dos2unix.pod:699
+#: dos2unix.pod:710
 msgid "dos2unix can only detect if a file is in UTF-16 format if the file has a BOM.  When an UTF-16 file doesn't have a BOM, dos2unix will see the file as a binary file."
 msgstr "„dos2unix“ може открити само да ли је датотека у УТФ-16 формату и да ли датотека има ОРБ.  Када УТФ-16 датотека нема ОРБ, „dos2unix“ ће видети датотеку као бинарну."
 
 #. type: textblock
-#: dos2unix.pod:703
+#: dos2unix.pod:714
 msgid "Use option C<-ul> or C<-ub> to convert an UTF-16 file without BOM."
 msgstr "Користите опцију „C<-ul>“ или „C<-ub>“ да претворите УТФ-16 датотеку без ОРБ-а."
 
 #. type: textblock
-#: dos2unix.pod:705
+#: dos2unix.pod:716
 msgid "dos2unix writes by default no BOM in the output file. With option C<-b> dos2unix writes a BOM when the input file has a BOM."
 msgstr "„dos2unix“ подразумевано не записује ОРБ у излазну датотеку. Са опцијом „C<-b>“ „dos2unix записује ОРБ када улазна датотека има ОРБ."
 
 #. type: textblock
-#: dos2unix.pod:708
+#: dos2unix.pod:719
 msgid "unix2dos writes by default a BOM in the output file when the input file has a BOM. Use option C<-r> to remove the BOM."
 msgstr "„unix2dos“ подразумевано записује ОРБ у излазну датотеку када улазна датотека има ОРБ. Користите опцију „C<-r>“ да уклоните ОРБ."
 
 #. type: textblock
-#: dos2unix.pod:711
+#: dos2unix.pod:722
 msgid "dos2unix and unix2dos write always a BOM when option C<-m> is used."
 msgstr "„dos2unix“ и „unix2dos“ увек записује ОРБ када се користи „C<-m>“ опција."
 
 #. type: =head2
-#: dos2unix.pod:713
+#: dos2unix.pod:724
 msgid "Unicode file names on Windows"
 msgstr "Јуникод називи датотека на Виндоузу"
 
 #. type: textblock
-#: dos2unix.pod:715
+#: dos2unix.pod:726
 msgid "dos2unix has optional support for reading and writing Unicode file names in the Windows Command Prompt. That means that dos2unix can open files that have characters in the name that are not part of the default system ANSI code page.  To see if dos2unix for Windows was built with Unicode file name support type C<dos2unix -V>."
 msgstr "„dos2unix“ има изборну подршку за читање и писање Јуникод назива датотека у Виндоуз командној линији. То значи да „dos2unix“ може отворити датотеке које у називу имају знакове који нису део подразумеване системске АНСИ кодне странице.  Да бисте видели да ли је „dos2unix“ за Виндоуз изграђен са подршком Јуникод назива датотеке упишите „C<dos2unix -V>“."
 
 #. type: textblock
-#: dos2unix.pod:721
+#: dos2unix.pod:732
 msgid "There are some issues with displaying Unicode file names in a Windows console.  See option C<-D>, C<--display-enc>. The file names may be displayed wrongly in the console, but the files will be written with the correct name."
 msgstr "Постоје проблеми са приказом Јуникод назива датотека у Виндоуз конзоли.  Видите опцију „C<-D>“, „C<--display-enc>“. Називи датотека могу бити погрешно приказани у конзоли, али ће датотеке бити записане под тачним називом."
 
 #. type: =head2
-#: dos2unix.pod:725
+#: dos2unix.pod:736
 msgid "Unicode examples"
 msgstr "Примери Уникода"
 
 #. type: textblock
-#: dos2unix.pod:727
+#: dos2unix.pod:738
 msgid "Convert from Windows UTF-16 (with BOM) to Unix UTF-8:"
 msgstr "Претвара из Виндоуз УТФ-16 (са ОРБ-ом) у Јуникс УТФ-8:"
 
 #. type: verbatim
-#: dos2unix.pod:729
+#: dos2unix.pod:740
 #, no-wrap
 msgid ""
 "    dos2unix -n in.txt out.txt\n"
@@ -1351,12 +1375,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:731
+#: dos2unix.pod:742
 msgid "Convert from Windows UTF-16LE (without BOM) to Unix UTF-8:"
 msgstr "Претвара из Виндоуз УТФ-16ЛЕ (без ОРБ-а) у Јуникс УТФ-8:"
 
 #. type: verbatim
-#: dos2unix.pod:733
+#: dos2unix.pod:744
 #, no-wrap
 msgid ""
 "    dos2unix -ul -n in.txt out.txt\n"
@@ -1366,12 +1390,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:735
+#: dos2unix.pod:746
 msgid "Convert from Unix UTF-8 to Windows UTF-8 with BOM:"
 msgstr "Претворите из Јуникс УТФ-8 у Вондоуз УТФ-8 са ОРБ-ом:"
 
 #. type: verbatim
-#: dos2unix.pod:737
+#: dos2unix.pod:748
 #, no-wrap
 msgid ""
 "    unix2dos -m -n in.txt out.txt\n"
@@ -1381,12 +1405,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:739
+#: dos2unix.pod:750
 msgid "Convert from Unix UTF-8 to Windows UTF-16:"
 msgstr "Претворите из Јуникс УТФ-8 у Вондоуз УТФ-16:"
 
 #. type: verbatim
-#: dos2unix.pod:741
+#: dos2unix.pod:752
 #, no-wrap
 msgid ""
 "    unix2dos < in.txt | iconv -f UTF-8 -t UTF-16 > out.txt\n"
@@ -1396,47 +1420,47 @@ msgstr ""
 "\n"
 
 #. type: =head1
-#: dos2unix.pod:743
+#: dos2unix.pod:754
 msgid "GB18030"
 msgstr "GB18030"
 
 #. type: textblock
-#: dos2unix.pod:745
+#: dos2unix.pod:756
 msgid "GB18030 is a Chinese government standard. A mandatory subset of the GB18030 standard is officially required for all software products sold in China. See also L<https://en.wikipedia.org/wiki/GB_18030>."
 msgstr "GB18030 је стандард кинеске владе. Обавезни подскуп GB18030 стандарда се званично захтева за све софтверске производе продате у Кини. Видите такође L<http://en.wikipedia.org/wiki/GB_18030>."
 
 #. type: textblock
-#: dos2unix.pod:749
+#: dos2unix.pod:760
 msgid "GB18030 is fully compatible with Unicode, and can be considered an unicode transformation format. Like UTF-8, GB18030 is compatible with ASCII. GB18030 is also compatible with Windows code page 936, also known as GBK."
 msgstr "„GB18030“ је у потпуности сагласан са Јуникод-ом, и може се сматрати Јуникод форматом преображаја. Као УТФ-8, „GB18030“ је сагласан са АСКРИ. „GB18030“ је такође сагласан са Виндоуз кодном страницом 936, познатом и као ГБК."
 
 #. type: textblock
-#: dos2unix.pod:753
+#: dos2unix.pod:764
 msgid "On Unix/Linux UTF-16 files are converted to GB18030 when the locale encoding is set to GB18030. Note that this will only work if the locale is supported by the system. Use command C<locale -a> to get the list of supported locales."
 msgstr "На Јуниксу/Линуксу УТФ-16 датотеке се претварају у „GB18030“ када је језичко кодирање постављено на „GB18030“. Знајте да ће ово радити само ако је језик подржан системом. Користите наредбу „C<locale -a>“ да добавите списак подржаних језика."
 
 #. type: textblock
-#: dos2unix.pod:757
+#: dos2unix.pod:768
 msgid "On Windows you need to use option C<-gb> to convert UTF-16 files to GB18030."
 msgstr "На Виндоузу треба да користите опцију „C<-gb>“ да преведете УТФ-16 датотеке у „GB18030“."
 
 #. type: textblock
-#: dos2unix.pod:759
+#: dos2unix.pod:770
 msgid "GB18030 encoded files can have a Byte Order Mark, like Unicode files."
 msgstr "„GB18030“ кодиране датотеке могу имати Ознаку редоследа бајтова, као Јуникод датотеке."
 
 #. type: =head1
-#: dos2unix.pod:761
+#: dos2unix.pod:772
 msgid "EXAMPLES"
 msgstr "ПРИМЕРИ"
 
 #. type: textblock
-#: dos2unix.pod:763
+#: dos2unix.pod:774
 msgid "Read input from 'stdin' and write output to 'stdout':"
 msgstr "Чита улаз са „стнд_улаза“ и пише излаз на „стнд_излаз“:"
 
 #. type: verbatim
-#: dos2unix.pod:765
+#: dos2unix.pod:776
 #, no-wrap
 msgid ""
 "    dos2unix < a.txt\n"
@@ -1448,12 +1472,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:768
+#: dos2unix.pod:779
 msgid "Convert and replace a.txt. Convert and replace b.txt:"
 msgstr "Претвара и замењује „а.txt“. Претвара и замењује „б.txt“:"
 
 #. type: verbatim
-#: dos2unix.pod:770
+#: dos2unix.pod:781
 #, no-wrap
 msgid ""
 "    dos2unix a.txt b.txt\n"
@@ -1465,12 +1489,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:773
+#: dos2unix.pod:784
 msgid "Convert and replace a.txt in ascii conversion mode:"
 msgstr "Претвара и замењује „а.txt“ у аскри режиму претварања:"
 
 #. type: verbatim
-#: dos2unix.pod:775
+#: dos2unix.pod:786
 #, no-wrap
 msgid ""
 "    dos2unix a.txt\n"
@@ -1480,12 +1504,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:777
+#: dos2unix.pod:788
 msgid "Convert and replace a.txt in ascii conversion mode, convert and replace b.txt in 7bit conversion mode:"
 msgstr "Претвара и замењује „а.txt“ у аскри режиму претварања, Претвара и замењује „б.txt“ у 7битном режиму претварања:"
 
 #. type: verbatim
-#: dos2unix.pod:780
+#: dos2unix.pod:791
 #, no-wrap
 msgid ""
 "    dos2unix a.txt -c 7bit b.txt\n"
@@ -1499,12 +1523,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:784
+#: dos2unix.pod:795
 msgid "Convert a.txt from Mac to Unix format:"
 msgstr "Претвара „а.txt“ из Мек у Јуникс формат:"
 
 #. type: verbatim
-#: dos2unix.pod:786
+#: dos2unix.pod:797
 #, no-wrap
 msgid ""
 "    dos2unix -c mac a.txt\n"
@@ -1516,12 +1540,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:789
+#: dos2unix.pod:800
 msgid "Convert a.txt from Unix to Mac format:"
 msgstr "Претвара „а.txt“ из Јуникс у Мек формат:"
 
 #. type: verbatim
-#: dos2unix.pod:791
+#: dos2unix.pod:802
 #, no-wrap
 msgid ""
 "    unix2dos -c mac a.txt\n"
@@ -1533,12 +1557,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:794
+#: dos2unix.pod:805
 msgid "Convert and replace a.txt while keeping original date stamp:"
 msgstr "Претвара и замењује „а.txt“ док задржава изворни печат датума:"
 
 #. type: verbatim
-#: dos2unix.pod:796
+#: dos2unix.pod:807
 #, no-wrap
 msgid ""
 "    dos2unix -k a.txt\n"
@@ -1550,12 +1574,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:799
+#: dos2unix.pod:810
 msgid "Convert a.txt and write to e.txt:"
 msgstr "Претвара „а.txt“ и пише на „е.txt“:"
 
 #. type: verbatim
-#: dos2unix.pod:801
+#: dos2unix.pod:812
 #, no-wrap
 msgid ""
 "    dos2unix -n a.txt e.txt\n"
@@ -1565,12 +1589,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:803
+#: dos2unix.pod:814
 msgid "Convert a.txt and write to e.txt, keep date stamp of e.txt same as a.txt:"
 msgstr "Претвара „а.txt“ и пише на „е.txt“, задржава печат датума „е.txt“-а истим као „а.txt“:"
 
 #. type: verbatim
-#: dos2unix.pod:805
+#: dos2unix.pod:816
 #, no-wrap
 msgid ""
 "    dos2unix -k -n a.txt e.txt\n"
@@ -1580,12 +1604,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:807
+#: dos2unix.pod:818
 msgid "Convert and replace a.txt, convert b.txt and write to e.txt:"
 msgstr "Претвара и замењује „а.txt“, претвара „б.txt“ и пише на „.txt“:"
 
 #. type: verbatim
-#: dos2unix.pod:809
+#: dos2unix.pod:820
 #, no-wrap
 msgid ""
 "    dos2unix a.txt -n b.txt e.txt\n"
@@ -1597,12 +1621,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:812
+#: dos2unix.pod:823
 msgid "Convert c.txt and write to e.txt, convert and replace a.txt, convert and replace b.txt, convert d.txt and write to f.txt:"
 msgstr "Претвара „ц.txt“ и пише на „е.txt“, претвара и замењује„а.txt“, претвара и замењује „б.txt“, претвара „д.txt“ и пише у „ф.txt“:"
 
 #. type: verbatim
-#: dos2unix.pod:815
+#: dos2unix.pod:826
 #, no-wrap
 msgid ""
 "    dos2unix -n c.txt e.txt -o a.txt b.txt -n d.txt f.txt\n"
@@ -1612,17 +1636,17 @@ msgstr ""
 "\n"
 
 #. type: =head1
-#: dos2unix.pod:817
+#: dos2unix.pod:828
 msgid "RECURSIVE CONVERSION"
 msgstr "ДУБИНСКО ПРЕТВАРАЊЕ"
 
 #. type: textblock
-#: dos2unix.pod:819
+#: dos2unix.pod:830
 msgid "In a Unix shell the find(1) and xargs(1) commands can be used to run dos2unix recursively over all text files in a directory tree. For instance to convert all .txt files in the directory tree under the current directory type:"
 msgstr "У Јуникс шкољци наредбе „find(1)“ и „xargs(1)“ се могу користити за покретање „dos2unix“-а дубински преко свих текстуалних датотека у стаблу директоријума. На пример за претварање свих „.txt“ датотека у стаблу директоријума под текућим директоријумом упишите:"
 
 #. type: verbatim
-#: dos2unix.pod:823
+#: dos2unix.pod:834
 #, no-wrap
 msgid ""
 "    find . -name '*.txt' -print0 |xargs -0 dos2unix\n"
@@ -1632,12 +1656,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:825
+#: dos2unix.pod:836
 msgid "The find(1) option C<-print0> and corresponding xargs(1) option C<-0> are needed when there are files with spaces or quotes in the name. Otherwise these options can be omitted. Another option is to use find(1) with the C<-exec> option:"
 msgstr "„find(1)“-ова опција „C<-print0>“ и одговарајућа „xargs(1)“-ова опција „C<-0>“ су потребне када постоје датотеке са размацима и наводницима у називима. У супротном се ове опције могу изоставити. Друга могућност је да користите „find(1)“ са „C<-exec>“ опцијом:"
 
 #. type: verbatim
-#: dos2unix.pod:829
+#: dos2unix.pod:840
 #, no-wrap
 msgid ""
 "    find . -name '*.txt' -exec dos2unix {} \\;\n"
@@ -1647,12 +1671,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:831
+#: dos2unix.pod:842
 msgid "In a Windows Command Prompt the following command can be used:"
 msgstr "У Виндоуз командном упиту следеће наредбе се могу користити:"
 
 #. type: verbatim
-#: dos2unix.pod:833
+#: dos2unix.pod:844
 #, no-wrap
 msgid ""
 "    for /R %G in (*.txt) do dos2unix \"%G\"\n"
@@ -1662,12 +1686,12 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:835
+#: dos2unix.pod:846
 msgid "PowerShell users can use the following command in Windows PowerShell:"
 msgstr "Корисници „PowerShell“-а могу користити следеће наредбе у Виндоуз „PowerShell“-у:"
 
 #. type: verbatim
-#: dos2unix.pod:837
+#: dos2unix.pod:848
 #, no-wrap
 msgid ""
 "    get-childitem -path . -filter '*.txt' -recurse | foreach-object {dos2unix $_.Fullname}\n"
@@ -1677,22 +1701,22 @@ msgstr ""
 "\n"
 
 #. type: =head1
-#: dos2unix.pod:840
+#: dos2unix.pod:851
 msgid "LOCALIZATION"
 msgstr "ЈЕЗИЧЕЊЕ"
 
 #. type: =item
-#: dos2unix.pod:844
+#: dos2unix.pod:855
 msgid "B<LANG>"
 msgstr "B<ЈЕЗ>"
 
 #. type: textblock
-#: dos2unix.pod:846
+#: dos2unix.pod:857
 msgid "The primary language is selected with the environment variable LANG. The LANG variable consists out of several parts. The first part is in small letters the language code. The second is optional and is the country code in capital letters, preceded with an underscore. There is also an optional third part: character encoding, preceded with a dot. A few examples for POSIX standard type shells:"
 msgstr "Примарни језик се бира променљивом окружења „LANG“. Променљива „LANG“ се састоји из неколико делова. Први део је малим словима језички код. Други је необавезан и представља код државе великим словима, којем претходи доња црта. Ту је и изборни трећи део: кодирање знакова, којем претходи тачка. Неколико примера за врсте шкољки ПОСИКС стандарда:"
 
 #. type: verbatim
-#: dos2unix.pod:853
+#: dos2unix.pod:864
 #, no-wrap
 msgid ""
 "    export LANG=nl               Dutch\n"
@@ -1714,47 +1738,47 @@ msgstr ""
 "\n"
 
 #. type: textblock
-#: dos2unix.pod:861
+#: dos2unix.pod:872
 msgid "For a complete list of language and country codes see the gettext manual: L<https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html>"
 msgstr "За потпун списак језика и шифара држава видите приручник геттекста: L<https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html>"
 
 #. type: textblock
-#: dos2unix.pod:864
+#: dos2unix.pod:875
 msgid "On Unix systems you can use the command locale(1) to get locale specific information."
 msgstr "На Јуникс системима можете користити наредбу „locale(1)“ да видите особене податке језика."
 
 #. type: =item
-#: dos2unix.pod:867
+#: dos2unix.pod:878
 msgid "B<LANGUAGE>"
 msgstr "B<ЈЕЗИК>"
 
 #. type: textblock
-#: dos2unix.pod:869
+#: dos2unix.pod:880
 msgid "With the LANGUAGE environment variable you can specify a priority list of languages, separated by colons. dos2unix gives preference to LANGUAGE over LANG.  For instance, first Dutch and then German: C<LANGUAGE=nl:de>. You have to first enable localization, by setting LANG (or LC_ALL) to a value other than \"C\", before you can use a language priority list through the LANGUAGE variable. See also the gettext manual: L<https://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html>"
 msgstr "Са променљивом окружења ЈЕЗИК можете навести списак хитности језика, раздвојених двотачком. „dos2unix“ даје предност за ЈЕЗИК над ЈЕЗ.  На пример, прво холандски а затим немачки: C<LANGUAGE=nl:de>. Прво треба да омогућите преводе, постављајући „LANG“ (или LC_ALL) на вредност другачију од „C“, пре него ли будете могли да користите списак хитности језика променљивом „LANGUAGE“. Видите такође приручник геттекста: L<https://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html>"
 
 #. type: textblock
-#: dos2unix.pod:877
+#: dos2unix.pod:888
 msgid "If you select a language which is not available you will get the standard English messages."
 msgstr "Ако изаберете језик који није доступан добићете стандардне поруке на енглеском."
 
 #. type: =item
-#: dos2unix.pod:881
+#: dos2unix.pod:892
 msgid "B<DOS2UNIX_LOCALEDIR>"
 msgstr "B<DOS2UNIX_LOCALEDIR>"
 
 #. type: textblock
-#: dos2unix.pod:883
+#: dos2unix.pod:894
 msgid "With the environment variable DOS2UNIX_LOCALEDIR the LOCALEDIR set during compilation can be overruled. LOCALEDIR is used to find the language files. The GNU default value is C</usr/local/share/locale>.  Option B<--version> will display the LOCALEDIR that is used."
 msgstr "Са променљивом окружења „DOS2UNIX_LOCALEDIR“ „LOCALEDIR“ поставка у време компилације се може поништити. „LOCALEDIR“ се користи за налажење датотека језика. ГНУ-ова основна вредност је „C</usr/local/share/locale>“.  Опција „B<--version>“ ће приказати „LOCALEDIR“ који се користи."
 
 #. type: textblock
-#: dos2unix.pod:888
+#: dos2unix.pod:899
 msgid "Example (POSIX shell):"
 msgstr "Пример (ПОСИКС љуска):"
 
 #. type: verbatim
-#: dos2unix.pod:890
+#: dos2unix.pod:901
 #, no-wrap
 msgid ""
 "    export DOS2UNIX_LOCALEDIR=$HOME/share/locale\n"
@@ -1764,72 +1788,72 @@ msgstr ""
 "\n"
 
 #. type: =head1
-#: dos2unix.pod:895
+#: dos2unix.pod:906
 msgid "RETURN VALUE"
 msgstr "РЕЗУЛТНА ВРЕДНОСТ"
 
 #. type: textblock
-#: dos2unix.pod:897
+#: dos2unix.pod:908
 msgid "On success, zero is returned.  When a system error occurs the last system error will be returned. For other errors 1 is returned."
 msgstr "На успех, резултат је нула.  Када има системских грешака резултат је последња грешка система. За друге грешке резултат је 1."
 
 #. type: textblock
-#: dos2unix.pod:900
+#: dos2unix.pod:911
 msgid "The return value is always zero in quiet mode, except when wrong command-line options are used."
 msgstr "Вредност резултата је увек нула у тихом режиму, изузев када се користе погрешне опције линије наредби."
 
 #. type: =head1
-#: dos2unix.pod:903
+#: dos2unix.pod:914
 msgid "STANDARDS"
 msgstr "СТАНДАРДИ"
 
 #. type: textblock
-#: dos2unix.pod:905
+#: dos2unix.pod:916
 msgid "L<https://en.wikipedia.org/wiki/Text_file>"
 msgstr "L<https://en.wikipedia.org/wiki/Text_file>"
 
 #. type: textblock
-#: dos2unix.pod:907
+#: dos2unix.pod:918
 msgid "L<https://en.wikipedia.org/wiki/Carriage_return>"
 msgstr "L<https://en.wikipedia.org/wiki/Carriage_return>"
 
 #. type: textblock
-#: dos2unix.pod:909
+#: dos2unix.pod:920
 msgid "L<https://en.wikipedia.org/wiki/Newline>"
 msgstr "L<https://en.wikipedia.org/wiki/Newline>"
 
 #. type: textblock
-#: dos2unix.pod:911
+#: dos2unix.pod:922
 msgid "L<https://en.wikipedia.org/wiki/Unicode>"
 msgstr "L<https://en.wikipedia.org/wiki/Unicode>"
 
 #. type: =head1
-#: dos2unix.pod:913
+#: dos2unix.pod:924
 msgid "AUTHORS"
 msgstr "АУТОРИ"
 
 #. type: textblock
-#: dos2unix.pod:915
+#: dos2unix.pod:926
 msgid "Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (mac2unix mode) - <wuebben@kde.org>, Christian Wurll (add extra newline) - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl> (maintainer)"
 msgstr "Бенџамин Лин – <blin@socs.uts.edu.au>, Бернд Јоханес Вебен (mac2unix) – <wuebben@kde.org>, Кристијан Вирл (додаје додатни нови ред) – <wurll@ira.uka.de>, Ервин Вотерландер – <waterlan@xs4all.nl> (одржавалац)"
 
 #. type: textblock
-#: dos2unix.pod:920
+#: dos2unix.pod:931
 msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
 msgstr "Страница пројекта: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
 
 #. type: textblock
-#: dos2unix.pod:922
+#: dos2unix.pod:933
 msgid "SourceForge page: L<https://sourceforge.net/projects/dos2unix/>"
 msgstr "Страница Ковнице извора: L<https://sourceforge.net/projects/dos2unix/>"
 
 #. type: =head1
-#: dos2unix.pod:924
+#: dos2unix.pod:935
 msgid "SEE ALSO"
 msgstr "ВИДИТЕ ТАКОЂЕ"
 
 #. type: textblock
-#: dos2unix.pod:926
+#: dos2unix.pod:937
 msgid "file(1)  find(1)  iconv(1)  locale(1)  xargs(1)"
 msgstr "file(1)  find(1)  iconv(1)  locale(1)  xargs(1)"
 

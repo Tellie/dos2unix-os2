@@ -2,7 +2,7 @@ NUME
     dos2unix - Convertor de format de fișier text din DOS/Mac în Unix și
     viceversa
 
-REZUMAT
+SINOPSIS
         dos2unix [opțiuni] [FIȘIER ...] [-n FIȘIER_INTRARE FIȘIER_IEȘIRE ...]
         unix2dos [opțiuni] [FIȘIER ...] [-n FIȘIER_INTRARE FIȘIER_IEȘIRE ...]
 
@@ -197,6 +197,9 @@ OPȚIUNI
         de linie nouă. De exemplu, concatenarea fișierelor poate să nu dea
         rezultatul așteptat.
 
+    --error-binary
+        Returnează o eroare atunci când un fișier binar este omis.
+
     -f, --force
         Forțează conversia fișierelor binare.
 
@@ -368,8 +371,12 @@ OPȚIUNI
         grup.
 
     --no-add-eol
-        Nu adaugă o întrerupere de linie la ultima linie, dacă nu există
-        una.
+        Nu adaugă o întrerupere de linie la ultima linie, dacă nu există una
+        (implicit).
+
+    --no-error-binary
+        Nu returnează o eroare atunci când un fișier binar este omis
+        (implicit).
 
     -O, --to-stdout
         Scrie la ieșirea standard, ca un filtru Unix. Folosiți opțiunea "-o"
@@ -447,6 +454,10 @@ OPȚIUNI
         care de obicei nu se găsesc în fișierele text. Este posibil ca un
         fișier binar să conțină doar caractere de text normale. Un astfel de
         fișier binar va fi văzut din greșeală ca un fișier text.
+
+        În mod implicit, nu se returnează nicio eroare atunci când un fișier
+        binar este omis. Atunci când se utilizează opțiunea
+        "--error-binary", se returnează o eroare.
 
     -u, --keep-utf16
         Păstrează codificarea UTF-16 originală a fișierului de intrare.

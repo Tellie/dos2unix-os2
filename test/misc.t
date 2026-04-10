@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 # Requires perl-Test-Simple installation.
-use Test::Simple tests => 17;
+use Test::Simple tests => 28;
 
 $suffix = "";
 if (-e "../dos2unix.exe") {
@@ -48,6 +48,18 @@ ok( $result == 0, 'Dos2unix returns zero on skipping binary input.' );
 system("$UNIX2DOS -v -n utf16len.txt out.txt");
 $result = ($? >> 8);
 ok( $result == 0, 'Unix2dos returns zero on skipping binary input.' );
+
+system("$DOS2UNIX -v --error-binary -n utf16len.txt out.txt");
+$result = ($? >> 8);
+ok( $result == 1, 'Dos2unix returns error on skipping binary input.' );
+
+system("$DOS2UNIX -v --error-binary --no-error-binary -n utf16len.txt out.txt");
+$result = ($? >> 8);
+ok( $result == 0, 'Dos2unix returns no error on skipping binary input.' );
+
+system("$UNIX2DOS -v --error-binary -n utf16len.txt out.txt");
+$result = ($? >> 8);
+ok( $result == 1, 'Unix2dos returns error on skipping binary input.' );
 
 system("$DOS2UNIX -v -f -n utf16len.txt out.txt");
 $result = ($? >> 8);
@@ -98,3 +110,33 @@ ok( $? == 0, 'Option -i, --info');
 system("$DOS2UNIX -ic0 dos*.txt | xargs -0 ls 2> err.txt > outinfo0.txt");
 system("$DOS2UNIX outinfo0.txt; diff info0.txt outinfo0.txt");
 ok( $? == 0, 'Option -ic0');
+
+unlink("out.txt");
+
+system("$DOS2UNIX -v -n empty.txt out.txt; cmp empty.txt out.txt");
+ok( $? == 0, 'dos2unix empty file.');
+
+system("$MAC2UNIX -v -n empty.txt out.txt; cmp empty.txt out.txt");
+ok( $? == 0, 'mac2unix empty file.');
+
+system("$UNIX2DOS -v -n empty.txt out.txt; cmp empty.txt out.txt");
+ok( $? == 0, 'unix2dos empty file.');
+
+system("$UNIX2MAC -v -n empty.txt out.txt; cmp empty.txt out.txt");
+ok( $? == 0, 'unix2mac empty file.');
+
+system("$DOS2UNIX -v < /dev/null");
+$result = ($? >> 8);
+ok( $result == 0, 'dos2unix empty input.');
+
+system("$MAC2UNIX -v < /dev/null");
+$result = ($? >> 8);
+ok( $result == 0, 'mac2unix empty input.');
+
+system("$UNIX2DOS -v < /dev/null");
+$result = ($? >> 8);
+ok( $result == 0, 'unix2dos empty input.');
+
+system("$UNIX2MAC -v < /dev/null");
+$result = ($? >> 8);
+ok( $result == 0, 'unix2mac empty input.');

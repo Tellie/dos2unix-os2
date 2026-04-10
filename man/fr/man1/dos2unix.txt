@@ -198,6 +198,9 @@ OPTIONS
         exemple, concaténer des fichiers peut ne pas donner le résultat
         attendu.
 
+    --error-binary
+        Retourner une erreur si un fichier binaire est ignoré.
+
     -f, --force
         Force la conversion de fichiers binaires.
 
@@ -369,7 +372,12 @@ OPTIONS
         préserver l'utilisateur ou le groupe propriétaire des fichiers.
 
     --no-add-eol
-        N'ajoute pas de saut de ligne à la dernière ligne s'il n'y en a pas.
+        N'ajoute pas de saut de ligne à la dernière ligne s'il n'y en a pas
+        (par défaut).
+
+    --no-error-binary
+        Ne pas retourner une erreur si un fichier binaire est ignoré (par
+        défaut).
 
     -O, --to-stdout
         Écrit vers la sortie standard, comme un filtre Unix. Utilisez
@@ -448,6 +456,10 @@ OPTIONS
         rencontrés dans des fichiers textes. Il est cependant possible qu'un
         fichier binaire ne contienne que des caractères textes normaux. Un
         tel fichier serait erronément traité comme un fichier texte.
+
+        Par défaut, aucune erreur n'est retournée quand un fichier binaire
+        est ignoré. Si l'option "--error-binary" est utilisée, une erreur
+        est retournée.
 
     -u, --keep-utf16
         Conserve l'encodage UTF-16 original du fichier d'entrée. Le fichier

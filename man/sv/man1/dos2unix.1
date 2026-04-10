@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "dos2unix 1"
-.TH dos2unix 1 2026-01-30 "dos2unix" 2026-01-30
+.TH dos2unix 1 2026-04-07 "dos2unix" 2026-04-06
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -71,11 +71,11 @@ dos2unix \- konverterare för textfilsformat från DOS/Mac till Unix och vice ve
 .Ve
 .SH BESKRIVNING
 .IX Header "BESKRIVNING"
-The dos2unix package includes utilities \f(CW\*(C`dos2unix\*(C'\fR and \f(CW\*(C`unix2dos\*(C'\fR to convert plain text files in DOS or Mac format to Unix format and vice versa.
+Paketet dos2unix inkluderar verktygen \f(CW\*(C`dos2unix\*(C'\fR och \f(CW\*(C`unix2dos\*(C'\fR som konverterar oformaterade textfiler i DOS\- eller Mac-format till Unix-format och vice versa.
 .PP
 Textfiler i DOS/Windows har en radbrytning, också känd som nyrad, som är en kombination av två tecken: vagnretur (Carriage Return, CR) åtföljt av radmatning (Line Feed, LF). Textfiler i Unix har en radbrytning som är ett enda tecken: radmatning (Line Feed, LF). Textfiler för Mac, innan Mac OS X, hade en radbrytning som var en enda vagnretur (Carriage Return, CR). Numera använder Mac OS radbrytning i Unix-stil (LF).
 .PP
-Besides line breaks dos2unix can also convert the encoding of files. A few DOS code pages can be converted to Unix Latin\-1. And Windows Unicode (UTF\-16)  files can be converted to Unix Unicode (UTF\-8) files.
+Förutom radbrytningar så kan dos2unix också konvertera filers kodning. Några DOS-teckentabeller kan konverteras till Unix Latin\-1. Och filer som använder Windows Unicode (UTF\-16) kan konverteras till Unix Unicode (UTF\-8).
 .PP
 Binära filer hoppas över automatiskt, om inte konvertering tvingas.
 .PP
@@ -83,7 +83,7 @@ Kataloger och FIFOs och andra filer som inte är vanliga filer hoppas över auto
 .PP
 Symboliska länkar och deras mål förblir oförändrade som standard. Symboliska länkar kan valfritt bli ersatta eller så kan utmatningen skrivas till målet för den symboliska länken. På Windows saknas stöd för att skriva till målet för en symbolisk länk.
 .PP
-dos2unix was modelled after dos2unix under SunOS/Solaris.  There is one important difference with the original SunOS/Solaris version. This version does by default in-place conversion (old file mode), while the original SunOS/Solaris version only supports paired conversion (new file mode). See also options \f(CW\*(C`\-o\*(C'\fR and \f(CW\*(C`\-n\*(C'\fR. Another difference is that the SunOS/Solaris version uses by default \fIiso\fR mode conversion while this version uses by default \fIascii\fR mode conversion.
+dos2unix modellerades efter dos2unix från SunOS/Solaris. Det finns en viktig skillnad gentemot originalversionen för SunOS/Solaris. Denna versionen gör som standard konverteringen på plats (gammalfilsläge), medan originalversionen från SunOS/Solaris bara hade stöd för parad konvertering (nyfilsläge). Se vidare flaggorna \f(CW\*(C`\-o\*(C'\fR och \f(CW\*(C`\-n\*(C'\fR. En annan skillnad är att SunOS/Solaris\-versionen som standard använder \fIiso\fR\-lägeskonvertering medan denna version som standard använder \fIascii\fR\-lägeskonvertering.
 .SH FLAGGOR
 .IX Header "FLAGGOR"
 .IP \fB\-\-\fR 4
@@ -147,7 +147,7 @@ Det finns flera metoder för att visa text i en Windows-konsol baserad på vilke
 .RS 4
 .IP \fBansi\fR 4
 .IX Item "ansi"
-dos2unix's default method is to use ANSI encoded text. The advantage is that it is backwards compatible. It works with raster and TrueType fonts. In some regions you may need to change the active DOS OEM code page to the Windows system ANSI code page using the \f(CW\*(C`chcp\*(C'\fR command, because dos2unix uses the Windows system code page.
+dos2unix standardmetod är att använda ANSI-kodad text. Fördelen är att den är bakåtkompatibel. Det fungerar med raster\- och TrueType-teckensnitt. I vissa regioner kan du behöva ändra den aktiva DOS OEM-teckentabellen till Windows-systemets ANSI-teckentabell genom att använda kommandot \f(CW\*(C`chcp\*(C'\fR, eftersom dos2unix använder Windows-systemets teckentabell.
 .Sp
 Nackdelen med ansi är att internationella filnamn med tecken som inte finns i systemets standardteckentabell inte visas korrekt. Du kommer att se frågetecken, eller en felaktig symbol istället. När du inte arbetar med utländska filnamn är denna metoden OK.
 .IP "\fBunicode, unicodebom\fR" 4
@@ -178,6 +178,9 @@ Standardkodningen kan ändras via miljövariabeln DOS2UNIX_DISPLAY_ENC genom att
 Lägg till en radbrytning på sista raden om det inte finns någon. Detta fungerar för alla konverteringar.
 .Sp
 En fil konverterad från DOS\- till Unix-format kan sakna en radbrytning på sista raden. Det finns textredigerare som skriver textfiler utan en radbrytning på den sista raden. Vissa Unix-program har problem med att behandla dessa filer, då POSIX-standarden definierar det som att varje rad i en textfil måste har ett avslutande nyradstecken. Att konkatenera filer kan till exempel ge oväntat resultat.
+.IP \fB\-\-error\-binary\fR 4
+.IX Item "--error-binary"
+Return an error if a binary file is skipped.
 .IP "\fB\-f, \-\-force\fR" 4
 .IX Item "-f, --force"
 Tvinga konvertering av binära filer.
@@ -340,7 +343,10 @@ Tillåt inte ändring av ägarskap i gammalt filläge (standard)
 Avbryt konvertering när användar\- och/eller gruppägarskap för originalfilen inte kan bevaras i gammalt filläge. Se också flaggorna \f(CW\*(C`\-o\*(C'\fR och \f(CW\*(C`\-n\*(C'\fR. Denna flagga är endast tillgänglig om dos2unix har stöd för att bevara användar\- och gruppägarskap för filer.
 .IP \fB\-\-no\-add\-eol\fR 4
 .IX Item "--no-add-eol"
-Lägg inte till en radbrytning på den sista raden om det inte finns någon.
+Do not add a line break to the last line if there isn't one (default).
+.IP \fB\-\-no\-error\-binary\fR 4
+.IX Item "--no-error-binary"
+Do not return an error if a binary file is skipped (default).
 .IP "\fB\-O, \-\-to\-stdout\fR" 4
 .IX Item "-O, --to-stdout"
 Skriv till standard ut som ett Unix-filter. Använd flaggan \f(CW\*(C`\-o\*(C'\fR för att återgå till det gamla (på\-plats) filläget.
@@ -382,6 +388,8 @@ Ta bort byteordningsmarkering (Byte Order Mark, BOM). Skriv inte en BOM i utfile
 Hoppa över binära filer (standard).
 .Sp
 Binärfiler hoppas över för att undvika oavsiktliga misstag. Var medveten om att detektering av binärfiler inte är 100% säker. Infiler genomsöks efter binära symboler som typiskt inte återfinns i textfiler. Det är möjligt att en binärfil enbart innehåller texttecken. En sådan binärfil kommer oavsiktligt att ses som en textfil.
+.Sp
+By default, no error is returned when a binary file is skipped. When the \f(CW\*(C`\-\-error\-binary\*(C'\fR option is used, an error is returned.
 .IP "\fB\-u, \-\-keep\-utf16\fR" 4
 .IX Item "-u, --keep-utf16"
 Behåll infilens original UTF\-16\-kodning. Utfilen kommer att skrivas med samma UTF\-16\-kodning som infilen, omvänd eller rak byteordning (little eller big endian). Detta förhindrar transformation till UTF\-8. En UTF\-16 BOM kommer att skrivas i enlighet med detta. Denna flagga kan inaktiveras med \f(CW\*(C`\-ascii\*(C'\fR\-flaggan.
@@ -501,7 +509,7 @@ Unicode-textfiler kan ha DOS, Unix eller Mac-radbrytningar precis som ASCII-text
 .PP
 Alla versioner av dos2unix och unix2dos kan konvertera UTF\-8\-kodade filer, eftersom UTF\-8 designades för bakåtkompatibilitet med ASCII.
 .PP
-dos2unix and unix2dos with Unicode UTF\-16 support, can read little and big endian UTF\-16 encoded text files. To see if dos2unix was built with UTF\-16 support type \f(CW\*(C`dos2unix \-V\*(C'\fR.
+dos2unix och unix2dos med Unicode\-UTF\-16\-stöd, kan läsa UTF\-16\-kodade textfiler i omvänd och rak byteordning (little och big endian). För att se om dos2unix byggts med UTF\-16\-stöd skriv \f(CW\*(C`dos2unix \-V\*(C'\fR.
 .PP
 Under Unix/Linux kommer UTF\-16\-kodade filer att konverteras till lokalens teckenkodning. Använd kommandot \fBlocale\fR\|(1) för att ta reda på vilken lokalens teckenkodning är. När konvertering inte är möjlig kommer ett konverteringsfel att inträffa och filen kommer att hoppas över.
 .PP
@@ -511,7 +519,7 @@ UTF\-16\- och UTF\-8\-kodning är fullt kompatibla, ingen text kommer att gå f�
 .PP
 När flaggan \f(CW\*(C`\-u\*(C'\fR används kommer utfilen att skrivas med samma UTF\-16\-kodning som infilen. Flaggan \f(CW\*(C`\-u\*(C'\fR förhindrar konvertering till UTF\-8.
 .PP
-dos2unix and unix2dos have no option to convert UTF\-8 files to UTF\-16.
+dos2unix och unix2dos har ingen flagga för att konvertera UTF\-8\-filer till UTF\-16.
 .PP
 ISO\- och 7\-bitarslägeskonvertering fungerar inte på UTF\-16\-filer.
 .SS "Byteordningsmarkering (Byte Order Mark)"
@@ -520,18 +528,18 @@ I Windows har Unicode-textfiler typiskt en byteordningsmarkering (Byte Order Mar
 .PP
 I Unix har Unicode-textfiler typiskt ingen BOM. Filer antas vara kodade i den lokala teckenuppsättningen.
 .PP
-dos2unix can only detect if a file is in UTF\-16 format if the file has a BOM.  When an UTF\-16 file doesn't have a BOM, dos2unix will see the file as a binary file.
+dos2unix kan bara detektera om en fil är i UTF\-16\-format om filen har en BOM. När en UTF\-16\-fil inte har en BOM så kommer dos2unix att de filen som en binärfil.
 .PP
 Använd flaggan \f(CW\*(C`\-ul\*(C'\fR eller \f(CW\*(C`\-ub\*(C'\fR för att konvertera en UTF\-16\-fil utan BOM.
 .PP
-dos2unix writes by default no BOM in the output file. With option \f(CW\*(C`\-b\*(C'\fR dos2unix writes a BOM when the input file has a BOM.
+dos2unix skriver som standard ingen BOM i utfilen. Med flaggan \f(CW\*(C`\-b\*(C'\fR kommer dos2unix att skriva en BOM när infilen har en BOM.
 .PP
-unix2dos writes by default a BOM in the output file when the input file has a BOM. Use option \f(CW\*(C`\-r\*(C'\fR to remove the BOM.
+unix2dos skriver som standard en BOM i utfilen när infilen har en BOM. Använd flaggan \f(CW\*(C`\-r\*(C'\fR för att ta bort BOM:en.
 .PP
-dos2unix and unix2dos write always a BOM when option \f(CW\*(C`\-m\*(C'\fR is used.
+dos2unix och unix2dos skriver alltid en BOM när flaggan \f(CW\*(C`\-m\*(C'\fR används.
 .SS "Unicode-filnamn under Windows"
 .IX Subsection "Unicode-filnamn under Windows"
-dos2unix has optional support for reading and writing Unicode file names in the Windows Command Prompt. That means that dos2unix can open files that have characters in the name that are not part of the default system ANSI code page.  To see if dos2unix for Windows was built with Unicode file name support type \f(CW\*(C`dos2unix \-V\*(C'\fR.
+dos2unix har valfritt stöd för läsning och skrivning av Unicode-filnamn i Windows kommandoprompt. Detta innebär att dos2unix kan öppna filer som har tecken i sina namn som inte är en del av systemets standard ANSI-teckentabell. För att se om dos2unix för Windows byggdes med stöd för Unicode-filnamn skriv \f(CW\*(C`dos2unix \-V\*(C'\fR.
 .PP
 Det finns en del problem med att visa Unicode-filnamn i en Windows-konsol. Se vidare flaggan \f(CW\*(C`\-D\*(C'\fR, \f(CW\*(C`\-\-display\-enc\*(C'\fR. Filnamnen kan visas felaktigt i konsolen, men filerna som skrivs kommer att ha de korrekta namnen.
 .SS Unicode-exempel
@@ -691,7 +699,7 @@ För en fullständig lista över språk och landskoder se vidare i gettext-manua
 På Unix-system kan du använda kommando \fBlocale\fR\|(1) för att få lokal-specifik information.
 .IP \fBLANGUAGE\fR 4
 .IX Item "LANGUAGE"
-With the LANGUAGE environment variable you can specify a priority list of languages, separated by colons. dos2unix gives preference to LANGUAGE over LANG.  For instance, first Dutch and then German: \f(CW\*(C`LANGUAGE=nl:de\*(C'\fR. You have to first enable localization, by setting LANG (or LC_ALL) to a value other than "C", before you can use a language priority list through the LANGUAGE variable. See also the gettext manual: <https://www.gnu.org/software/gettext/manual/html_node/The\-LANGUAGE\-variable.html>
+Med miljövariabeln LANGUAGE kan du ange en prioritetslista över språk, separerade med kolon. dos2unix kommer att ge företräde till LANGAUGE över LANG. Exempelvis först nederländska och sedan tyska: \f(CW\*(C`LANGUAGE=nl:de\*(C'\fR. Du måste först ha aktiverat lokalisering, genom att sätta LANG (eller LC_ALL) till ett värde annat än “C“, innan du kan använda en prioritetslista för språk via LANGUAGE-variabeln. Se vidare i gettext-manualen: <https://www.gnu.org/software/gettext/manual/html_node/The\-LANGUAGE\-variable.html>
 .Sp
 Om du väljer ett språk som inte är tillgänglig kommer du att få engelska meddelanden som standard.
 .IP \fBDOS2UNIX_LOCALEDIR\fR 4

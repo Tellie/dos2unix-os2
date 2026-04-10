@@ -36,12 +36,13 @@ DESCRIÇÃO
     ligações simbólicas do Windows.
 
     O dos2unix foi modelado seguindo dos2unix do SunOS/Solaris. Há uma
-    diferença importante em relação à versão original do SunOS/Solaris. Essa
-    versão faz conversão no-lugar (modo de arquivo antigo) por padrão,
+    diferença importante em relação à versão original do SunOS/Solaris. Por
+    padrão, essa versão faz conversão no-lugar (modo de arquivo antigo),
     enquanto a versão original do SunOS/Solaris fornecia suporte apenas a
     conversão pareada (modo de novo arquivo). Veja também as opções "-o" e
-    "-n". Uma outra diferença é que a versão SunOS/Solaris usa, por padrão,
-    a conversão de modo do *iso* enquanto esta versão usa o do *ascii*.
+    "-n". Uma outra diferença é que a versão do SunOS/Solaris usa, por
+    padrão, a conversão de modo do *iso* enquanto esta versão usa o do
+    *ascii*.
 
 OPÇÕES
     --  Trata as opções seguintes como nomes de arquivos. Use essa opção se
@@ -190,6 +191,9 @@ OPÇÕES
         porque o padrão POSIX define que cada linha em um arquivo de texto
         deve terminar com um caractere de nova linha de terminação. Por
         exemplo, concatenar arquivos pode não dar o resultado esperado.
+
+    --error-binary
+        Retorna um erro se um arquivo binário for ignorado.
 
     -f, --force
         Força a conversão de arquivos binários.
@@ -358,7 +362,11 @@ OPÇÕES
         e do grupo de arquivos.
 
     --no-add-eol
-        Não adiciona uma quebra de linha à última linha se não houver uma.
+        Não adiciona uma quebra de linha à última linha se não houver uma
+        (padrão).
+
+    --no-error-binary
+        Não retorna um erro se um arquivo binário é ignorado (padrão).
 
     -O, --to-stdout
         Escreve na saída padrão, como um filtro Unix. Use a opção "-o" para
@@ -429,6 +437,10 @@ OPÇÕES
         textos. É possível que um arquivo binário contenha apenas caracteres
         de texto normais. tal arquivo binário pode ser acidentalmente visto
         como um arquivo de texto.
+
+        Por padrão, não é retornado nenhum erro quando um arquivo binário é
+        ignorado. Quando a opção C <--error-binary> é usada, é retornado um
+        erro.
 
     -u, --keep-utf16
         Mantém a codificação UTF-16 original do arquivo de entrada. O

@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "dos2unix 1"
-.TH dos2unix 1 2026-01-30 "dos2unix" 2026-01-30
+.TH dos2unix 1 2026-04-07 "dos2unix" 2026-04-06
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -83,7 +83,7 @@ Arquivos não regulares, tais como diretórios e FIFOs, são ignorados automatic
 .PP
 Ligações simbólicas e seus alvos são por padrão mantidas intocáveis. Ligações simbólicas podem opcionalmente ser substituídas, ou a saída pode ser escrita para o alvo das ligações simbólicas. Não há suporte às ligações simbólicas do Windows.
 .PP
-O dos2unix foi modelado seguindo dos2unix do SunOS/Solaris. Há uma diferença importante em relação à versão original do SunOS/Solaris. Essa versão faz conversão no-lugar (modo de arquivo antigo) por padrão, enquanto a versão original do SunOS/Solaris fornecia suporte apenas a conversão pareada (modo de novo arquivo). Veja também as opções \f(CW\*(C`\-o\*(C'\fR e \f(CW\*(C`\-n\*(C'\fR. Uma outra diferença é que a versão SunOS/Solaris usa, por padrão, a conversão de modo do \fIiso\fR enquanto esta versão usa o do \fIascii\fR.
+O dos2unix foi modelado seguindo dos2unix do SunOS/Solaris. Há uma diferença importante em relação à versão original do SunOS/Solaris. Por padrão, essa versão faz conversão no-lugar (modo de arquivo antigo), enquanto a versão original do SunOS/Solaris fornecia suporte apenas a conversão pareada (modo de novo arquivo). Veja também as opções \f(CW\*(C`\-o\*(C'\fR e \f(CW\*(C`\-n\*(C'\fR. Uma outra diferença é que a versão do SunOS/Solaris usa, por padrão, a conversão de modo do \fIiso\fR enquanto esta versão usa o do \fIascii\fR.
 .SH OPÇÕES
 .IX Header "OPÇÕES"
 .IP \fB\-\-\fR 4
@@ -178,6 +178,9 @@ A codificação padrão pode ser alterada com a variável de ambiente DOS2UNIX_D
 Adiciona uma quebra de linha à última linha se não houver uma. Isso funciona para todas as conversões.
 .Sp
 Um arquivo convertido do formato DOS para Unix pode não ter uma quebra de linha na última linha. Existem editores de texto que escrevem arquivos de texto sem uma quebra de linha na última linha. Alguns programas Unix têm problemas para processar esses arquivos, porque o padrão POSIX define que cada linha em um arquivo de texto deve terminar com um caractere de nova linha de terminação. Por exemplo, concatenar arquivos pode não dar o resultado esperado.
+.IP \fB\-\-error\-binary\fR 4
+.IX Item "--error-binary"
+Retorna um erro se um arquivo binário for ignorado.
 .IP "\fB\-f, \-\-force\fR" 4
 .IX Item "-f, --force"
 Força a conversão de arquivos binários.
@@ -340,7 +343,10 @@ Não permite alteração da propriedade do arquivo no modo de arquivo antigo (pa
 Aborta a conversão quando a propriedade do usuário e/ou do grupo do arquivo original não puder ser preservada no modo de arquivo antigo. Veja também as opções \f(CW\*(C`\-o\*(C'\fR e \f(CW\*(C`\-n\*(C'\fR. Esta opção só está disponível se o dos2unix oferecer suporte à preservação da propriedade do usuário e do grupo de arquivos.
 .IP \fB\-\-no\-add\-eol\fR 4
 .IX Item "--no-add-eol"
-Não adiciona uma quebra de linha à última linha se não houver uma.
+Não adiciona uma quebra de linha à última linha se não houver uma (padrão).
+.IP \fB\-\-no\-error\-binary\fR 4
+.IX Item "--no-error-binary"
+Não retorna um erro se um arquivo binário é ignorado (padrão).
 .IP "\fB\-O, \-\-to\-stdout\fR" 4
 .IX Item "-O, --to-stdout"
 Escreve na saída padrão, como um filtro Unix. Use a opção \f(CW\*(C`\-o\*(C'\fR para voltar ao modo de arquivo antigo (in-place).
@@ -382,6 +388,8 @@ Remove marca de ordem de bytes (BOM). Não escreve um BOM no arquivo de saída. 
 Ignora arquivo binários (padrão).
 .Sp
 A ação de ignorar arquivos binários é feita para evitar equívocos acidentais. Fique ciente de que a detecção de arquivos binários não é 100% à prova de erros. Arquivos de entrada são analisados por símbolos binários que, geralmente, não são encontrados em arquivos textos. É possível que um arquivo binário contenha apenas caracteres de texto normais. tal arquivo binário pode ser acidentalmente visto como um arquivo de texto.
+.Sp
+Por padrão, não é retornado nenhum erro quando um arquivo binário é ignorado. Quando a opção C <\-\-error\-binary> é usada, é retornado um erro.
 .IP "\fB\-u, \-\-keep\-utf16\fR" 4
 .IX Item "-u, --keep-utf16"
 Mantém a codificação UTF\-16 original do arquivo de entrada. O arquivo de saída será escrito na mesma codificação UTF\-16, em little ou big endian, como o arquivo de entrada. Isso evita transformação para UTF\-8. Como consequência, um BOM UTF\-16 será escrito. Essa opção pode ser desabilitada com a opção \f(CW\*(C`\-ascii\*(C'\fR.
