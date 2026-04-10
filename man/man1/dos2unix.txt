@@ -179,6 +179,9 @@ OPTIONS
         character. For instance concatenating files may not give the
         expected result.
 
+    --error-binary
+        Return an error if a binary file is skipped.
+
     -f, --force
         Force conversion of binary files.
 
@@ -339,7 +342,11 @@ OPTIONS
         for preserving the user and group ownership of files.
 
     --no-add-eol
-        Do not add a line break to the last line if there isn't one.
+        Do not add a line break to the last line if there isn't one
+        (default).
+
+    --no-error-binary
+        Do not return an error if a binary file is skipped (default).
 
     -O, --to-stdout
         Write to standard output, like a Unix filter. Use option "-o" to go
@@ -406,6 +413,9 @@ OPTIONS
         found in text files. It is possible that a binary file contains only
         normal text characters. Such a binary file will mistakenly be seen
         as a text file.
+
+        By default, no error is returned when a binary file is skipped. When
+        the "--error-binary" option is used, an error is returned.
 
     -u, --keep-utf16
         Keep the original UTF-16 encoding of the input file. The output file

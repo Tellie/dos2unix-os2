@@ -155,6 +155,10 @@ fügt einen Zeilenumbruch nach der letzten Zeile hinzu, falls ein solcher nicht 
 
 Einer Datei, die aus dem DOS- ins Unix-Format umgewandelt wurde, kann ein Zeilenumbruch nach der letzten Zeile fehlen. Es gibt Texteditoren, die Dateien ohne diesen angehängten Zeilenumbruch schreiben. Einige Unix-Programme haben jedoch Probleme mit der Verarbeitung dieser Dateien, da der POSIX-Standard definiert, dass jede Zeile in einer Textdatei mit einem abschließenden Zeilenvorschubzeichen enden muss. Beispielsweise kann es beim Aneinanderhängen von solche Dateien zu unerwarteten Ergebnissen kommen.
 
+=item B<--error-binary>
+
+liefert einen Fehler zurück, wenn eine Binärdatei übersprungen wird.
+
 =item B<-f, --force>
 
 erzwingt die Umwandlung von Binärdateien.
@@ -319,7 +323,11 @@ bricht die Umwandlung ab, wenn der Eigentümer und/oder die Gruppe der Originald
 
 =item B<--no-add-eol>
 
-fügt keinen Zeilenumbruch nach der letzten Zeile hinzu, falls ein solcher nicht existiert.
+fügt keinen Zeilenumbruch nach der letzten Zeile hinzu, falls ein solcher nicht existiert (Vorgabe).
+
+=item B<--no-error-binary>
+
+liefert keinen Fehler zurück, wenn eine Binärdatei übersprungen wird (Vorgabe).
 
 =item B<-O, --to-stdout>
 
@@ -345,11 +353,11 @@ Eine weitere Option ist der Neue-Datei-Modus:
 
     dos2unix -n foo.txt foo.txt
 
-Der Vorteil der Option C<--allow-chown> ist, dass Sie Platzhalter verwenden können und die Eigentumsverhältnisse bewahrt bleiben, sofern möglich.
+Der Vorteil der Option B<--allow-chown> ist, dass Sie Platzhalter verwenden können und die Eigentumsverhältnisse bewahrt bleiben, sofern möglich.
 
 =item B<-q, --quiet>
 
-Stiller Modus, in dem alle Warnungen und sonstige Meldungen unterdrückt werden. Der Rückgabewert ist 0, außer wenn fehlerhafte Befehlszeilenoptionen angegeben werden.
+aktiviert den stillen Modus, in dem alle Warnungen und sonstigen Meldungen unterdrückt werden. Der Rückgabewert ist 0, außer wenn fehlerhafte Befehlszeilenoptionen angegeben werden.
 
 =item B<-r, --remove-bom>
 
@@ -360,6 +368,8 @@ entfernt die Markierung der Bytereihenfolge (BOM). Es wird keine BOM in die Ausg
 überspringt Binärdateien (Vorgabe).
 
 Binärdateien werden übersprungen, damit unerwünschtes Fehlverhalten vermieden wird. Denken Sie daran, dass die Erkennung nicht 100% sicher funktioniert. Die übergebenen Dateien werden auf Binärsymbole überprüft, die typischerweise in Textdateien nicht vorkommen. Es ist jedoch möglich, dass eine Binärdatei ausschließlich gewöhnliche Textzeichen enthält. Eine solche Binärdatei wird dann fälschlicherweise als Textdatei angesehen.
+
+Standardmäßig wird kein Fehler zurückgeliefert, wenn eine Binärdatei übersprungen wird. Bei Verwendung der Option B<--error-binary> wird ein Fehler zurückgeliefert.
 
 =item B<-u, --keep-utf16>
 

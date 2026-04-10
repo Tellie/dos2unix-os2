@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "dos2unix 1"
-.TH dos2unix 1 2026-01-30 "dos2unix" 2026-01-30
+.TH dos2unix 1 2026-04-07 "dos2unix" 2026-04-06
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -178,6 +178,9 @@ De standaard codering can gewijzigd worden met omgevingsvariabele DOS2UNIX_DISPL
 Een regeleinde toevoegen aan de laatste regel als er nog geen is. Dit werkt voor alle conversies.
 .Sp
 Een bestand dat is geconverteerd van DOS\- naar Unix-indeling kan een regeleinde op de laatste regel missen. Er zijn tekstbewerkers die tekstbestanden schrijven zonder een regeleinde op de laatste regel. Sommige Unix-programma's hebben problemen met het verwerken van deze bestanden, omdat de POSIX-standaard definieert dat elke regel in een tekstbestand moet eindigen met een afsluitend regeleindeteken. Het samenvoegen van bestanden kan bijvoorbeeld niet het verwachte resultaat opleveren.
+.IP \fB\-\-error\-binary\fR 4
+.IX Item "--error-binary"
+Return an error if a binary file is skipped.
 .IP "\fB\-f\fR, \fB\-\-force\fR" 4
 .IX Item "-f, --force"
 Conversie van binaire bestanden afdwingen.
@@ -340,7 +343,10 @@ Wijziging van bestandseigenaar niet toestaan in oud-bestand-modus (standaard).
 Conversie afbreken wanneer het gebruikers\- en/of groepseigendomsrecht van het originele bestand niet behouden kan worden in de oud-bestand-modus. Zie ook opties \f(CW\*(C`\-o\*(C'\fR en \f(CW\*(C`\-n\*(C'\fR. Deze optie is alleen beschikbaar als dos2unix ondersteuning heeft voor het behouden van het gebruikers\- en groepseigendomsrechten van bestanden.
 .IP \fB\-\-no\-add\-eol\fR 4
 .IX Item "--no-add-eol"
-Geen regeleinde toevoegen aan de laatste regel als er geen is.
+Do not add a line break to the last line if there isn't one (default).
+.IP \fB\-\-no\-error\-binary\fR 4
+.IX Item "--no-error-binary"
+Do not return an error if a binary file is skipped (default).
 .IP "\fB\-O, \-\-to\-stdout\fR" 4
 .IX Item "-O, --to-stdout"
 Naar standaarduitvoer schrijven, zoals een Unix-filter. Gebruik optie \f(CW\*(C`\-o\*(C'\fR om terug te gaan naar de oud-bestand-modus (vervangend).
@@ -382,6 +388,8 @@ Een Byte-Order-Mark (BOM) verwijderen.  Er wordt geen BOM naar het uitvoerbestan
 Binaire bestanden overslaan (standaard).
 .Sp
 Binaire bestanden worden overgeslagen om vergissingen te voorkomen.  Het detecteren van binaire bestanden is echter niet 100% betrouwbaar. Invoerbestanden worden gescand op binaire tekens die gewoonlijk niet in tekstbestanden voorkomen.  Maar het is mogelijk dat een binair bestand enkel normale teksttekens bevat.  Zo'n binair bestand zal dan foutief als een tekstbestand gezien worden.
+.Sp
+By default, no error is returned when a binary file is skipped. When the \f(CW\*(C`\-\-error\-binary\*(C'\fR option is used, an error is returned.
 .IP "\fB\-u\fR, \fB\-\-keep\-utf16\fR" 4
 .IX Item "-u, --keep-utf16"
 De originele UTF\-16\-codering van het invoerbestand behouden.  Het uitvoerbestand wordt in dezelfde UTF\-16\-codering (little endian of big endian) geschreven als het invoerbestand.  Dit voorkomt conversie naar UTF\-8.  Er wordt ook een corresponderende UTF\-16\-BOM geschreven.  Deze optie kan uitgeschakeld worden met de optie \f(CW\*(C`\-ascii\*(C'\fR.

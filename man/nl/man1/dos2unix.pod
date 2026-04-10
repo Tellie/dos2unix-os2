@@ -155,6 +155,10 @@ Een regeleinde toevoegen aan de laatste regel als er nog geen is. Dit werkt voor
 
 Een bestand dat is geconverteerd van DOS- naar Unix-indeling kan een regeleinde op de laatste regel missen. Er zijn tekstbewerkers die tekstbestanden schrijven zonder een regeleinde op de laatste regel. Sommige Unix-programma's hebben problemen met het verwerken van deze bestanden, omdat de POSIX-standaard definieert dat elke regel in een tekstbestand moet eindigen met een afsluitend regeleindeteken. Het samenvoegen van bestanden kan bijvoorbeeld niet het verwachte resultaat opleveren.
 
+=item B<--error-binary>
+
+Return an error if a binary file is skipped.
+
 =item B<-f>, B<--force>
 
 Conversie van binaire bestanden afdwingen.
@@ -319,7 +323,11 @@ Conversie afbreken wanneer het gebruikers- en/of groepseigendomsrecht van het or
 
 =item B<--no-add-eol>
 
-Geen regeleinde toevoegen aan de laatste regel als er geen is.
+Do not add a line break to the last line if there isn't one (default).
+
+=item B<--no-error-binary>
+
+Do not return an error if a binary file is skipped (default).
 
 =item B<-O, --to-stdout>
 
@@ -360,6 +368,8 @@ Een Byte-Order-Mark (BOM) verwijderen.  Er wordt geen BOM naar het uitvoerbestan
 Binaire bestanden overslaan (standaard).
 
 Binaire bestanden worden overgeslagen om vergissingen te voorkomen.  Het detecteren van binaire bestanden is echter niet 100% betrouwbaar. Invoerbestanden worden gescand op binaire tekens die gewoonlijk niet in tekstbestanden voorkomen.  Maar het is mogelijk dat een binair bestand enkel normale teksttekens bevat.  Zo'n binair bestand zal dan foutief als een tekstbestand gezien worden.
+
+By default, no error is returned when a binary file is skipped. When the C<--error-binary> option is used, an error is returned.
 
 =item B<-u>, B<--keep-utf16>
 

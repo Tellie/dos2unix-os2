@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "dos2unix 1"
-.TH dos2unix 1 2026-01-30 "dos2unix" 2026-01-30
+.TH dos2unix 1 2026-04-07 "dos2unix" 2026-04-06
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -178,6 +178,9 @@ Die Standardkodierung kann durch Setzen der Umgebungsvariable DOS2UNIX_DISPLAY_E
 fügt einen Zeilenumbruch nach der letzten Zeile hinzu, falls ein solcher nicht existiert. Dies funktioniert in jeder Umwandlung.
 .Sp
 Einer Datei, die aus dem DOS\- ins Unix-Format umgewandelt wurde, kann ein Zeilenumbruch nach der letzten Zeile fehlen. Es gibt Texteditoren, die Dateien ohne diesen angehängten Zeilenumbruch schreiben. Einige Unix-Programme haben jedoch Probleme mit der Verarbeitung dieser Dateien, da der POSIX-Standard definiert, dass jede Zeile in einer Textdatei mit einem abschließenden Zeilenvorschubzeichen enden muss. Beispielsweise kann es beim Aneinanderhängen von solche Dateien zu unerwarteten Ergebnissen kommen.
+.IP \fB\-\-error\-binary\fR 4
+.IX Item "--error-binary"
+liefert einen Fehler zurück, wenn eine Binärdatei übersprungen wird.
 .IP "\fB\-f, \-\-force\fR" 4
 .IX Item "-f, --force"
 erzwingt die Umwandlung von Binärdateien.
@@ -340,7 +343,10 @@ verhindert die Änderung des Eigentümers der Datei im Alte-Datei-Modus (Voreins
 bricht die Umwandlung ab, wenn der Eigentümer und/oder die Gruppe der Originaldatei im Alte-Datei-Modus nicht erhalten werden kann. Siehe auch die Optionen \f(CW\*(C`\-o\*(C'\fR und \f(CW\*(C`\-n\*(C'\fR. Diese Option ist nur verfügbar, wenn dos2unix über Unterstützung für die Erhaltung des Eigentümers und der Gruppe von Dateien verfügt.
 .IP \fB\-\-no\-add\-eol\fR 4
 .IX Item "--no-add-eol"
-fügt keinen Zeilenumbruch nach der letzten Zeile hinzu, falls ein solcher nicht existiert.
+fügt keinen Zeilenumbruch nach der letzten Zeile hinzu, falls ein solcher nicht existiert (Vorgabe).
+.IP \fB\-\-no\-error\-binary\fR 4
+.IX Item "--no-error-binary"
+liefert keinen Fehler zurück, wenn eine Binärdatei übersprungen wird (Vorgabe).
 .IP "\fB\-O, \-\-to\-stdout\fR" 4
 .IX Item "-O, --to-stdout"
 schreibt wie ein Unix-Filter in die Standardausgabe. Mit der Option \f(CW\*(C`\-o\*(C'\fR können Sie zum Alte-Datei-Modus (Ersetzungsmodus) zurückkehren.
@@ -370,10 +376,10 @@ Eine weitere Option ist der Neue-Datei-Modus:
 \&    dos2unix \-n foo.txt foo.txt
 .Ve
 .Sp
-Der Vorteil der Option \f(CW\*(C`\-\-allow\-chown\*(C'\fR ist, dass Sie Platzhalter verwenden können und die Eigentumsverhältnisse bewahrt bleiben, sofern möglich.
+Der Vorteil der Option \fB\-\-allow\-chown\fR ist, dass Sie Platzhalter verwenden können und die Eigentumsverhältnisse bewahrt bleiben, sofern möglich.
 .IP "\fB\-q, \-\-quiet\fR" 4
 .IX Item "-q, --quiet"
-Stiller Modus, in dem alle Warnungen und sonstige Meldungen unterdrückt werden. Der Rückgabewert ist 0, außer wenn fehlerhafte Befehlszeilenoptionen angegeben werden.
+aktiviert den stillen Modus, in dem alle Warnungen und sonstigen Meldungen unterdrückt werden. Der Rückgabewert ist 0, außer wenn fehlerhafte Befehlszeilenoptionen angegeben werden.
 .IP "\fB\-r, \-\-remove\-bom\fR" 4
 .IX Item "-r, --remove-bom"
 entfernt die Markierung der Bytereihenfolge (BOM). Es wird keine BOM in die Ausgabedatei geschrieben. Dies ist das Standardverhalten beim Umwandeln von Unix\-Zeilenumbrüchen. Siehe auch die Option \f(CW\*(C`\-b\*(C'\fR.
@@ -382,6 +388,8 @@ entfernt die Markierung der Bytereihenfolge (BOM). Es wird keine BOM in die Ausg
 überspringt Binärdateien (Vorgabe).
 .Sp
 Binärdateien werden übersprungen, damit unerwünschtes Fehlverhalten vermieden wird. Denken Sie daran, dass die Erkennung nicht 100% sicher funktioniert. Die übergebenen Dateien werden auf Binärsymbole überprüft, die typischerweise in Textdateien nicht vorkommen. Es ist jedoch möglich, dass eine Binärdatei ausschließlich gewöhnliche Textzeichen enthält. Eine solche Binärdatei wird dann fälschlicherweise als Textdatei angesehen.
+.Sp
+Standardmäßig wird kein Fehler zurückgeliefert, wenn eine Binärdatei übersprungen wird. Bei Verwendung der Option \fB\-\-error\-binary\fR wird ein Fehler zurückgeliefert.
 .IP "\fB\-u, \-\-keep\-utf16\fR" 4
 .IX Item "-u, --keep-utf16"
 erhält die originale UTF\-16\-Kodierung der Eingabedatei. Die Ausgabedatei wird in der gleichen UTF\-16\-Kodierung geschrieben (Little\-Endian\- oder Big-Endian-Bytereihenfolge) wie die Eingabedatei. Dies verhindert die Umwandlung in UTF\-8. Eine UTF\-16\-BOM wird dementsprechend geschrieben. Diese Option kann durch Angabe der Option \f(CW\*(C`\-ascii\*(C'\fR deaktiviert werden.

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>dos2unix 7.5.4 - DOS/MAC to UNIX and vice versa text file format converter</title>
+<title>dos2unix 7.5.5 - DOS/MAC to UNIX and vice versa text file format converter</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rev="made" href="mailto:ASSI@walter.nonet" />
 </head>
@@ -208,6 +208,12 @@ unix2dos [options] [FILE ...] [-n INFILE OUTFILE ...]</code></pre>
 <p>A file converted from DOS to Unix format may lack a line break on the last line. There are text editors that write text files without a line break on the last line. Some Unix programs have problems processing these files, because the POSIX standard defines that every line in a text file must end with a terminating newline character. For instance concatenating files may not give the expected result.</p>
 
 </dd>
+<dt id="error-binary"><b>--error-binary</b></dt>
+<dd>
+
+<p>Return an error if a binary file is skipped.</p>
+
+</dd>
 <dt id="f---force"><b>-f, --force</b></dt>
 <dd>
 
@@ -411,7 +417,13 @@ unix2dos [options] [FILE ...] [-n INFILE OUTFILE ...]</code></pre>
 <dt id="no-add-eol"><b>--no-add-eol</b></dt>
 <dd>
 
-<p>Do not add a line break to the last line if there isn&#39;t one.</p>
+<p>Do not add a line break to the last line if there isn&#39;t one (default).</p>
+
+</dd>
+<dt id="no-error-binary"><b>--no-error-binary</b></dt>
+<dd>
+
+<p>Do not return an error if a binary file is skipped (default).</p>
 
 </dd>
 <dt id="O---to-stdout"><b>-O, --to-stdout</b></dt>
@@ -462,6 +474,8 @@ unix2dos [options] [FILE ...] [-n INFILE OUTFILE ...]</code></pre>
 <p>Skip binary files (default).</p>
 
 <p>The skipping of binary files is done to avoid accidental mistakes. Be aware that the detection of binary files is not 100% foolproof. Input files are scanned for binary symbols which are typically not found in text files. It is possible that a binary file contains only normal text characters. Such a binary file will mistakenly be seen as a text file.</p>
+
+<p>By default, no error is returned when a binary file is skipped. When the <code>--error-binary</code> option is used, an error is returned.</p>
 
 </dd>
 <dt id="u---keep-utf16"><b>-u, --keep-utf16</b></dt>

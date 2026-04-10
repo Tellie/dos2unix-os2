@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.3.6-beta4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 19:36+0000\n"
+"POT-Creation-Date: 2026-03-15 21:19+0100\n"
 "PO-Revision-Date: 2018-08-14 12:07+0100\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -36,32 +36,22 @@ msgstr ""
 "Alle rettigheder forbeholdes.\n"
 "\n"
 
-#: dos2unix.c:106 dos2unix.c:122 dos2unix.c:199 unix2dos.c:143 unix2dos.c:223
-#, c-format
-msgid "Binary symbol 0x00%02X found at line %u\n"
-msgstr "Binært symbol 0x00%02X fundet på linje %u\n"
-
-#: dos2unix.c:172 dos2unix.c:253 dos2unix.c:389 dos2unix.c:469 unix2dos.c:192
-#: unix2dos.c:272 unix2dos.c:388 unix2dos.c:466
+#: dos2unix.c:168 dos2unix.c:247 dos2unix.c:379 dos2unix.c:457 unix2dos.c:190
+#: unix2dos.c:268 unix2dos.c:382 unix2dos.c:458
 msgid "Added line break to last line.\n"
 msgstr ""
 
-#: dos2unix.c:300 dos2unix.c:553 unix2dos.c:317 unix2dos.c:550
+#: dos2unix.c:294 dos2unix.c:541 unix2dos.c:313 unix2dos.c:542
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "programfejl, ugyldig omdannelsestilstand %d\n"
 
-#: dos2unix.c:327 dos2unix.c:343 dos2unix.c:415 unix2dos.c:339 unix2dos.c:417
-#, c-format
-msgid "Binary symbol 0x%02X found at line %u\n"
-msgstr "Binært symbol 0x%02X fundet på linje %u\n"
-
-#: dos2unix.c:532 unix2dos.c:531
+#: dos2unix.c:520 unix2dos.c:523
 #, c-format
 msgid "using code page %d.\n"
 msgstr "bruger tegnkodningstabel %d.\n"
 
-#: dos2unix.c:591 unix2dos.c:588
+#: dos2unix.c:579 unix2dos.c:580
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "fejl: Værdien af miljøvariabel DOS2UNIX_LOCALEDIR er for lang.\n"
 
@@ -213,18 +203,22 @@ msgid " -e, --add-eol         add a line break to the last line if there isn't o
 msgstr " --no-allow-chown      tillad ikke ændring af filejerskab (standard)\n"
 
 #: common.c:672
+msgid " --error-binary        return an error when a binary file is skipped\n"
+msgstr ""
+
+#: common.c:673
 msgid " -f, --force           force conversion of binary files\n"
 msgstr " -f, --force           gennemtving omdannelse af binære filer\n"
 
-#: common.c:675
+#: common.c:676
 msgid " -gb, --gb18030        convert UTF-16 to GB18030\n"
 msgstr " -gb, --gb18030        konverter UTF-16 til GB18030\n"
 
-#: common.c:678
+#: common.c:679
 msgid " -h, --help            display this help text\n"
 msgstr " -h, --help            vis denne hjælpetekst\n"
 
-#: common.c:679
+#: common.c:680
 msgid ""
 " -i, --info[=FLAGS]    display file information\n"
 "   file ...            files to analyze\n"
@@ -232,23 +226,23 @@ msgstr ""
 " -i, --info[=FLAG]     vis filinformation\n"
 "   fil …               filer at analysere\n"
 
-#: common.c:681
+#: common.c:682
 msgid " -k, --keepdate        keep output file date\n"
 msgstr " -k, --keepdate        behold outputfils dato\n"
 
-#: common.c:682
+#: common.c:683
 msgid " -L, --license         display software license\n"
 msgstr " -L, --license         vis softwarelicens\n"
 
-#: common.c:683
+#: common.c:684
 msgid " -l, --newline         add additional newline\n"
 msgstr " -l, --newline         tilføj ekstra linjeskift\n"
 
-#: common.c:684
+#: common.c:685
 msgid " -m, --add-bom         add Byte Order Mark (default UTF-8)\n"
 msgstr " -m, --add-bom         tilføj byte-rækkefølge-markering (standard UTF-8)\n"
 
-#: common.c:685
+#: common.c:686
 msgid ""
 " -n, --newfile         write to new file\n"
 "   infile              original file in new-file mode\n"
@@ -258,20 +252,24 @@ msgstr ""
 "   infile              originalfil i ny-fil-tilstand\n"
 "   outfile             outputfil i ny-fil-tilstand\n"
 
-#: common.c:689
+#: common.c:690
 msgid " --no-allow-chown      don't allow file ownership change (default)\n"
 msgstr " --no-allow-chown      tillad ikke ændring af filejerskab (standard)\n"
 
-#: common.c:691
+#: common.c:692
 #, fuzzy
 msgid " --no-add-eol          don't add a line break to the last line if there isn't one (default)\n"
 msgstr " --no-allow-chown      tillad ikke ændring af filejerskab (standard)\n"
 
-#: common.c:692
+#: common.c:693
+msgid " --no-error-binary     don't return an error when a binary file is skipped (default)\n"
+msgstr ""
+
+#: common.c:694
 msgid " -O, --to-stdout       write to standard output\n"
 msgstr ""
 
-#: common.c:693
+#: common.c:695
 #, fuzzy
 msgid ""
 " -o, --oldfile         write to old file (default)\n"
@@ -280,43 +278,43 @@ msgstr ""
 " -o, --oldfile         skriv til gammel fil (standard)\n"
 "   file …              filter til omdannelse i gammel-fil-tilstand\n"
 
-#: common.c:695
+#: common.c:697
 msgid " -q, --quiet           quiet mode, suppress all warnings\n"
 msgstr " -q, --quiet           stilletilstand, tilbagehold alle advarsler\n"
 
-#: common.c:697
+#: common.c:699
 msgid " -r, --remove-bom      remove Byte Order Mark (default)\n"
 msgstr " -r, --remove-bom      fjern byte-rækkefølge-markering (standard)\n"
 
-#: common.c:699
+#: common.c:701
 msgid " -r, --remove-bom      remove Byte Order Mark\n"
 msgstr " -r, --remove-bom      fjern byte-rækkefølge-markering\n"
 
-#: common.c:700
+#: common.c:702
 msgid " -s, --safe            skip binary files (default)\n"
 msgstr " -s, --safe            spring binære filer over (standard)\n"
 
-#: common.c:702
+#: common.c:704
 msgid " -u,  --keep-utf16     keep UTF-16 encoding\n"
 msgstr " -u,  --keep-utf16     behold UTF-16-kodning\n"
 
-#: common.c:703
+#: common.c:705
 msgid " -ul, --assume-utf16le assume that the input format is UTF-16LE\n"
 msgstr " -ul, --assume-utf16le antag at inputformatet er UTF-16LE\n"
 
-#: common.c:704
+#: common.c:706
 msgid " -ub, --assume-utf16be assume that the input format is UTF-16BE\n"
 msgstr " -ub, --assume-utf16be antag at inputformatet er UTF-16BE\n"
 
-#: common.c:706
+#: common.c:708
 msgid " -v,  --verbose        verbose operation\n"
 msgstr " -v,  --verbose        uddybende operation\n"
 
-#: common.c:708
+#: common.c:710
 msgid " -F, --follow-symlink  follow symbolic links and convert the targets\n"
 msgstr " -F, --follow-symlink  følg symbolske henvisninger og omdan deres mål\n"
 
-#: common.c:711
+#: common.c:713
 msgid ""
 " -R, --replace-symlink replace symbolic links with converted files\n"
 "                         (original target files remain unchanged)\n"
@@ -324,270 +322,270 @@ msgstr ""
 " -R, --replace-symlink erstat symbolske henvisninger med omdannede filer\n"
 "                         (oprindelige målfiler forbliver uændrede)\n"
 
-#: common.c:713
+#: common.c:715
 msgid " -S, --skip-symlink    keep symbolic links and targets unchanged (default)\n"
 msgstr " -S, --skip-symlink    behold symbolske henvisninger og deres mål uændrede (standard)\n"
 
-#: common.c:715
+#: common.c:717
 msgid " -V, --version         display version number\n"
 msgstr " -V, --version         vis versionsnummer\n"
 
-#: common.c:727
+#: common.c:729
 #, fuzzy
 msgid "DOS 16 bit version (Watcom C).\n"
 msgstr "DOS 16-bit-version (WATCOMC).\n"
 
-#: common.c:729
+#: common.c:731
 #, fuzzy
 msgid "DOS 16 bit version (Turbo C).\n"
 msgstr "DOS 16-bit-version (TURBOC).\n"
 
-#: common.c:731
+#: common.c:733
 #, fuzzy
 msgid "DOS 32 bit version (Watcom C).\n"
 msgstr "DOS 32-bit-version (WATCOMC).\n"
 
-#: common.c:733
+#: common.c:735
 msgid "DOS 32 bit version (DJGPP).\n"
 msgstr "DOS 32-bit-version (DJGPP).\n"
 
-#: common.c:735
+#: common.c:737
 msgid "MSYS version.\n"
 msgstr "MSYS-version.\n"
 
-#: common.c:737
+#: common.c:739
 msgid "Cygwin version.\n"
 msgstr "Cygwin-version.\n"
 
-#: common.c:739
+#: common.c:741
 msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Windows 64-bit-version (MinGW-w64).\n"
 
-#: common.c:741
+#: common.c:743
 #, fuzzy
 msgid "Windows 32 bit version (Watcom C).\n"
 msgstr "Windows 32-bit-version (WATCOMC).\n"
 
-#: common.c:743
+#: common.c:745
 msgid "Windows 32 bit version (MinGW-w64).\n"
 msgstr "Windows 32-bit-version (MinGW-w64).\n"
 
-#: common.c:745
+#: common.c:747
 msgid "Windows 32 bit version (MinGW).\n"
 msgstr "Windows 32-bit-version (MinGW).\n"
 
-#: common.c:747
+#: common.c:749
 #, c-format
 msgid "Windows 64 bit version (MSVC %d).\n"
 msgstr "Windows 64-bit-version (MSVC %d).\n"
 
-#: common.c:749
+#: common.c:751
 #, c-format
 msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Windows 32-bit-version (MSVC %d).\n"
 
-#: common.c:751
+#: common.c:753
 #, fuzzy
 msgid "OS/2 version (Watcom C).\n"
 msgstr "OS/2-version (WATCOMC).\n"
 
-#: common.c:753
+#: common.c:755
 msgid "OS/2 version (EMX).\n"
 msgstr "OS/2-version (EMX).\n"
 
-#: common.c:755
+#: common.c:757
 #, c-format
 msgid "%s version.\n"
 msgstr "%s-version.\n"
 
-#: common.c:761
+#: common.c:763
 msgid "With Unicode UTF-16 support.\n"
 msgstr "Med understøttelse for Unicode UTF-16.\n"
 
-#: common.c:763
+#: common.c:765
 msgid "Without Unicode UTF-16 support.\n"
 msgstr "Uden Unicode UTF-16-understøttelse.\n"
 
-#: common.c:767
+#: common.c:769
 msgid "With Unicode file name support.\n"
 msgstr "Med understøttelse for Unicode-filnavne.\n"
 
-#: common.c:769
+#: common.c:771
 msgid "Without Unicode file name support.\n"
 msgstr "Uden Unicode filnavnsunderstøttelse.\n"
 
-#: common.c:773
+#: common.c:775
 msgid "With native language support.\n"
 msgstr "Med understøttelse for lokale sprog.\n"
 
-#: common.c:778
+#: common.c:780
 msgid "With support to preserve the user and group ownership of files.\n"
 msgstr "Med understøttelse af at bevare bruger- og gruppeejerskab for filer.\n"
 
-#: common.c:780
+#: common.c:782
 msgid "Without support to preserve the user and group ownership of files.\n"
 msgstr "Uden understøttelse af at bevare bruger- og gruppeejerskab for filer.\n"
 
-#: common.c:915
+#: common.c:917
 msgid "Path for temporary output file is too long:"
 msgstr "Sti til midlertidig uddatafil er for lang:"
 
-#: common.c:1201 common.c:1208 common.c:1215 common.c:1222 common.c:1234
-#: common.c:1241
+#: common.c:1203 common.c:1210 common.c:1217 common.c:1224 common.c:1236
+#: common.c:1243
 #, c-format
 msgid "Writing %s BOM.\n"
 msgstr "Skriver %s BOM.\n"
 
-#: common.c:1201 common.c:1254 common.c:1879 common.c:1900
+#: common.c:1203 common.c:1256 common.c:1881 common.c:1902
 msgid "UTF-16LE"
 msgstr "UTF-16LE"
 
-#: common.c:1208 common.c:1257 common.c:1881 common.c:1902
+#: common.c:1210 common.c:1259 common.c:1883 common.c:1904
 msgid "UTF-16BE"
 msgstr "UTF-16BE"
 
-#: common.c:1215 common.c:1234 common.c:1263 common.c:1892
+#: common.c:1217 common.c:1236 common.c:1265 common.c:1894
 msgid "GB18030"
 msgstr "GB18030"
 
-#: common.c:1222 common.c:1241 common.c:1260 common.c:1894
+#: common.c:1224 common.c:1243 common.c:1262 common.c:1896
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: common.c:1286
+#: common.c:1288
 #, c-format
 msgid "Input file %s has %s BOM.\n"
 msgstr "Inddatafilen %s har %s BOM.\n"
 
-#: common.c:1327 common.c:1369
+#: common.c:1329 common.c:1371
 msgid "Assuming UTF-16LE encoding.\n"
 msgstr "Antager UTF-16LE-kodning.\n"
 
-#: common.c:1331 common.c:1373
+#: common.c:1333 common.c:1375
 msgid "Assuming UTF-16BE encoding.\n"
 msgstr "Antager UTF-16BE-kodning.\n"
 
-#: common.c:1521
+#: common.c:1523
 #, c-format
 msgid "problems resolving symbolic link '%s'\n"
 msgstr "problemer med at følge symbolsk henvisning \"%s\"\n"
 
-#: common.c:1539
+#: common.c:1541
 #, c-format
 msgid "Failed to open temporary output file: %s\n"
 msgstr "Åbning af midlertidig outputfil mislykkedes: %s\n"
 
-#: common.c:1551
+#: common.c:1553
 #, c-format
 msgid "using %s as temporary file\n"
 msgstr "bruger %s som midlertidig fil\n"
 
-#: common.c:1605 common.c:1633
+#: common.c:1607 common.c:1635
 #, c-format
 msgid "Failed to change the permissions of temporary output file %s:"
 msgstr "Ændring af tilladelser for midlertidig outputfil %s mislykkedes:"
 
-#: common.c:1621
+#: common.c:1623
 #, c-format
 msgid "The user and/or group ownership of file %s is not preserved.\n"
 msgstr "Bruger- og/eller gruppeejerskab for filen %s bevares ikke.\n"
 
-#: common.c:1643
+#: common.c:1645
 #, c-format
 msgid "Failed to change the owner and group of temporary output file %s:"
 msgstr "Ændring af ejer og gruppe for midlertidig outputfil %s mislykkedes:"
 
-#: common.c:1700
+#: common.c:1702
 #, c-format
 msgid "problems renaming '%s' to '%s':"
 msgstr "der opstod problemer under omdøbning af »%s« til »%s«:"
 
-#: common.c:1704
+#: common.c:1706
 #, c-format
 msgid "          which is the target of symbolic link '%s'\n"
 msgstr "          som er målet for symbolsk henvisning \"%s\"\n"
 
-#: common.c:1706
+#: common.c:1708
 #, c-format
 msgid "          output file remains in '%s'\n"
 msgstr "          outputfil forbliver i \"%s\"\n"
 
-#: common.c:1854 common.c:1949
+#: common.c:1856 common.c:1951
 #, c-format
 msgid "Skipping binary file %s\n"
 msgstr "Springer binær fil %s over\n"
 
-#: common.c:1857 common.c:1952
+#: common.c:1859 common.c:1954
 #, c-format
 msgid "code page %d is not supported.\n"
 msgstr "tegnkodningstabel %d understøttes ikke.\n"
 
-#: common.c:1861 common.c:1956 common.c:2044
+#: common.c:1863 common.c:1958 common.c:2046
 #, c-format
 msgid "Skipping UTF-16 file %s, the size of wchar_t is %d bytes.\n"
 msgstr "Springer UTF-16-filen %s over. Størrelsen på wchar_t er %d byte.\n"
 
-#: common.c:1864 common.c:1959
+#: common.c:1866 common.c:1961
 #, c-format
 msgid "Skipping UTF-16 file %s, an UTF-16 conversion error occurred on line %u.\n"
 msgstr "Springer UTF-16-filen %s over. Der opstod en UTF-16-konverteringsfejl på linje %u.\n"
 
-#: common.c:1868 common.c:1963
+#: common.c:1870 common.c:1965
 #, c-format
 msgid "Skipping UTF-16 file %s, UTF-16 conversion is not supported in this version of %s.\n"
 msgstr "Springer UTF-16-filen %s over. UTF-16-konvertering er ikke understøttet i denne version af %s.\n"
 
-#: common.c:1934 common.c:2033
+#: common.c:1936 common.c:2035
 #, c-format
 msgid "Skipping %s, not a regular file.\n"
 msgstr "Springer %s over, ikke en almindelig fil.\n"
 
-#: common.c:1938
+#: common.c:1940
 #, c-format
 msgid "Skipping %s, output file %s is a symbolic link.\n"
 msgstr "Springer %s over. Outputfil %s er en symbolsk henvisning.\n"
 
-#: common.c:1940
+#: common.c:1942
 #, c-format
 msgid "Skipping symbolic link %s.\n"
 msgstr "Springer symbolsk henvisning %s over.\n"
 
-#: common.c:1943 common.c:2038
+#: common.c:1945 common.c:2040
 #, c-format
 msgid "Skipping symbolic link %s, target is not a regular file.\n"
 msgstr "Springer symbolsk henvisning %s over. Målet er ikke en almindelig fil.\n"
 
-#: common.c:1946
+#: common.c:1948
 #, c-format
 msgid "Skipping %s, target of symbolic link %s is not a regular file.\n"
 msgstr "Springer %s over. Målet for symbolsk henvisning %s er ikke en almindelig fil.\n"
 
-#: common.c:1971
+#: common.c:1973
 #, c-format
 msgid "converting file %s to file %s in Unix format...\n"
 msgstr "omdanner fil %s til fil %s i Unix-format …\n"
 
-#: common.c:1973
+#: common.c:1975
 #, c-format
 msgid "converting file %s to Unix format...\n"
 msgstr "omdanner fil %s til Unix-format …\n"
 
-#: common.c:1977
+#: common.c:1979
 #, c-format
 msgid "converting file %s to file %s in Mac format...\n"
 msgstr "omdanner fil %s til fil %s i Mac-format …\n"
 
-#: common.c:1979
+#: common.c:1981
 #, c-format
 msgid "converting file %s to Mac format...\n"
 msgstr "omdanner fil %s til Mac-format …\n"
 
-#: common.c:1982
+#: common.c:1984
 #, c-format
 msgid "converting file %s to file %s in DOS format...\n"
 msgstr "omdanner fil %s til fil %s i DOS-format …\n"
 
-#: common.c:1984
+#: common.c:1986
 #, c-format
 msgid "converting file %s to DOS format...\n"
 msgstr "omdanner fil %s til DOS-format …\n"
@@ -598,7 +596,7 @@ msgstr "omdanner fil %s til DOS-format …\n"
 #. 3rd %s is encoding of output file.
 #. 4th %s is name of output file.
 #. E.g.: converting UTF-16LE file in.txt to UTF-8 file out.txt in Unix format...
-#: common.c:1996
+#: common.c:1998
 #, c-format
 msgid "converting %s file %s to %s file %s in Unix format...\n"
 msgstr "omdanner %s-filen %s til %s-filen %s i Unix-format …\n"
@@ -608,95 +606,105 @@ msgstr "omdanner %s-filen %s til %s-filen %s i Unix-format …\n"
 #. 2nd %s is name of input file.
 #. 3rd %s is encoding of output (input file is overwritten).
 #. E.g.: converting UTF-16LE file foo.txt to UTF-8 Unix format...
-#: common.c:2003
+#: common.c:2005
 #, c-format
 msgid "converting %s file %s to %s Unix format...\n"
 msgstr "omdanner %s-filen %s til %s-Unix-format …\n"
 
-#: common.c:2007
+#: common.c:2009
 #, c-format
 msgid "converting %s file %s to %s file %s in Mac format...\n"
 msgstr "omdanner %s-filen %s til %s-filen %s i Mac-format …\n"
 
-#: common.c:2009
+#: common.c:2011
 #, c-format
 msgid "converting %s file %s to %s Mac format...\n"
 msgstr "omdanner %s-filen %s til %s-Mac-format …\n"
 
-#: common.c:2012
+#: common.c:2014
 #, c-format
 msgid "converting %s file %s to %s file %s in DOS format...\n"
 msgstr "omdanner %s-filen %s til %s-filen %s i DOS-format …\n"
 
-#: common.c:2014
+#: common.c:2016
 #, c-format
 msgid "converting %s file %s to %s DOS format...\n"
 msgstr "omdanner %s-filen %s til %s-DOS-format …\n"
 
-#: common.c:2021
+#: common.c:2023
 #, c-format
 msgid "problems converting file %s to file %s\n"
 msgstr "problemer under omdannelse af fil %s til fil %s\n"
 
-#: common.c:2023
+#: common.c:2025
 #, c-format
 msgid "problems converting file %s\n"
 msgstr "problemer under omdannelse af fil %s\n"
 
-#: common.c:2186 common.c:2243
+#: common.c:2188 common.c:2245
 #, c-format
 msgid "can not read from input file %s:"
 msgstr "kan ikke læse fra inputfilen %s:"
 
-#: common.c:2403
+#: common.c:2405
 #, c-format
 msgid "wrong flag '%c' for option -i or --info\n"
 msgstr "forkert flag »%c« for tilvalget -i eller --info\n"
 
-#: common.c:2539 common.c:2582
+#: common.c:2546 common.c:2589
 #, c-format
 msgid "active code page: %d\n"
 msgstr "aktuel tegnkodningstabel: %d\n"
 
-#: common.c:2594
+#: common.c:2601
 #, c-format
 msgid "invalid %s conversion mode specified\n"
 msgstr "ugyldig %s omdannelsestilstand specificeret\n"
 
-#: common.c:2602 common.c:2632
+#: common.c:2609 common.c:2639
 #, c-format
 msgid "option '%s' requires an argument\n"
 msgstr "tilvalg \"%s\" kræver et argument\n"
 
-#: common.c:2624
+#: common.c:2631
 #, c-format
 msgid "invalid %s display encoding specified\n"
 msgstr "ugyldig visningskodning %s specificeret\n"
 
-#: common.c:2644 common.c:2658 common.c:2670
+#: common.c:2651 common.c:2665 common.c:2677
 #, c-format
 msgid "target of file %s not specified in new-file mode\n"
 msgstr "mål for fil %s er ikke angivet i ny-fil-tilstand\n"
 
-#: common.c:2753
+#: common.c:2760
 #, c-format
 msgid "can not read from input file: %s\n"
 msgstr "kan ikke læse fra inputfil: %s\n"
 
-#: common.c:2763 common.c:2775
+#: common.c:2770 common.c:2782
 #, c-format
 msgid "can not write to output file: %s\n"
 msgstr "kan ikke skrive til outputfil: %s\n"
 
-#: common.c:2851
+#: common.c:2858
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "fejl: Ugyldigt surrogatpar. Mangler lav surrogat.\n"
 
-#: common.c:2869
+#: common.c:2876
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "fejl: Ugyldigt surrogatpar. Mangler høj surrogat.\n"
 
-#: common.c:2972
+#: common.c:2979
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "Konverterede %u ud af %u linjeskift.\n"
+
+#: common.c:2993
+#, c-format
+msgid "Binary symbol 0x00%02X found at line %u\n"
+msgstr "Binært symbol 0x00%02X fundet på linje %u\n"
+
+#: common.c:3017
+#, c-format
+msgid "Binary symbol 0x%02X found at line %u\n"
+msgstr "Binært symbol 0x%02X fundet på linje %u\n"

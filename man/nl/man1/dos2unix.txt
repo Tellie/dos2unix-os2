@@ -190,6 +190,9 @@ OPTIES
         samenvoegen van bestanden kan bijvoorbeeld niet het verwachte
         resultaat opleveren.
 
+    --error-binary
+        Return an error if a binary file is skipped.
+
     -f, --force
         Conversie van binaire bestanden afdwingen.
 
@@ -360,7 +363,11 @@ OPTIES
         bestanden.
 
     --no-add-eol
-        Geen regeleinde toevoegen aan de laatste regel als er geen is.
+        Do not add a line break to the last line if there isn't one
+        (default).
+
+    --no-error-binary
+        Do not return an error if a binary file is skipped (default).
 
     -O, --to-stdout
         Naar standaarduitvoer schrijven, zoals een Unix-filter. Gebruik
@@ -432,6 +439,9 @@ OPTIES
         gewoonlijk niet in tekstbestanden voorkomen. Maar het is mogelijk
         dat een binair bestand enkel normale teksttekens bevat. Zo'n binair
         bestand zal dan foutief als een tekstbestand gezien worden.
+
+        By default, no error is returned when a binary file is skipped. When
+        the "--error-binary" option is used, an error is returned.
 
     -u, --keep-utf16
         De originele UTF-16-codering van het invoerbestand behouden. Het

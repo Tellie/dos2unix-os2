@@ -155,6 +155,10 @@ Dodawanie znaku końca linii do ostatniej linii, jeśli ta go nie zawiera. Dzia�
 
 Pliki przekształcone z formatu DOS do Uniksa mogą nie mieć w ostatnim wierszu znaku końca linii. Istnieją edytory tekstu zapisujące pliki tekstowe bez znaku końca wiersza w ostatniej linii. Niektóre programy uniksowe mają problemy przy przetwarzaniu takich plików, ponieważ standard POSIX określa, że każdy wiersz pliku tekstowego musi kończyć się znakiem końca linii. Na przykład łączenie plików może nie dać oczekiwanego wyniku.
 
+=item B<--error-binary>
+
+Zwrócenie błędu, jeśli pominięto plik binarny.
+
 =item B<-f, --force>
 
 Wymuszenie konwersji plików binarnych.
@@ -318,7 +322,11 @@ Przerwanie konwersji, jeżeli użytkownik lub grupa oryginalnego pliku nie może
 
 =item B<--no-add-eol>
 
-Bez dodawania znaku końca linii do ostatniego wiersza, jeśli ten go nie zawiera.
+Bez dodawania znaku końca linii do ostatniego wiersza, jeśli ten go nie zawiera (domyślne).
+
+=item B<--no-error-binary>
+
+Bez zwracania błędu, jeśli pominięto plik binarny (domyślne).
 
 =item B<-O, --to-stdout>
 
@@ -332,7 +340,7 @@ W połączeniu z opcją C<-e> pliki mogą być właściwie łączone - bez poł�
 
 Tryb starego pliku. Konwersja PLIKU i nadpisanie go wyjściem. Program działa domyślnie w tym trybie. Można używać masek.
 
-W trybie starego pliku (w miejscu) przekonwertowany plik otrzymuje tego samego właściciela, grupę oraz prawa odczytu/zapisu, jak plik oryginalny - także wtedy, gdy plik jest konwertowany przez innego użytkownika, mającego prawo zapisu do pliku (np. przez użytkownika root). Konwersja zostanie przerwana, jeśli nie będzie możliwe zachowanie oryginalnych wartości. Zmiana właściciela mogłaby oznaczać, że pierwotny właściciel nie może już odczytać pliku. Zmiana grupy mogłaby być zagrożeniem bezpieczeństwa, plik mógłby być czytelny dla nie zamierzonych osób. Zachowanie właściciela, grupy i praw odczytu/zapisu jest obsługiwane tylko na Uniksie.
+W trybie starego pliku (w miejscu) przekonwertowany plik otrzymuje tego samego właściciela, grupę oraz prawa odczytu/zapisu, jak plik oryginalny - także wtedy, gdy plik jest konwertowany przez innego użytkownika, mającego prawo zapisu do pliku (np. przez użytkownika root). Konwersja zostanie przerwana, jeśli nie będzie możliwe zachowanie oryginalnych wartości. Zmiana właściciela mogłaby oznaczać, że pierwotny właściciel nie może już odczytać pliku. Zmiana grupy mogłaby być zagrożeniem bezpieczeństwa, plik mógłby być czytelny dla niezamierzonych osób. Zachowanie właściciela, grupy i praw odczytu/zapisu jest obsługiwane tylko na Uniksie.
 
 Aby sprawdzić, czy doswunix ma obsługę zachowywania użytkownika i grupy plików, można napisać C<dos2unix -V>.
 
@@ -359,6 +367,8 @@ Usunięcie znaków BOM (Byte Order Mark). Bez zapisywania BOM do pliku wyjściow
 Pominięcie plików binarnych (domyślne).
 
 Pomijanie plików binarnych ma na celu zapobieżenie przypadkowym błędom. Uwaga: wykrywanie plików binarnych nie jest w 100% odporne na błędy. Pliki wejściowe są przeszukiwane pod kątem symboli binarnych, które zwykle nie występują w plikach tekstowych. Może się zdarzyć, że plik binarny zawiera tylko zwykłe znaki tekstowe. Taki plik binarny będzie błędnie widziany jako plik tekstowy.
+
+Domyślnie nie jest zwacany błąd, kiedy zostaje pominięty plik binarny. Jeśli użyta zostanie opcja C<--error-binary>, błąd jest zwracany.
 
 =item B<-u, --keep-utf16>
 
@@ -426,7 +436,7 @@ W tym trybie wszystkie znaki 8-bitowe spoza ASCII (o wartościach od 128 do 255)
 
 =item B<iso>
 
-W tym trybie znaki są konwertowane między zestawem znaków DOS (stroną kodową) a zestawem znaków ISO-8859-1 (Latin-1) używanym na Uniksie. Znaki DOS-owe nie mające odpowiednika w ISO-8859-1, których nie da się przekonwertować, są zamieniane na kropkę. To samo dotyczy znaków ISO-8859-1 bez odpowiednika w DOS-ie.
+W tym trybie znaki są konwertowane między zestawem znaków DOS (stroną kodową) a zestawem znaków ISO-8859-1 (Latin-1) używanym na Uniksie. Znaki DOS-owe niemające odpowiednika w ISO-8859-1, których nie da się przekonwertować, są zamieniane na kropkę. To samo dotyczy znaków ISO-8859-1 bez odpowiednika w DOS-ie.
 
 Jeśli używana jest tylko opcja C<-iso>, dos2unix próbuje wykryć aktywną stronę kodową. Jeśli nie jest to możliwe, dos2unix używa domyślnej strony kodowej CP437, stosowanej głównie w USA. Aby wymusić określoną stronę kodową, należy użyć opcji C<-437> (US), C<-850> (zachodnioeuropejska), C<-860> (portugalska), C<-863> (kanadyjska francuska) lub C<-865> (nordycka). Ponadto obsługiwana jest strona kodowa Windows CP1252 (zachodnioeuropejska) przy użyciu opcji C<-1252>. W przypadku innych stron kodowych można użyć narzędzia dos2unix wraz z iconv(1). Iconv potrafi konwertować między wieloma kodowaniami znaków.
 

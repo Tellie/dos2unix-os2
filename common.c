@@ -669,6 +669,7 @@ void PrintUsage(const char *progname)
    encoding            ansi, unicode, utf8, default to ansi\n"));
 #endif
   D2U_ANSI_FPRINTF(stdout,_(" -e, --add-eol         add a line break to the last line if there isn't one\n"));
+  D2U_ANSI_FPRINTF(stdout,_(" --error-binary        return an error when a binary file is skipped\n"));
   D2U_ANSI_FPRINTF(stdout,_(" -f, --force           force conversion of binary files\n"));
 #ifdef D2U_UNICODE
 #if (defined(_WIN32) && !defined(__CYGWIN__))
@@ -689,6 +690,7 @@ void PrintUsage(const char *progname)
   D2U_ANSI_FPRINTF(stdout,_(" --no-allow-chown      don't allow file ownership change (default)\n"));
 #endif
   D2U_ANSI_FPRINTF(stdout,_(" --no-add-eol          don't add a line break to the last line if there isn't one (default)\n"));
+  D2U_ANSI_FPRINTF(stdout,_(" --no-error-binary     don't return an error when a binary file is skipped (default)\n"));
   D2U_ANSI_FPRINTF(stdout,_(" -O, --to-stdout       write to standard output\n"));
   D2U_ANSI_FPRINTF(stdout,_(" -o, --oldfile         write to old file (default)\n\
    file ...            files to convert in old-file mode\n"));
@@ -2434,6 +2436,7 @@ int parse_options(int argc, char *argv[],
   pFlag->ConvMode = CONVMODE_ASCII;  /* default ascii */
   pFlag->NewLine = 0;
   pFlag->Force = 0;
+  pFlag->error_binary = 0;
   pFlag->Follow = SYMLINK_SKIP;
   pFlag->status = 0;
   pFlag->stdio_mode = 1;
@@ -2499,6 +2502,10 @@ int parse_options(int argc, char *argv[],
 #endif
       else if ((strcmp(argv[ArgIdx],"-s") == 0) || (strcmp(argv[ArgIdx],"--safe") == 0))
         pFlag->Force = 0;
+      else if ((strcmp(argv[ArgIdx],"--error-binary") == 0))
+        pFlag->error_binary = 1;
+      else if ((strcmp(argv[ArgIdx],"--no-error-binary") == 0))
+        pFlag->error_binary = 0;
       else if ((strcmp(argv[ArgIdx],"-q") == 0) || (strcmp(argv[ArgIdx],"--quiet") == 0))
         pFlag->verbose = 0;
       else if ((strcmp(argv[ArgIdx],"-v") == 0) || (strcmp(argv[ArgIdx],"--verbose") == 0))
@@ -2974,6 +2981,18 @@ void logConverted(int RetVal, int verbose, const char *progname, unsigned int co
 }
 
 #ifdef D2U_UNICODE
+
+void logBinaryCharW(CFlag *ipFlag, wint_t c, unsigned int line_nr, const char *progname) {
+  if (!ipFlag->error) {
+      if (ipFlag->stdio_mode)
+          ipFlag->error = 1;
+      else
+          ipFlag->error = ipFlag->error_binary;
+    }
+  D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
+  D2U_UTF8_FPRINTF(stderr, _("Binary symbol 0x00%02X found at line %u\n"), c, line_nr);
+}
+
 /* Return 1 when c is a binary character */
 int binaryCharW(wint_t c) {
     if ((c < 32) &&
@@ -2986,6 +3005,17 @@ int binaryCharW(wint_t c) {
         return 0;
 }
 #endif
+
+void logBinaryChar(CFlag *ipFlag, int c, unsigned int line_nr, const char *progname) {
+  if (!ipFlag->error) {
+      if (ipFlag->stdio_mode)
+          ipFlag->error = 1;
+      else
+          ipFlag->error = ipFlag->error_binary;
+    }
+  D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
+  D2U_UTF8_FPRINTF(stderr, _("Binary symbol 0x%02X found at line %u\n"), c, line_nr);
+}
 
 /* Return 1 when c is a binary character */
 int binaryChar(int c) {

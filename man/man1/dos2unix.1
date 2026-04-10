@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "dos2unix 1"
-.TH dos2unix 1 2026-01-30 "dos2unix" 2026-01-30
+.TH dos2unix 1 2026-04-07 "dos2unix" 2026-04-06
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -239,6 +239,9 @@ last line. Some Unix programs have problems processing these files, because the
 POSIX standard defines that every line in a text file must end with a
 terminating newline character. For instance concatenating files may not give
 the expected result.
+.IP \fB\-\-error\-binary\fR 4
+.IX Item "--error-binary"
+Return an error if a binary file is skipped.
 .IP "\fB\-f, \-\-force\fR" 4
 .IX Item "-f, --force"
 Force conversion of binary files.
@@ -426,7 +429,10 @@ option is only available if dos2unix has support for preserving the user
 and group ownership of files.
 .IP \fB\-\-no\-add\-eol\fR 4
 .IX Item "--no-add-eol"
-Do not add a line break to the last line if there isn't one.
+Do not add a line break to the last line if there isn't one (default).
+.IP \fB\-\-no\-error\-binary\fR 4
+.IX Item "--no-error-binary"
+Do not return an error if a binary file is skipped (default).
 .IP "\fB\-O, \-\-to\-stdout\fR" 4
 .IX Item "-O, --to-stdout"
 Write to standard output, like a Unix filter. Use option \f(CW\*(C`\-o\*(C'\fR to go back to
@@ -495,6 +501,9 @@ that the detection of binary files is not 100% foolproof. Input files are
 scanned for binary symbols which are typically not found in text files. It is
 possible that a binary file contains only normal text characters. Such a binary
 file will mistakenly be seen as a text file.
+.Sp
+By default, no error is returned when a binary file is skipped. When the
+\&\f(CW\*(C`\-\-error\-binary\*(C'\fR option is used, an error is returned.
 .IP "\fB\-u, \-\-keep\-utf16\fR" 4
 .IX Item "-u, --keep-utf16"
 Keep the original UTF\-16 encoding of the input file. The output file will be

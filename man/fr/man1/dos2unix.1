@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "dos2unix 1"
-.TH dos2unix 1 2026-01-30 "dos2unix" 2026-01-30
+.TH dos2unix 1 2026-04-07 "dos2unix" 2026-04-06
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -178,6 +178,9 @@ L'encodage par défaut peut être changé en assignant la valeur \f(CW\*(C`unico
 Ajoute un saut de ligne à la dernière ligne si elle n'en a pas déjà un. Cela fonctionne avec toutes les conversions.
 .Sp
 Un fichier converti de DOS vers le format Unix peut ne pas avoir de saut de ligne à la dernière ligne. Il existe des éditeurs de texte qui écrivent le fichier texte sans saut de ligne à la dernière ligne. Certains programmes Unix ont des difficultés à traiter ces fichiers car le standard POSIX défini que chaque ligne d'un fichier texte doit être terminé par le caractère de nouvelle ligne. Par exemple, concaténer des fichiers peut ne pas donner le résultat attendu.
+.IP \fB\-\-error\-binary\fR 4
+.IX Item "--error-binary"
+Retourner une erreur si un fichier binaire est ignoré.
 .IP "\fB\-f, \-\-force\fR" 4
 .IX Item "-f, --force"
 Force la conversion de fichiers binaires.
@@ -340,7 +343,10 @@ Ne pas autoriser le changement du propriétaire du fichier dans l'ancien mode de
 Interrompt la conversion si l'utilisateur ou le groupe propriétaire du fichier original ne peuvent pas être préservés dans l'ancien mode de fichier. Voyez aussi les options \f(CW\*(C`\-o\*(C'\fR et \f(CW\*(C`\-n\*(C'\fR. Cette option est uniquement présente si dos2unix dispose des fonctionnalités pour préserver l'utilisateur ou le groupe propriétaire des fichiers.
 .IP \fB\-\-no\-add\-eol\fR 4
 .IX Item "--no-add-eol"
-N'ajoute pas de saut de ligne à la dernière ligne s'il n'y en a pas.
+N'ajoute pas de saut de ligne à la dernière ligne s'il n'y en a pas (par défaut).
+.IP \fB\-\-no\-error\-binary\fR 4
+.IX Item "--no-error-binary"
+Ne pas retourner une erreur si un fichier binaire est ignoré (par défaut).
 .IP "\fB\-O, \-\-to\-stdout\fR" 4
 .IX Item "-O, --to-stdout"
 Écrit vers la sortie standard, comme un filtre Unix. Utilisez l'option \f(CW\*(C`\-o\*(C'\fR pour revenir au mode de l'ancien fichier (en place).
@@ -382,6 +388,8 @@ Supprime la marque d'ordre des octets (BOM). N'écrit pas la BOM dans le fichier
 Ignore les fichiers binaires (par défaut).
 .Sp
 Ignorer les fichiers binaires sert à éviter les erreurs accidentelles. Attention que la détection de fichiers binaires n'est pas fiable à 100%. Les fichiers en entrée sont analysés pour y trouver des symboles binaires qui ne sont habituellement pas rencontrés dans des fichiers textes. Il est cependant possible qu'un fichier binaire ne contienne que des caractères textes normaux. Un tel fichier serait erronément traité comme un fichier texte.
+.Sp
+Par défaut, aucune erreur n'est retournée quand un fichier binaire est ignoré. Si l'option \f(CW\*(C`\-\-error\-binary\*(C'\fR est utilisée, une erreur est retournée.
 .IP "\fB\-u, \-\-keep\-utf16\fR" 4
 .IX Item "-u, --keep-utf16"
 Conserve l'encodage UTF\-16 original du fichier d'entrée. Le fichier de sortie sera écrit dans le même encodage UTF\-16 (petit ou grand boutien) que le fichier d'entrée. Ceci évite la transformation en UTF\-8. Une BOM UTF\-16 sera écrite en conséquent. Cette option peut être désactivée avec l'option \f(CW\*(C`\-ascii\*(C'\fR.

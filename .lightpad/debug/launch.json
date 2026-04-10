@@ -1,0 +1,82 @@
+{
+    "_comment": "Debug launch configurations. Edit this file to add your own configurations.",
+    "compounds": [
+        {
+            "_comment": "Example compound configuration for debugging multiple targets",
+            "configurations": [
+                "Server",
+                "Client"
+            ],
+            "name": "Server + Client",
+            "stopAll": true
+        }
+    ],
+    "configurations": [
+        {
+            "_comment": "Example Python debug configuration",
+            "adapterId": "python-debugpy",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "name": "Python: Current File",
+            "program": "${file}",
+            "request": "launch",
+            "type": "debugpy"
+        },
+        {
+            "MIMode": "gdb",
+            "_comment": "Example C++ GDB debug configuration",
+            "adapterId": "cppdbg-gdb",
+            "args": [
+            ],
+            "cwd": "${workspaceFolder}",
+            "environment": [
+            ],
+            "externalConsole": false,
+            "miDebuggerPath": "gdb",
+            "name": "C++: GDB Launch",
+            "program": "${workspaceFolder}/a.out",
+            "request": "launch",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing"
+                }
+            ],
+            "stopAtEntry": false,
+            "type": "cppdbg"
+        },
+        {
+            "_comment": "Example Node.js debug configuration",
+            "adapterId": "node-debug",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "name": "Node.js: Current File",
+            "program": "${file}",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "_comment": "Example Go debug configuration using Delve",
+            "adapterId": "go-delve",
+            "cwd": "${workspaceFolder}",
+            "mode": "debug",
+            "name": "Go: Current File",
+            "program": "${file}",
+            "request": "launch",
+            "type": "go"
+        },
+        {
+            "_comment": "Example Rust debug configuration using CodeLLDB",
+            "adapterId": "rust-codelldb",
+            "args": [
+            ],
+            "cwd": "${workspaceFolder}",
+            "name": "Rust: Debug Binary",
+            "program": "${workspaceFolder}/target/debug/${workspaceFolderBasename}",
+            "request": "launch",
+            "type": "lldb"
+        }
+    ],
+    "version": "1.0.0"
+}

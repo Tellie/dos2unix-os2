@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "dos2unix 1"
-.TH dos2unix 1 2026-01-30 "dos2unix" 2026-01-30
+.TH dos2unix 1 2026-04-07 "dos2unix" 2026-04-06
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -63,8 +63,8 @@
 .SH NUME
 .IX Header "NUME"
 dos2unix \- Convertor de format de fișier text din DOS/Mac în Unix și viceversa
-.SH REZUMAT
-.IX Header "REZUMAT"
+.SH SINOPSIS
+.IX Header "SINOPSIS"
 .Vb 2
 \&    dos2unix [opțiuni] [FIȘIER ...] [\-n FIȘIER_INTRARE FIȘIER_IEȘIRE ...]
 \&    unix2dos [opțiuni] [FIȘIER ...] [\-n FIȘIER_INTRARE FIȘIER_IEȘIRE ...]
@@ -178,6 +178,9 @@ Codificarea implicită poate fi schimbată cu variabila de mediu DOS2UNIX_DISPLA
 Adaugă o întrerupere de linie la ultima linie, dacă nu există una. Acest lucru funcționează pentru fiecare conversie.
 .Sp
 Un fișier convertit din formatul DOS în formatul Unix poate să nu aibă o întrerupere de linie pe ultima linie. Există editoare de text care scriu fișiere de text fără o întrerupere de linie pe ultima linie. Unele programe Unix au probleme în procesarea acestor fișiere, deoarece standardul POSIX definește că fiecare linie dintr-un fișier text trebuie să se încheie cu un caracter de sfârșit de linie nouă. De exemplu, concatenarea fișierelor poate să nu dea rezultatul așteptat.
+.IP \fB\-\-error\-binary\fR 4
+.IX Item "--error-binary"
+Returnează o eroare atunci când un fișier binar este omis.
 .IP "\fB\-f, \-\-force\fR" 4
 .IX Item "-f, --force"
 Forțează conversia fișierelor binare.
@@ -340,7 +343,10 @@ Nu permite schimbarea proprietarului fișierului în modul\-fișier_vechi (impli
 Anulează conversia atunci când utilizatorul și/sau grupul proprietar al fișierului original nu poate fi păstrat în modul\-fișier_vechi. A se vedea, de asemenea, opțiunile \f(CW\*(C`\-o\*(C'\fR și \f(CW\*(C`\-n\*(C'\fR. Această opțiune este disponibilă doar dacă «dos2unix» are suport pentru păstrarea dreptului de proprietate asupra fișierelor de către utilizator și grup.
 .IP \fB\-\-no\-add\-eol\fR 4
 .IX Item "--no-add-eol"
-Nu adaugă o întrerupere de linie la ultima linie, dacă nu există una.
+Nu adaugă o întrerupere de linie la ultima linie, dacă nu există una (implicit).
+.IP \fB\-\-no\-error\-binary\fR 4
+.IX Item "--no-error-binary"
+Nu returnează o eroare atunci când un fișier binar este omis (implicit).
 .IP "\fB\-O, \-\-to\-stdout\fR" 4
 .IX Item "-O, --to-stdout"
 Scrie la ieșirea standard, ca un filtru Unix. Folosiți opțiunea \f(CW\*(C`\-o\*(C'\fR pentru a reveni la modul\-fișier_vechi (în același loc / în același fișier).
@@ -382,6 +388,8 @@ Elimină marcajul de ordine a octeților (BOM). Nu scrie un marcaj de ordine a o
 Omite fișierele binare (implicit).
 .Sp
 Omiterea fișierelor binare se face pentru a evita greșelile accidentale. Rețineți că detectarea fișierelor binare nu este 100% sigură. Fișierele de intrare sunt scanate pentru simboluri binare care de obicei nu se găsesc în fișierele text. Este posibil ca un fișier binar să conțină doar caractere de text normale. Un astfel de fișier binar va fi văzut din greșeală ca un fișier text.
+.Sp
+În mod implicit, nu se returnează nicio eroare atunci când un fișier binar este omis. Atunci când se utilizează opțiunea \f(CW\*(C`\-\-error\-binary\*(C'\fR, se returnează o eroare.
 .IP "\fB\-u, \-\-keep\-utf16\fR" 4
 .IX Item "-u, --keep-utf16"
 Păstrează codificarea UTF\-16 originală a fișierului de intrare. Fișierul de ieșire va fi scris în aceeași codare UTF\-16, little sau big endian, ca și fișierul de intrare.  Acest lucru previne transformarea în UTF\-8. Un marcaj de ordine a octeților UTF\-16 va fi scris în consecință. Această opțiune poate fi dezactivată cu opțiunea \f(CW\*(C`\-ascii\*(C'\fR.

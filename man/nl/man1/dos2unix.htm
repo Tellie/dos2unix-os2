@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>dos2unix 7.5.4 - DOS/Mac naar Unix en vice versa tekstbestand formaat omzetter</title>
+<title>dos2unix 7.5.5 - DOS/Mac naar Unix en vice versa tekstbestand formaat omzetter</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rev="made" href="mailto:ASSI@walter.nonet" />
 </head>
@@ -50,7 +50,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 
 <p>Het dos2unix-pakket bevat de toepassingen <code>dos2unix</code> en <code>unix2dos</code> om platte tekstbestanden in DOS- of Mac-indeling naar Unix-indeling om te zetten, en vice versa.</p>
 
-<p>In DOS/Windows-tekstbestanden bestaat een regeleinde uit een combinatie van twee tekens: een &#39;Carriage Return&#39; (CR) gevolgd door een &#39;Line Feed&#39; (LF). In Unix-tekstbestanden bestaat een regeleinde uit één enkel &#39;Newline&#39;-teken, dat gelijk is aan een DOS &#39;Line Feed&#39;-teken (LF). In Mac-tekstbestanden, van vóór Mac OS X, bestaan regeleindes uit één enkel &#39;Carriage Return&#39;-teken. Mac OS X is op Unix gebaseerd en heeft dezelfde regeleindes als Unix.</p>
+<p>In DOS/Windows-tekstbestanden bestaat een regeleinde uit een combinatie van twee tekens: een &#39;Carriage Return&#39; (CR) gevolgd door een &#39;Line Feed&#39; (LF). In Unix-tekstbestanden bestaat een regeleinde uit &eacute;&eacute;n enkel &#39;Newline&#39;-teken, dat gelijk is aan een DOS &#39;Line Feed&#39;-teken (LF). In Mac-tekstbestanden, van v&oacute;&oacute;r Mac OS X, bestaan regeleindes uit &eacute;&eacute;n enkel &#39;Carriage Return&#39;-teken. Mac OS X is op Unix gebaseerd en heeft dezelfde regeleindes als Unix.</p>
 
 <p>Naast regeleindes kan dos2unix ook de codering van bestanden converteren. Enkele DOS-codetabellen kunnen omgezet worden naar Unix Latin-1. En Windows Unicode-bestanden (UTF-16) kunnen omgezet worden naar Unix Unicode-bestanden (UTF-8).</p>
 
@@ -168,7 +168,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 
 <p>dos2unix gebruikt standaard ANSI-gecodeerde tekst. Het voordeel hiervan is dat het achterwaarts compatibel is. Het werkt met raster- en TrueType-lettertypen. In sommige regio&#39;s moet je de actieve DOS OEM-codepagina veranderen in de Windows systeem ANSI-codepagina met het <code>chcp</code> commando, omdat dos2unix de Windows systeem-codepagina gebruikt.</p>
 
-<p>Het nadeel van ANSI is dat internationale bestandsnamen met letters buiten de standaard systeem-codepagina niet goed worden weergegeven. U ziet in plaats daarvan een vraagteken of een verkeerd symbool. Wanneer u niet werkt met buitenlands bestandsnamen is de methode oké.</p>
+<p>Het nadeel van ANSI is dat internationale bestandsnamen met letters buiten de standaard systeem-codepagina niet goed worden weergegeven. U ziet in plaats daarvan een vraagteken of een verkeerd symbool. Wanneer u niet werkt met buitenlands bestandsnamen is de methode ok&eacute;.</p>
 
 </dd>
 <dt id="unicode-unicodebom"><b>unicode</b>, <b>unicodebom</b></dt>
@@ -206,6 +206,12 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 <p>Een regeleinde toevoegen aan de laatste regel als er nog geen is. Dit werkt voor alle conversies.</p>
 
 <p>Een bestand dat is geconverteerd van DOS- naar Unix-indeling kan een regeleinde op de laatste regel missen. Er zijn tekstbewerkers die tekstbestanden schrijven zonder een regeleinde op de laatste regel. Sommige Unix-programma&#39;s hebben problemen met het verwerken van deze bestanden, omdat de POSIX-standaard definieert dat elke regel in een tekstbestand moet eindigen met een afsluitend regeleindeteken. Het samenvoegen van bestanden kan bijvoorbeeld niet het verwachte resultaat opleveren.</p>
+
+</dd>
+<dt id="error-binary"><b>--error-binary</b></dt>
+<dd>
+
+<p>Return an error if a binary file is skipped.</p>
 
 </dd>
 <dt id="f---force"><b>-f</b>, <b>--force</b></dt>
@@ -255,7 +261,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 0       0       6  no_bom    text   mac     mac.txt
 1       0       0  no_bom    text   noeol   noeol_dos.txt</code></pre>
 
-<p>Bij de optie kunnen één of meer vlaggen meegegeven worden om de uitvoer te beperken.</p>
+<p>Bij de optie kunnen &eacute;&eacute;n of meer vlaggen meegegeven worden om de uitvoer te beperken.</p>
 
 <dl>
 
@@ -411,7 +417,13 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 <dt id="no-add-eol"><b>--no-add-eol</b></dt>
 <dd>
 
-<p>Geen regeleinde toevoegen aan de laatste regel als er geen is.</p>
+<p>Do not add a line break to the last line if there isn&#39;t one (default).</p>
+
+</dd>
+<dt id="no-error-binary"><b>--no-error-binary</b></dt>
+<dd>
+
+<p>Do not return an error if a binary file is skipped (default).</p>
 
 </dd>
 <dt id="O---to-stdout"><b>-O, --to-stdout</b></dt>
@@ -463,6 +475,8 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 
 <p>Binaire bestanden worden overgeslagen om vergissingen te voorkomen. Het detecteren van binaire bestanden is echter niet 100% betrouwbaar. Invoerbestanden worden gescand op binaire tekens die gewoonlijk niet in tekstbestanden voorkomen. Maar het is mogelijk dat een binair bestand enkel normale teksttekens bevat. Zo&#39;n binair bestand zal dan foutief als een tekstbestand gezien worden.</p>
 
+<p>By default, no error is returned when a binary file is skipped. When the <code>--error-binary</code> option is used, an error is returned.</p>
+
 </dd>
 <dt id="u---keep-utf16"><b>-u</b>, <b>--keep-utf16</b></dt>
 <dd>
@@ -475,7 +489,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 
 <p>Veronderstellen dat de indeling van het invoerbestand UTF-16LE is.</p>
 
-<p>Wanneer het invoerbestand een Byte-Order-Mark (BOM) bevat, dan gaat deze BOM vóór deze optie.</p>
+<p>Wanneer het invoerbestand een Byte-Order-Mark (BOM) bevat, dan gaat deze BOM v&oacute;&oacute;r deze optie.</p>
 
 <p>Wanneer een verkeerde aanname is gemaakt (het invoerbestand was geen UTF-16LE) en de conversie verliep met succes, dan krijgt u een UTF-8-bestand met verkeerde tekst. De verkeerde conversie kan ongedaan worden gemaakt door met iconv(1) het UTF-8-uitvoerbestand terug om te zetten naar UTF-16LE. Dit zal het originele bestand terug brengen.</p>
 
@@ -757,7 +771,7 @@ dos2unix -o a.txt -n b.txt e.txt</code></pre>
 
 <pre><code>export LANG=nl               Nederlands
 export LANG=nl_NL            Nederlands, Nederland
-export LANG=nl_BE            Nederlands, België
+export LANG=nl_BE            Nederlands, Belgi&euml;
 export LANG=es_ES            Spaans, Spanje
 export LANG=es_MX            Spaans, Mexico
 export LANG=en_US.iso88591   Engels, VS, Latin-1-codering

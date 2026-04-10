@@ -124,6 +124,9 @@
         每一行必须以换行符结尾，部分Unix程序在处理此类缺少末尾换行符的文件时可能存在问题，例如：拼接两个文本文件时，第一个文件的最后一行会直
         接与第二个文件的第一行相连，从而产生非预期的结果。
 
+    --error-binary
+        Return an error if a binary file is skipped.
+
     -f, --force
         强制转换二进制文件。
 
@@ -254,7 +257,11 @@
         支持保护文件的属主/属组时才能使用该选项。
 
     --no-add-eol
-        即使文件末尾缺少换行符，也不要追加换行符。
+        Do not add a line break to the last line if there isn't one
+        (default).
+
+    --no-error-binary
+        Do not return an error if a binary file is skipped (default).
 
     -O, --to-stdout
         将结果重定向至标准输出（类似Unix过滤器）。可以使用选项 "-o" 来切换回旧文件（原位修改）模式。
@@ -299,6 +306,9 @@
 
         跳过二进制文件是为了避免可能的错误。请注意，对二进制文件的探测并不能做到100%准确。程序通过扫描二进制文件所特有的标记来将其与文本文件
         区分开来，但有的二进制文件可能只包含普通的文本字符，这样的文件就会被误判为文本文件。
+
+        By default, no error is returned when a binary file is skipped. When
+        the "--error-binary" option is used, an error is returned.
 
     -u, --keep-utf16
         保留输入文件的UTF-16编码。输出文件也使用UTF-16编码和相同的尾序。这将阻止转换到UTF-8。相应也会写入UTF-16

@@ -55,7 +55,7 @@
 .\" ========================================================================
 .\"
 .IX Title "dos2unix 1"
-.TH dos2unix 1 2026-01-30 "dos2unix" 2026-01-30
+.TH dos2unix 1 2026-04-07 "dos2unix" 2026-04-06
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -178,6 +178,9 @@ Domyślne kodowanie można zmienić przy użyciu zmiennej środowiskowej DOS2UNI
 Dodawanie znaku końca linii do ostatniej linii, jeśli ta go nie zawiera. Działa przy każdej konwersji.
 .Sp
 Pliki przekształcone z formatu DOS do Uniksa mogą nie mieć w ostatnim wierszu znaku końca linii. Istnieją edytory tekstu zapisujące pliki tekstowe bez znaku końca wiersza w ostatniej linii. Niektóre programy uniksowe mają problemy przy przetwarzaniu takich plików, ponieważ standard POSIX określa, że każdy wiersz pliku tekstowego musi kończyć się znakiem końca linii. Na przykład łączenie plików może nie dać oczekiwanego wyniku.
+.IP \fB\-\-error\-binary\fR 4
+.IX Item "--error-binary"
+Zwrócenie błędu, jeśli pominięto plik binarny.
 .IP "\fB\-f, \-\-force\fR" 4
 .IX Item "-f, --force"
 Wymuszenie konwersji plików binarnych.
@@ -339,7 +342,10 @@ Bez zezwolenia na zmianę właściciela pliku w trybie starego pliku (domyślne)
 Przerwanie konwersji, jeżeli użytkownik lub grupa oryginalnego pliku nie może być zachowana w trybie starego pliku. P. także opcje \f(CW\*(C`\-o\*(C'\fR oraz \f(CW\*(C`\-n\*(C'\fR. Ta opcja jest dostępna tylko jeśli dos2unix ma obsługę zachowywania użytkownika i grupy plików.
 .IP \fB\-\-no\-add\-eol\fR 4
 .IX Item "--no-add-eol"
-Bez dodawania znaku końca linii do ostatniego wiersza, jeśli ten go nie zawiera.
+Bez dodawania znaku końca linii do ostatniego wiersza, jeśli ten go nie zawiera (domyślne).
+.IP \fB\-\-no\-error\-binary\fR 4
+.IX Item "--no-error-binary"
+Bez zwracania błędu, jeśli pominięto plik binarny (domyślne).
 .IP "\fB\-O, \-\-to\-stdout\fR" 4
 .IX Item "-O, --to-stdout"
 Zapis na standardowe wyjście, jak filtr uniksowy. Opcja \f(CW\*(C`\-o\*(C'\fR przywróci tryb starego pliku (zamianę z miejscu).
@@ -353,7 +359,7 @@ W połączeniu z opcją \f(CW\*(C`\-e\*(C'\fR pliki mogą być właściwie łąc
 .IX Item "-o, --oldfile PLIK ..."
 Tryb starego pliku. Konwersja PLIKU i nadpisanie go wyjściem. Program działa domyślnie w tym trybie. Można używać masek.
 .Sp
-W trybie starego pliku (w miejscu) przekonwertowany plik otrzymuje tego samego właściciela, grupę oraz prawa odczytu/zapisu, jak plik oryginalny \- także wtedy, gdy plik jest konwertowany przez innego użytkownika, mającego prawo zapisu do pliku (np. przez użytkownika root). Konwersja zostanie przerwana, jeśli nie będzie możliwe zachowanie oryginalnych wartości. Zmiana właściciela mogłaby oznaczać, że pierwotny właściciel nie może już odczytać pliku. Zmiana grupy mogłaby być zagrożeniem bezpieczeństwa, plik mógłby być czytelny dla nie zamierzonych osób. Zachowanie właściciela, grupy i praw odczytu/zapisu jest obsługiwane tylko na Uniksie.
+W trybie starego pliku (w miejscu) przekonwertowany plik otrzymuje tego samego właściciela, grupę oraz prawa odczytu/zapisu, jak plik oryginalny \- także wtedy, gdy plik jest konwertowany przez innego użytkownika, mającego prawo zapisu do pliku (np. przez użytkownika root). Konwersja zostanie przerwana, jeśli nie będzie możliwe zachowanie oryginalnych wartości. Zmiana właściciela mogłaby oznaczać, że pierwotny właściciel nie może już odczytać pliku. Zmiana grupy mogłaby być zagrożeniem bezpieczeństwa, plik mógłby być czytelny dla niezamierzonych osób. Zachowanie właściciela, grupy i praw odczytu/zapisu jest obsługiwane tylko na Uniksie.
 .Sp
 Aby sprawdzić, czy doswunix ma obsługę zachowywania użytkownika i grupy plików, można napisać \f(CW\*(C`dos2unix \-V\*(C'\fR.
 .Sp
@@ -381,6 +387,8 @@ Usunięcie znaków BOM (Byte Order Mark). Bez zapisywania BOM do pliku wyjściow
 Pominięcie plików binarnych (domyślne).
 .Sp
 Pomijanie plików binarnych ma na celu zapobieżenie przypadkowym błędom. Uwaga: wykrywanie plików binarnych nie jest w 100% odporne na błędy. Pliki wejściowe są przeszukiwane pod kątem symboli binarnych, które zwykle nie występują w plikach tekstowych. Może się zdarzyć, że plik binarny zawiera tylko zwykłe znaki tekstowe. Taki plik binarny będzie błędnie widziany jako plik tekstowy.
+.Sp
+Domyślnie nie jest zwacany błąd, kiedy zostaje pominięty plik binarny. Jeśli użyta zostanie opcja \f(CW\*(C`\-\-error\-binary\*(C'\fR, błąd jest zwracany.
 .IP "\fB\-u, \-\-keep\-utf16\fR" 4
 .IX Item "-u, --keep-utf16"
 Zachowanie oryginalnego kodowania pliku wejściowego UTF\-16. Plik wyjściowy zostanie zapisany w tym samym kodowaniu UTF\-16 (little lub big endian), co plik wejściowy. Zapobiega to przekształceniu do UTF\-8. Do pliku zostanie zapisany odpowiedni znacznik BOM UTF\-16. Tę opcję można wyłączyć opcją \f(CW\*(C`\-ascii\*(C'\fR.
@@ -432,7 +440,7 @@ Jeśli dos2unix ma obsługę UTF\-16, pliki kodowane UTF\-16 są konwertowane do
 W tym trybie wszystkie znaki 8\-bitowe spoza ASCII (o wartościach od 128 do 255) są konwertowane do przestrzeni 7\-bitowej.
 .IP \fBiso\fR 4
 .IX Item "iso"
-W tym trybie znaki są konwertowane między zestawem znaków DOS (stroną kodową) a zestawem znaków ISO\-8859\-1 (Latin\-1) używanym na Uniksie. Znaki DOS-owe nie mające odpowiednika w ISO\-8859\-1, których nie da się przekonwertować, są zamieniane na kropkę. To samo dotyczy znaków ISO\-8859\-1 bez odpowiednika w DOS-ie.
+W tym trybie znaki są konwertowane między zestawem znaków DOS (stroną kodową) a zestawem znaków ISO\-8859\-1 (Latin\-1) używanym na Uniksie. Znaki DOS-owe niemające odpowiednika w ISO\-8859\-1, których nie da się przekonwertować, są zamieniane na kropkę. To samo dotyczy znaków ISO\-8859\-1 bez odpowiednika w DOS-ie.
 .Sp
 Jeśli używana jest tylko opcja \f(CW\*(C`\-iso\*(C'\fR, dos2unix próbuje wykryć aktywną stronę kodową. Jeśli nie jest to możliwe, dos2unix używa domyślnej strony kodowej CP437, stosowanej głównie w USA. Aby wymusić określoną stronę kodową, należy użyć opcji \f(CW\-437\fR (US), \f(CW\-850\fR (zachodnioeuropejska), \f(CW\-860\fR (portugalska), \f(CW\-863\fR (kanadyjska francuska) lub \f(CW\-865\fR (nordycka). Ponadto obsługiwana jest strona kodowa Windows CP1252 (zachodnioeuropejska) przy użyciu opcji \f(CW\-1252\fR. W przypadku innych stron kodowych można użyć narzędzia dos2unix wraz z \fBiconv\fR\|(1). Iconv potrafi konwertować między wieloma kodowaniami znaków.
 .Sp

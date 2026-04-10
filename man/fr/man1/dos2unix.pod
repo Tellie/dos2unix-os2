@@ -155,6 +155,10 @@ Ajoute un saut de ligne à la dernière ligne si elle n'en a pas déjà un. Cela
 
 Un fichier converti de DOS vers le format Unix peut ne pas avoir de saut de ligne à la dernière ligne. Il existe des éditeurs de texte qui écrivent le fichier texte sans saut de ligne à la dernière ligne. Certains programmes Unix ont des difficultés à traiter ces fichiers car le standard POSIX défini que chaque ligne d'un fichier texte doit être terminé par le caractère de nouvelle ligne. Par exemple, concaténer des fichiers peut ne pas donner le résultat attendu.
 
+=item B<--error-binary>
+
+Retourner une erreur si un fichier binaire est ignoré.
+
 =item B<-f, --force>
 
 Force la conversion de fichiers binaires.
@@ -319,7 +323,11 @@ Interrompt la conversion si l'utilisateur ou le groupe propriétaire du fichier 
 
 =item B<--no-add-eol>
 
-N'ajoute pas de saut de ligne à la dernière ligne s'il n'y en a pas.
+N'ajoute pas de saut de ligne à la dernière ligne s'il n'y en a pas (par défaut).
+
+=item B<--no-error-binary>
+
+Ne pas retourner une erreur si un fichier binaire est ignoré (par défaut).
 
 =item B<-O, --to-stdout>
 
@@ -360,6 +368,8 @@ Supprime la marque d'ordre des octets (BOM). N'écrit pas la BOM dans le fichier
 Ignore les fichiers binaires (par défaut).
 
 Ignorer les fichiers binaires sert à éviter les erreurs accidentelles. Attention que la détection de fichiers binaires n'est pas fiable à 100%. Les fichiers en entrée sont analysés pour y trouver des symboles binaires qui ne sont habituellement pas rencontrés dans des fichiers textes. Il est cependant possible qu'un fichier binaire ne contienne que des caractères textes normaux. Un tel fichier serait erronément traité comme un fichier texte.
+
+Par défaut, aucune erreur n'est retournée quand un fichier binaire est ignoré. Si l'option C<--error-binary> est utilisée, une erreur est retournée.
 
 =item B<-u, --keep-utf16>
 
