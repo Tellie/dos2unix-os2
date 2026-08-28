@@ -1,0 +1,11 @@
+{
+    "assignments": [
+        {
+            "file": "dos2unix.h",
+            "pythonMode": "auto",
+            "pythonVenvPath": "H:/git/dos2unix-os2/.venv",
+            "template": "astyle"
+        }
+    ],
+    "version": "1.0"
+}

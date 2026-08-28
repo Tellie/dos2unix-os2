@@ -1,6 +1,0 @@
-{
-    "_comment": "Watch expressions. Add expressions to monitor during debugging.",
-    "version": "1.0.0",
-    "watches": [
-    ]
-}
