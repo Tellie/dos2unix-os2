@@ -1,0 +1,2 @@
+test/*.txt -text
+test/*.t -text
