@@ -9,7 +9,7 @@ PROGRAMS = dos2unix.exe unix2dos.exe mac2unix.exe unix2mac.exe
 HTMLEXT = htm
 PACKAGE = dos2unix
 DOCFILES = man\man1\$(PACKAGE).txt man\man1\$(PACKAGE).$(HTMLEXT)
-VERSIONSUFFIX = -os2
+VERSIONSUFFIX = -os2-watcom
 
 prefix = c:\usr
 

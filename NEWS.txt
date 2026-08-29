@@ -1,3 +1,18 @@
+2026-08-27: Version 7.5.7
+
+ * Detect a missing UTF-16 low surrogate at the end of a file.
+ * Fixed the processing of files containing only half a BOM.
+ * unix2dos: Fixed conversion of a DOS line break immediately
+   after a Mac line break.
+ * mac2unix/unix2mac: Fixed counting line breaks in verbose
+   mode of files with mixed line break types.
+ * Code cleanup.
+
+2026-05-28: Version 7.5.6
+
+ * New homepage https://waterlander.net/dos2unix/
+ * Updated translations of the manual.
+
 2026-04-06: Version 7.5.5
 
  * New option --error-binary: Return an error if a

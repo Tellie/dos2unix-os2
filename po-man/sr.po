@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-man 7.5.5-beta3\n"
-"POT-Creation-Date: 2026-03-23 22:44+0100\n"
+"POT-Creation-Date: 2026-05-21 22:32+0200\n"
 "PO-Revision-Date: 2026-04-05 09:15+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
@@ -941,7 +941,9 @@ msgstr "B<-u, --keep-utf16>"
 
 #. type: textblock
 #: dos2unix.pod:522
-msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+#, fuzzy
+#| msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgstr "Задржава изворно УТФ-16 кодирање улазне датотеке. Излазна датотека биће записана у истом УТФ-16 кодирању, малом или великом крајношћу, као и улазна датотека.  Ово спречава преображај у УТФ-8. УТФ-16 ОРБ биће записан у складу с тим. Ова опција се може онемогућити помоћу опције „C<-ascii>“."
 
 #. type: =item
@@ -1231,7 +1233,9 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
+#, fuzzy
+#| msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
+msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
 msgstr "Видите такође L<http://czyborra.com/charsets/codepages.html> и L<http://czyborra.com/charsets/iso8859.html>."
 
 #. type: =head1
@@ -1246,7 +1250,9 @@ msgstr "Кодирања"
 
 #. type: textblock
 #: dos2unix.pod:665
-msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
+#, fuzzy
+#| msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
+msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
 msgstr "Постоје различита Јуникод кодирања. На Јуниксу и Линуксу Јуникод датотеке су обично кодиране у УТФ-8 кодирању. На Виндоузу Јуникод текстуалне датотеке могу бити кодиране у УТФ-8, УТФ-16 или УТФ-16 великој крајности, али су углавном кодиране у УТФ-16 формату."
 
 #. type: =head2
@@ -1266,7 +1272,9 @@ msgstr "Сва издања „dos2unix“-а и „unix2do“-а могу пр�
 
 #. type: textblock
 #: dos2unix.pod:678
-msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+#, fuzzy
+#| msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr "„dos2unix“ и „unix2dos“ са Јуникод УТФ-16 подршком, може читати УТФ-16 кодиране текстуалне датотеке мале и велике крајности. Да видите да ли је „dos2unix“ изграђен са УТФ-16 подршком упишите „C<dos2unix -V>“."
 
 #. type: textblock
@@ -1839,7 +1847,9 @@ msgstr "Бенџамин Лин – <blin@socs.uts.edu.au>, Бернд Јоха�
 
 #. type: textblock
 #: dos2unix.pod:931
-msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+#, fuzzy
+#| msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+msgid "Project page: L<https://waterlander.net/dos2unix/>"
 msgstr "Страница пројекта: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
 
 #. type: textblock

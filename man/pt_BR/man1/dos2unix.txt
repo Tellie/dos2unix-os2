@@ -443,11 +443,11 @@ OPÇÕES
         erro.
 
     -u, --keep-utf16
-        Mantém a codificação UTF-16 original do arquivo de entrada. O
-        arquivo de saída será escrito na mesma codificação UTF-16, em little
-        ou big endian, como o arquivo de entrada. Isso evita transformação
-        para UTF-8. Como consequência, um BOM UTF-16 será escrito. Essa
-        opção pode ser desabilitada com a opção "-ascii".
+        Keep the original UTF-16 encoding of the input file. The output file
+        will be written in the same UTF-16 encoding, little- or big-endian,
+        as the input file. This prevents transformation to UTF-8. An UTF-16
+        BOM will be written accordingly. This option can be disabled with
+        the "-ascii" option.
 
     -ul, --assume-utf16le
         Presume que o formato de arquivo de entrada é UTF-16LE.
@@ -570,15 +570,15 @@ MODOS DE CONVERSÃO
 
             unix2dos < entrada.txt | iconv -f UTF-8 -t CP1252 > saída.txt
 
-        Veja também <http://czyborra.com/charsets/codepages.html> e
-        <http://czyborra.com/charsets/iso8859.html>.
+        See also <https://czyborra.com/charsets/codepages.html> and
+        <https://czyborra.com/charsets/iso8859.html>.
 
 UNICODE
   Codificações
-    Exitem codificações Unicode diferentes. No Unix e no Linux, arquivos
-    Unicode são geralmente codificados em UTF-8. No Windows, arquivos texto
-    Unicode podem ser codificados em UTF-8, UTF-16 ou UTF-16 big endian, mas
-    na maioria das vezes são codificados no formato UTF-16.
+    There exist different Unicode encodings. On Unix and Linux Unicode files
+    are typically encoded in UTF-8 encoding. On Windows Unicode text files
+    can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly
+    encoded in UTF-16 format.
 
   Conversão
     Arquivos texto em Unicode pode ter quebras de linha DOS, Unix ou Mac,
@@ -588,9 +588,9 @@ UNICODE
     codificados em UTF-8 porque UTF-8 foi projetado para ter compatibilidade
     reversa com ASCII.
 
-    dos2unix e unix2dos com suporte a Unicode UTF-16 podem ler arquivos
-    texto codificados em little e big endian UTF-16. Para ver se dos2unix
-    foi compilado com suporte a UTF-16, digite "dos2unix -V".
+    dos2unix and unix2dos with Unicode UTF-16 support, can read little- and
+    big-endian UTF-16 encoded text files. To see if dos2unix was built with
+    UTF-16 support type "dos2unix -V".
 
     No Unix/Linux, arquivos codificados em UTF-16 são convertidos para a
     codificação de caracteres do localização. Use o comando locale(1) para
@@ -844,7 +844,7 @@ AUTORES
     extra) - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl>
     (mantenedor)
 
-    Página do projeto: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Project page: <https://waterlander.net/dos2unix/>
 
     Página do SourceForge: <https://sourceforge.net/projects/dos2unix/>
 

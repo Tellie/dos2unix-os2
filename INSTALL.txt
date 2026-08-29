@@ -284,7 +284,7 @@ WINDOWS 32 BIT PORT
 
     The win32 binaries built with MinGW32 are packed with a patched version of
     MinGW's libintl-8.dll that has builtin support for relocation. See also
-    https://waterlan.home.xs4all.nl/libintl.html and
+    https://waterlander.net/libintl/ and
     https://sourceforge.net/p/mingw/bugs/1808/
     The MSYS2 project has the relocation patch already included.
 
@@ -317,11 +317,12 @@ DOS PORT, 32 BIT
 
     To compile a version for DOS, get the DJGPP compiler
     <https://www.delorie.com/djgpp/>, and use makefile djgpp.mak.
+
     DJGPP 2.03 gcc >= 4.6 seems to cause problems. Crashes of gcc itself,
     or crashing dos2unix binaries (seen in DOSBox and DOSEMU).
     Use DJGPP 2.03 gcc <= 4.5.3.
 
-    DJGPP 2.05 seems to produce correct binaries (I tried gcc 5.3.0).
+    DJGPP 2.05 produces correct binaries.
 
 
         make -f djgpp.mak clean
@@ -329,13 +330,26 @@ DOS PORT, 32 BIT
         make -f djgpp.mak strip
         make -f djgpp.mak install
 
+
+    Run DJGPP on a DOS version that supports long file names. That is on
+    Windows 95, 98, ME, XP, Vista, or 7.
+    Or run DJGPP in DOSBox-X (https://dosbox-x.com/) with DOS version 7.0 or
+    7.1 in a FAT32 formatted image file. You need to unpack the dos2unix source zip
+    package with long file names.  E.g. with the DJGPP supplied unzip32.exe. The
+    file names should not be chopped to 8.3 length.
+
     Cross compilation with djgpp.mak works out-of-the-box in Cygwin if
-    you have djgpp-gcc-core installed. On Linux you can add CROSS_COMP=1
-    to the command line.
+    you have djgpp-gcc-core installed:
+
+        make -f djgpp.mak
+
+    On Linux you can add CROSS_COMP=1 to the command line:
+
+        make -f djgpp.mak CROSS_COMP=1
 
 
     Or use Open Watcom
-    Cross compiling from Windows 32 bit. This works.
+    Cross compiling from Windows. This works:
 
         wmake -f wccdos32.mak clean
         wmake -f wccdos32.mak
@@ -344,13 +358,13 @@ DOS PORT, 32 BIT
 
 DOS PORT, 16 BIT
 
-    To compile a version for DOS, use the Borland C compiler 3.1 or 4.0,
-    and use makefile bcc.mak:
+    Borland C version 4.0 or higher:
+    (You can run the Borland C 4.0 command line tools in DOSBox-X.)
 
         make -f bcc.mak clean
         make -f bcc.mak
 
-    Or use Open Watcom
+    Open Watcom:
 
         wmake -f wccdos16.mak clean
         wmake -f wccdos16.mak

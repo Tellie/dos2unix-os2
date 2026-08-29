@@ -461,8 +461,8 @@ OPȚIUNI
 
     -u, --keep-utf16
         Păstrează codificarea UTF-16 originală a fișierului de intrare.
-        Fișierul de ieșire va fi scris în aceeași codare UTF-16, little sau
-        big endian, ca și fișierul de intrare. Acest lucru previne
+        Fișierul de ieșire va fi scris în aceeași codare UTF-16, little- sau
+        big-endian, ca și fișierul de intrare. Acest lucru previne
         transformarea în UTF-8. Un marcaj de ordine a octeților UTF-16 va fi
         scris în consecință. Această opțiune poate fi dezactivată cu
         opțiunea "-ascii".
@@ -591,8 +591,9 @@ MODURI DE CONVERSIE
 
             unix2dos < fișier_intrare.txt | iconv -f UTF-8 -t CP1252 > fișier_ieșire.txt
 
-        Consultați de asemenea <http://czyborra.com/charsets/codepages.html>
-        și <http://czyborra.com/charsets/iso8859.html>.
+        Consultați de asemenea
+        <https://czyborra.com/charsets/codepages.html> și
+        <https://czyborra.com/charsets/iso8859.html>.
 
 UNICODE
   Codificări
@@ -610,8 +611,8 @@ UNICODE
     compatibilitate cu ASCII.
 
     «dos2unix» și «unix2dos» cu suport Unicode UTF-16, pot citi fișiere text
-    codificate UTF-16 little și big endian. Pentru a vedea dacă «dos2unix» a
-    fost construit cu suport UTF-16, tastați: "dos2unix -V".
+    codificate UTF-16 little- și big-endian. Pentru a vedea dacă «dos2unix»
+    a fost construit cu suport UTF-16, tastați: "dos2unix -V".
 
     În Unix/Linux, fișierele codificate UTF-16 sunt convertite în
     codificarea caracterelor locale. Utilizați comanda locale(1) pentru a
@@ -876,8 +877,7 @@ AUTORI
     suplimentare) - <wurll@ira.uka.de>, Erwin Waterlander -
     <waterlan@xs4all.nl> (menținător)
 
-    Pagina principală a proiectului:
-    <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Pagina principală a proiectului: <https://waterlander.net/dos2unix/>
 
     Pagina din SourceForge a proiectului:
     <https://sourceforge.net/projects/dos2unix/>

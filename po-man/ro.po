@@ -13,14 +13,15 @@
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.2-beta3, noi-2023.
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.3-beta8, mai-2025.
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.5-beta3, mar-2026.
+# Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.6-beta2, mai-2026.
 # Actualizare a traducerii pentru versiunea Y, făcută de X,Y(luna-anul).
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man 7.5.5-beta3\n"
+"Project-Id-Version: dos2unix-man 7.5.6-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 22:44+0100\n"
-"PO-Revision-Date: 2026-03-26 14:29+0100\n"
+"POT-Creation-Date: 2026-05-08 21:20+0200\n"
+"PO-Revision-Date: 2026-05-20 11:18+0200\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
 "Language: ro\n"
@@ -966,8 +967,8 @@ msgstr "B<-u, --keep-utf16>"
 
 #. type: textblock
 #: dos2unix.pod:522
-msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
-msgstr "Păstrează codificarea UTF-16 originală a fișierului de intrare. Fișierul de ieșire va fi scris în aceeași codare UTF-16, little sau big endian, ca și fișierul de intrare.  Acest lucru previne transformarea în UTF-8. Un marcaj de ordine a octeților UTF-16 va fi scris în consecință. Această opțiune poate fi dezactivată cu opțiunea C<-ascii>."
+msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+msgstr "Păstrează codificarea UTF-16 originală a fișierului de intrare. Fișierul de ieșire va fi scris în aceeași codare UTF-16, little- sau big-endian, ca și fișierul de intrare. Acest lucru previne transformarea în UTF-8. Un marcaj de ordine a octeților UTF-16 va fi scris în consecință. Această opțiune poate fi dezactivată cu opțiunea C<-ascii>."
 
 #. type: =item
 #: dos2unix.pod:527
@@ -1256,8 +1257,8 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
-msgstr "Consultați de asemenea L<http://czyborra.com/charsets/codepages.html> și L<http://czyborra.com/charsets/iso8859.html>."
+msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
+msgstr "Consultați de asemenea L<https://czyborra.com/charsets/codepages.html> și L<https://czyborra.com/charsets/iso8859.html>."
 
 #. type: =head1
 #: dos2unix.pod:661
@@ -1271,7 +1272,7 @@ msgstr "Codificări"
 
 #. type: textblock
 #: dos2unix.pod:665
-msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
+msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
 msgstr "Există diferite codificări Unicode. În Unix și Linux fișierele Unicode sunt de obicei codificate în codificarea UTF-8. În Windows, fișierele text Unicode pot fi codificate în UTF-8, UTF-16 sau UTF-16 big-endian, dar sunt în mare parte codificate în formatul UTF-16."
 
 #. type: =head2
@@ -1291,8 +1292,8 @@ msgstr "Toate versiunile de «dos2unix» și «unix2dos» pot converti fișiere 
 
 #. type: textblock
 #: dos2unix.pod:678
-msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
-msgstr "«dos2unix» și «unix2dos» cu suport Unicode UTF-16, pot citi fișiere text codificate UTF-16 little și big endian. Pentru a vedea dacă «dos2unix» a fost construit cu suport UTF-16, tastați: C<dos2unix -V>."
+msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+msgstr "«dos2unix» și «unix2dos» cu suport Unicode UTF-16, pot citi fișiere text codificate UTF-16 little- și big-endian. Pentru a vedea dacă «dos2unix» a fost construit cu suport UTF-16, tastați: C<dos2unix -V>."
 
 #. type: textblock
 #: dos2unix.pod:682
@@ -1878,8 +1879,8 @@ msgstr "Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (modul mac
 
 #. type: textblock
 #: dos2unix.pod:931
-msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
-msgstr "Pagina principală a proiectului: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+msgid "Project page: L<https://waterlander.net/dos2unix/>"
+msgstr "Pagina principală a proiectului: L<https://waterlander.net/dos2unix/>"
 
 # R-GC, scrie:
 # după revizuirea fișierului, DȘ zice:

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>dos2unix 7.5.5 - textfilsformatskonverterare fr&#xe5;n DOS/Mac till Unix och vice versa</title>
+<title>dos2unix 7.5.7 - textfilsformatskonverterare fr&#xe5;n DOS/Mac till Unix och vice versa</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rev="made" href="mailto:ASSI@walter.nonet" />
 </head>
@@ -481,7 +481,7 @@ unix2dos [flaggor] [FIL &hellip;] [-n INFIL UTFIL &hellip;]</code></pre>
 <dt id="u---keep-utf16"><b>-u, --keep-utf16</b></dt>
 <dd>
 
-<p>Beh&aring;ll infilens original UTF-16-kodning. Utfilen kommer att skrivas med samma UTF-16-kodning som infilen, omv&auml;nd eller rak byteordning (little eller big endian). Detta f&ouml;rhindrar transformation till UTF-8. En UTF-16 BOM kommer att skrivas i enlighet med detta. Denna flagga kan inaktiveras med <code>-ascii</code>-flaggan.</p>
+<p>Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file. This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the <code>-ascii</code> option.</p>
 
 </dd>
 <dt id="ul---assume-utf16le"><b>-ul, --assume-utf16le</b></dt>
@@ -605,7 +605,7 @@ unix2dos [flaggor] [FIL &hellip;] [-n INFIL UTFIL &hellip;]</code></pre>
 
 <pre><code>unix2dos &lt; in.txt | iconv -f UTF-8 -t CP1252 &gt; ut.txt</code></pre>
 
-<p>Se &auml;ven <a href="http://czyborra.com/charsets/codepages.html">http://czyborra.com/charsets/codepages.html</a> och <a href="http://czyborra.com/charsets/iso8859.html">http://czyborra.com/charsets/iso8859.html</a>.</p>
+<p>See also <a href="https://czyborra.com/charsets/codepages.html">https://czyborra.com/charsets/codepages.html</a> and <a href="https://czyborra.com/charsets/iso8859.html">https://czyborra.com/charsets/iso8859.html</a>.</p>
 
 </dd>
 </dl>
@@ -614,7 +614,7 @@ unix2dos [flaggor] [FIL &hellip;] [-n INFIL UTFIL &hellip;]</code></pre>
 
 <h2 id="Kodningar">Kodningar</h2>
 
-<p>Det finns flera olika Unicode kodningar. I Unix och Linux kodas filer vanligtvis med UTF-8-kodning. I Windows kan Unicode-textfiler kodas i UTF-8, UTF-16 eller UTF-16 rak byteordning (big endian), men kodas mestadels i UTF-16-format.</p>
+<p>There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format.</p>
 
 <h2 id="Konvertering">Konvertering</h2>
 
@@ -622,7 +622,7 @@ unix2dos [flaggor] [FIL &hellip;] [-n INFIL UTFIL &hellip;]</code></pre>
 
 <p>Alla versioner av dos2unix och unix2dos kan konvertera UTF-8-kodade filer, eftersom UTF-8 designades f&ouml;r bak&aring;tkompatibilitet med ASCII.</p>
 
-<p>dos2unix och unix2dos med Unicode-UTF-16-st&ouml;d, kan l&auml;sa UTF-16-kodade textfiler i omv&auml;nd och rak byteordning (little och big endian). F&ouml;r att se om dos2unix byggts med UTF-16-st&ouml;d skriv <code>dos2unix -V</code>.</p>
+<p>dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type <code>dos2unix -V</code>.</p>
 
 <p>Under Unix/Linux kommer UTF-16-kodade filer att konverteras till lokalens teckenkodning. Anv&auml;nd kommandot locale(1) f&ouml;r att ta reda p&aring; vilken lokalens teckenkodning &auml;r. N&auml;r konvertering inte &auml;r m&ouml;jlig kommer ett konverteringsfel att intr&auml;ffa och filen kommer att hoppas &ouml;ver.</p>
 
@@ -822,7 +822,7 @@ export LANG=en_GB.UTF-8      Engelska, UK, UTF-8-kodning</code></pre>
 
 <p>Benjamin Lin - &lt;blin@socs.uts.edu.au&gt;, Bernd Johannes Wuebben (mac2unix-l&auml;ge) - &lt;wuebben@kde.org&gt;, Christian Wurll (l&auml;gg till en extra radbrytning) - &lt;wurll@ira.uka.de&gt;, Erwin Waterlander - &lt;waterlan@xs4all.nl&gt; (upphovsman)</p>
 
-<p>Projektsida: <a href="https://waterlan.home.xs4all.nl/dos2unix.html">https://waterlan.home.xs4all.nl/dos2unix.html</a></p>
+<p>Project page: <a href="https://waterlander.net/dos2unix/">https://waterlander.net/dos2unix/</a></p>
 
 <p>SourceForge-sida: <a href="https://sourceforge.net/projects/dos2unix/">https://sourceforge.net/projects/dos2unix/</a></p>
 

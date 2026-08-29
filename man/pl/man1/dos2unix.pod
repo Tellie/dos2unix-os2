@@ -372,7 +372,7 @@ Domyślnie nie jest zwacany błąd, kiedy zostaje pominięty plik binarny. Jeśl
 
 =item B<-u, --keep-utf16>
 
-Zachowanie oryginalnego kodowania pliku wejściowego UTF-16. Plik wyjściowy zostanie zapisany w tym samym kodowaniu UTF-16 (little lub big endian), co plik wejściowy. Zapobiega to przekształceniu do UTF-8. Do pliku zostanie zapisany odpowiedni znacznik BOM UTF-16. Tę opcję można wyłączyć opcją C<-ascii>.
+Zachowanie oryginalnego kodowania pliku wejściowego UTF-16. Plik wyjściowy zostanie zapisany w tym samym kodowaniu UTF-16 (little- lub big-endian), co plik wejściowy. Zapobiega to przekształceniu do UTF-8. Do pliku zostanie zapisany odpowiedni znacznik BOM UTF-16. Tę opcję można wyłączyć opcją C<-ascii>.
 
 =item B<-ul, --assume-utf16le>
 
@@ -476,7 +476,7 @@ Konwersja z uniksowego UTF-8 (Unicode) do strony kodowej Windows CP1252:
 
     unix2dos < wejście.txt | iconv -f UTF-8 -t CP1252 > wynik.txt
 
-Więcej pod adresem L<http://czyborra.com/charsets/codepages.html> oraz L<http://czyborra.com/charsets/iso8859.html>.
+Więcej pod adresem L<https://czyborra.com/charsets/codepages.html> oraz L<https://czyborra.com/charsets/iso8859.html>.
 
 =back
 
@@ -692,7 +692,7 @@ L<https://pl.wikipedia.org/wiki/Unicode>
 
 Benjamin Lin <blin@socs.uts.edu.au>; Bernd Johannes Wuebben (tryb mac2unix) <wuebben@kde.org>; Christian Wurll (dodawanie dodatkowej nowej linii) <wurll@ira.uka.de>; Erwin Waterlander <waterlan@xs4all.nl> (prowadzący)
 
-Strona projektu: L<https://waterlan.home.xs4all.nl/dos2unix.html>
+Strona projektu: L<https://waterlander.net/dos2unix/>
 
 Strona SourceForge: L<https://sourceforge.net/projects/dos2unix/>
 

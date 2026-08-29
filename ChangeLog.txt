@@ -1,3 +1,47 @@
+2026-08-27 Erwin Waterlander <waterlan@xs4all.nl>
+	* Version 7.5.7
+
+2026-08-18 Erwin Waterlander <waterlan@xs4all.nl>
+	* Safer way to read BOM using a lookahead buffer.
+	  No more use of consecutive ungetc() calls.
+	  dos2unix is now ungetc() free.
+
+2026-08-16 Erwin Waterlander <waterlan@xs4all.nl>
+	* Refactored code. Simpler mac2unix algorithm.
+	  ungetc() is no longer used.
+
+2026-08-02 Erwin Waterlander <waterlan@xs4all.nl>
+	* Fixed possible memory leak in handling Unicode
+	  arguments on Windows.
+
+2026-07-29 Erwin Waterlander <waterlan@xs4all.nl>
+	* Removed the use of strcpy()
+
+2026-07-25 Erwin Waterlander <waterlan@xs4all.nl>
+	* mac2unix/unix2mac: Fixed counting line breaks
+	  in verbose mode of files with mixed line break
+	  types.
+
+2026-07-09 <acts1631kjv@proton.me>
+	* Fixed the processing of files containing only
+	  half a BOM (Found by AI).
+	* unix2dos: Fixed conversion of a DOS line break
+	  immediately after a Mac line break (Found by AI).
+
+2026-07-07 <acts1631kjv@proton.me>
+	* Detect a missing UTF-16 low surrogate
+	  at the end of a file (Found by AI).
+
+2026-05-28 Erwin Waterlander <waterlan@xs4all.nl>
+	* Version 7.5.6
+	* Updated translations of the manual.
+
+2026-05-04 Erwin Waterlander <waterlan@xs4all.nl>
+	* New homepage https://waterlander.net/dos2unix/
+
+2026-04-16 Erwin Waterlander <waterlan@xs4all.nl>
+	* Updates for DJGPP.
+
 2026-04-06 Erwin Waterlander <waterlan@xs4all.nl>
 	* Version 7.5.5
 
@@ -21,6 +65,7 @@
 	  https://sourceforge.net/p/dos2unix/bugs/21/
 	  Aborting conversion to skip a binary file is not an error.
 	* Refactored code. Simpler dos2unix algorithm.
+	  ungetc() is no longer used.
 
 2025-12-19 Erwin Waterlander <waterlan@xs4all.nl>
 	* Refactored code. Split conversion functions.

@@ -589,8 +589,8 @@ MODES DE CONVERSION
 
             unix2dos < entrée.txt | iconv -f UTF-8 -t CP1252 > sortie.txt
 
-        Consultez aussi <http://czyborra.com/charsets/codepages.html> et
-        <http://czyborra.com/charsets/iso8859.html>.
+        Consultez aussi <https://czyborra.com/charsets/codepages.html> et
+        <https://czyborra.com/charsets/iso8859.html>.
 
 UNICODE
   Codages
@@ -875,7 +875,7 @@ AUTEURS
     supplémentaire) - <wurll@ira.uka.de>, Erwin Waterlander -
     <waterlan@xs4all.nl> (Mainteneur)
 
-    Page du projet: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Page du projet: <https://waterlander.net/dos2unix/>
 
     Page SourceForge: <https://sourceforge.net/projects/dos2unix/>
 

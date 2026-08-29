@@ -337,9 +337,9 @@
         이진 파일을 건너뛸 때 오류 미반환이 기본 동작입니다. "--error-binary" 옵션을 사용하면 오류를 반환합니다.
 
     -u, --keep-utf16
-        입력의 UTF-16 인코딩 원본을 유지합니다. 원본 파일은 동일한 UTF-16 인코딩을 리틀엔디언 또는 빅엔디언으로 입력
-        파일과 같이 기록합니다. 이는 UTF-8로의 변환을 막습니다. UTF-16 BOM은 원본을 따라 대상에 기록합니다. 이
-        옵션 동작은 "-ascii" 옵션으로 막을 수 있습니다.
+        입력 파일의 UTF-16 인코딩 원본을 유지합니다. 출력 파일은 동일한 UTF-16 인코딩을 리틀엔디언 또는 빅엔디언으로
+        입력 파일과 같이 기록합니다. 이는 UTF-8로의 변환을 막습니다. UTF-16 BOM은 원본을 따라 대상에 기록합니다.
+        이 옵션 동작은 "-ascii" 옵션으로 막을 수 있습니다.
 
     -ul, --assume-utf16le
         입력 파일 형식을 UTF-16LE로 가정합니다.
@@ -440,14 +440,14 @@
 
             unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > out.txt
 
-        <http://czyborra.com/charsets/codepages.html> 링크와
-        <http://czyborra.com/charsets/iso8859.html> 링크도 참고하십시오.
+        <https://czyborra.com/charsets/codepages.html> 링크와
+        <https://czyborra.com/charsets/iso8859.html> 링크도 참고하십시오.
 
 유니코드
   인코딩
-    여러가지 유니코드 인코딩이 있습니다. 유닉스와 리뉵스 유니코드 파일은 보통 UTF-8 인코딩 방식으로 인코딩합니다. 윈도우에서는
-    유니코드 텍스트 파일을 UTF-8, UTF-16, UTF-16 빅엔디언 방식으로 인코딩할 수 있지만 보통 UTF-16 형식으로
-    인코딩합니다.
+    제각기 다른 유니코드 인코딩이 있습니다. 유닉스와 리눅스 유니코드 파일은 보통 UTF-8 인코딩 방식으로 인코딩합니다.
+    윈도우에서는 유니코드 텍스트 파일을 UTF-8, UTF-16, UTF-16 빅엔디언 방식으로 인코딩할 수 있지만 대부분
+    UTF-16 형식으로 인코딩합니다.
 
   변환
     유니코드 텍스트 파일에는 DOS, 유닉스, 맥 개행 문자를 아스키 텍스트 파일처럼 가질 수 있습니다.
@@ -669,7 +669,7 @@ GB18030
     <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl>
     (maintainer)
 
-    프로젝트 페이지: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    프로젝트 페이지: <https://waterlander.net/dos2unix/>
 
     SourceForge 페이지: <https://sourceforge.net/projects/dos2unix/>
 

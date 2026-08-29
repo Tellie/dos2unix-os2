@@ -191,7 +191,7 @@ OPTIES
         resultaat opleveren.
 
     --error-binary
-        Return an error if a binary file is skipped.
+        Een fout rapporteren wanneer een binair bestand wordt overgeslagen.
 
     -f, --force
         Conversie van binaire bestanden afdwingen.
@@ -363,11 +363,12 @@ OPTIES
         bestanden.
 
     --no-add-eol
-        Do not add a line break to the last line if there isn't one
-        (default).
+        Geen regeleinde toevoegen aan de laatste regel als er geen is
+        (standaard).
 
     --no-error-binary
-        Do not return an error if a binary file is skipped (default).
+        Geen fout rapporteren wanneer een binair bestand wordt overgeslagen
+        (standaard).
 
     -O, --to-stdout
         Naar standaarduitvoer schrijven, zoals een Unix-filter. Gebruik
@@ -440,13 +441,14 @@ OPTIES
         dat een binair bestand enkel normale teksttekens bevat. Zo'n binair
         bestand zal dan foutief als een tekstbestand gezien worden.
 
-        By default, no error is returned when a binary file is skipped. When
-        the "--error-binary" option is used, an error is returned.
+        Standaard wordt geen fout gerapporteerd als een binair bestand wordt
+        overgeslagen. Hiervoor wordt alleen een fout gerapporteerd wanneer
+        optie "--error-binary" gegeven is.
 
     -u, --keep-utf16
         De originele UTF-16-codering van het invoerbestand behouden. Het
-        uitvoerbestand wordt in dezelfde UTF-16-codering (little endian of
-        big endian) geschreven als het invoerbestand. Dit voorkomt conversie
+        uitvoerbestand wordt in dezelfde UTF-16-codering (little-endian of
+        big-endian) geschreven als het invoerbestand. Dit voorkomt conversie
         naar UTF-8. Er wordt ook een corresponderende UTF-16-BOM geschreven.
         Deze optie kan uitgeschakeld worden met de optie "-ascii".
 
@@ -571,15 +573,15 @@ CONVERSIEMODI
 
             unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > uit.txt
 
-        Zie ook <http://czyborra.com/charsets/codepages.html> en
-        <http://czyborra.com/charsets/iso8859.html>.
+        Zie ook <https://czyborra.com/charsets/codepages.html> en
+        <https://czyborra.com/charsets/iso8859.html>.
 
 UNICODE
   Coderingen
     Er bestaan verschillende Unicode-coderingen. Op Unix en Linux zijn
     Unicode-bestanden typisch gecodeerd in UTF-8. Op Windows kunnen
-    Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16 of UTF-16 big
-    endian, maar ze zijn meestal gecodeerd in UTF-16.
+    Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16, of UTF-16
+    big-endian, maar ze zijn meestal gecodeerd in UTF-16.
 
   Conversie
     Unicode-tekstbestanden kunnen DOS-, Unix- of Mac-regeleindes hebben, net
@@ -588,9 +590,9 @@ UNICODE
     Alle versies van dos2unix en unix2dos kunnen UTF-8-gecodeerde bestanden
     omzetten, want UTF-8 is ontworpen op compatibiliteit met ASCII.
 
-    dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little en
-    big endian UTF-16-gecodeerde tekstbestanden lezen. Om er achter te komen
-    of dos2unix gebouwd is met UTF-16- ondersteuning, typt u "dos2unix -V".
+    dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little- en
+    big-endian UTF-16-gecodeerde tekstbestanden lezen. Om er achter te komen
+    of dos2unix gebouwd is met UTF-16-ondersteuning, typt u "dos2unix -V".
 
     Op Unix/Linux worden UTF-16-bestanden geconverteerd naar de codering van
     de ingestelde taalregio. Gebruik de opdracht locale(1) om te zien wat de
@@ -850,7 +852,7 @@ AUTEURS
     extra regeleindes) - <wurll@ira.uka.de>, Erwin Waterlander -
     <waterlan@xs4all.nl> (beheerder)
 
-    Projectpagina: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Projectpagina: <https://waterlander.net/dos2unix/>
 
     SourceForge-pagina: <https://sourceforge.net/projects/dos2unix/>
 

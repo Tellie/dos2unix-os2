@@ -5,9 +5,9 @@
 # Roland Illig <roland.illig@gmx.de>, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man-7.5.5-beta3\n"
-"POT-Creation-Date: 2026-03-23 22:44+0100\n"
-"PO-Revision-Date: 2026-03-26 17:39+0100\n"
+"Project-Id-Version: dos2unix-man-7.5.6-beta2\n"
+"POT-Creation-Date: 2026-05-08 21:20+0200\n"
+"PO-Revision-Date: 2026-05-27 17:33+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. type: =head1
@@ -943,7 +943,7 @@ msgstr "B<-u, --keep-utf16>"
 
 #. type: textblock
 #: dos2unix.pod:522
-msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgstr "erhält die originale UTF-16-Kodierung der Eingabedatei. Die Ausgabedatei wird in der gleichen UTF-16-Kodierung geschrieben (Little-Endian- oder Big-Endian-Bytereihenfolge) wie die Eingabedatei. Dies verhindert die Umwandlung in UTF-8. Eine UTF-16-BOM wird dementsprechend geschrieben. Diese Option kann durch Angabe der Option C<-ascii> deaktiviert werden."
 
 #. type: =item
@@ -1233,8 +1233,8 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
-msgstr "Siehe auch L<http://czyborra.com/charsets/codepages.html> und L<http://czyborra.com/charsets/iso8859.html>."
+msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
+msgstr "Siehe auch L<https://czyborra.com/charsets/codepages.html> und L<https://czyborra.com/charsets/iso8859.html>."
 
 #. type: =head1
 #: dos2unix.pod:661
@@ -1248,7 +1248,7 @@ msgstr "Zeichenkodierungen"
 
 #. type: textblock
 #: dos2unix.pod:665
-msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
+msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
 msgstr "Es gibt verschiedene Unicode-Zeichenkodierungen. Unter Unix und Linux sind Unicode-Dateien typischerweise in UTF-8 kodiert. Unter Windows können Textdateien in UTF-8, UTF-16 oder UTF-16 in Big-Endian-Bytereihenfolge kodiert sein, liegen aber meist im Format UTF-16 vor."
 
 #. type: =head2
@@ -1268,7 +1268,7 @@ msgstr "Alle Versionen von dos2unix und unix2dos können UTF-8-kodierte Dateien 
 
 #. type: textblock
 #: dos2unix.pod:678
-msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr "Dos2unix und unix2dos mit Unterstützung für UTF-16 können in UTF-16 kodierte Dateien in Little-Endian- und Big-Endian-Bytereihenfolge lesen. Um festzustellen, ob dos2unix mit UTF-16-Unterstützung kompiliert wurde, geben Sie C<dos2unix -V> ein."
 
 #. type: textblock
@@ -1841,8 +1841,8 @@ msgstr "Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (Mac2unix-
 
 #. type: textblock
 #: dos2unix.pod:931
-msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
-msgstr "Projektseite: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+msgid "Project page: L<https://waterlander.net/dos2unix/>"
+msgstr "Projektseite: L<https://waterlander.net/dos2unix/>"
 
 #. type: textblock
 #: dos2unix.pod:933

@@ -427,11 +427,11 @@
         грешка.
 
     -u, --keep-utf16
-        Задржава изворно УТФ-16 кодирање улазне датотеке. Излазна датотека
-        биће записана у истом УТФ-16 кодирању, малом или великом крајношћу,
-        као и улазна датотека. Ово спречава преображај у УТФ-8. УТФ-16 ОРБ
-        биће записан у складу с тим. Ова опција се може онемогућити помоћу
-        опције „"-ascii"“.
+        Keep the original UTF-16 encoding of the input file. The output file
+        will be written in the same UTF-16 encoding, little- or big-endian,
+        as the input file. This prevents transformation to UTF-8. An UTF-16
+        BOM will be written accordingly. This option can be disabled with
+        the "-ascii" option.
 
     -ul, --assume-utf16le
         Подразумева да је формат улазне датотеке „UTF-16LE“.
@@ -550,15 +550,15 @@
 
             unix2dos < улаз.txt | iconv -f UTF-8 -t CP1252 > излаз.txt
 
-        Видите такође <http://czyborra.com/charsets/codepages.html> и
-        <http://czyborra.com/charsets/iso8859.html>.
+        See also <https://czyborra.com/charsets/codepages.html> and
+        <https://czyborra.com/charsets/iso8859.html>.
 
 УНИКОД
   Кодирања
-    Постоје различита Јуникод кодирања. На Јуниксу и Линуксу Јуникод
-    датотеке су обично кодиране у УТФ-8 кодирању. На Виндоузу Јуникод
-    текстуалне датотеке могу бити кодиране у УТФ-8, УТФ-16 или УТФ-16
-    великој крајности, али су углавном кодиране у УТФ-16 формату.
+    There exist different Unicode encodings. On Unix and Linux Unicode files
+    are typically encoded in UTF-8 encoding. On Windows Unicode text files
+    can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly
+    encoded in UTF-16 format.
 
   Претварање
     Јуникод текстуалне датотеке могу имати DOS, Unix или Mac преломе реда,
@@ -567,9 +567,9 @@
     Сва издања „dos2unix“-а и „unix2do“-а могу претворити УТФ-8 кодиране
     датотеке, јер је УТФ-8 дизајниран за повратну сагласност са АСКРИ-ијем.
 
-    „dos2unix“ и „unix2dos“ са Јуникод УТФ-16 подршком, може читати УТФ-16
-    кодиране текстуалне датотеке мале и велике крајности. Да видите да ли је
-    „dos2unix“ изграђен са УТФ-16 подршком упишите „"dos2unix -V"“.
+    dos2unix and unix2dos with Unicode UTF-16 support, can read little- and
+    big-endian UTF-16 encoded text files. To see if dos2unix was built with
+    UTF-16 support type "dos2unix -V".
 
     На Јуниксу/Линуксу УТФ-16 кодиране датотеке се претварају у локално
     кодирање знакова. Користите наредбу „locale(1)“ да сазнате које је
@@ -819,7 +819,7 @@ GB18030
     <wurll@ira.uka.de>, Ервин Вотерландер – <waterlan@xs4all.nl>
     (одржавалац)
 
-    Страница пројекта: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Project page: <https://waterlander.net/dos2unix/>
 
     Страница Ковнице извора: <https://sourceforge.net/projects/dos2unix/>
 

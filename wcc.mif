@@ -104,7 +104,7 @@ VERSIONSUFFIX	= -bin
 !endif
 
 !ifndef ZIPFILE
-ZIPFILE = $(PACKAGE)$(DOS2UNIX_VERSION)$(VERSIONSUFFIX).zip
+ZIPFILE = $(PACKAGE)-$(DOS2UNIX_VERSION)$(VERSIONSUFFIX).zip
 !endif
 ZIPOBJ = bin\dos2unix.exe bin\mac2unix.exe bin\unix2dos.exe bin\unix2mac.exe share\doc\$(docsubdir) $(ZIPOBJ_EXTRA)
 

@@ -1,13 +1,13 @@
 # Korean translation of the dos2unix package.
-# Copyright (C) 2022, 2026 Erwin Waterlander (msgids)
+# Copyright (C) 2022, 2025, 2026 Erwin Waterlander (msgids)
 # This file is distributed under the same license as the dos2unix package.
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2022, 2026.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2022, 2025, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man 7.5.5-beta3\n"
-"POT-Creation-Date: 2026-03-23 22:44+0100\n"
-"PO-Revision-Date: 2026-03-27 13:13+0900\n"
+"Project-Id-Version: dos2unix-man 7.5.6-beta2\n"
+"POT-Creation-Date: 2026-05-08 21:20+0200\n"
+"PO-Revision-Date: 2026-05-21 13:50+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <translation-team-ko@googlegroups.com>\n"
 "Language: ko\n"
@@ -942,8 +942,8 @@ msgstr "B<-u, --keep-utf16>"
 
 #. type: textblock
 #: dos2unix.pod:522
-msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
-msgstr "입력의 UTF-16 인코딩 원본을 유지합니다. 원본 파일은 동일한 UTF-16 인코딩을 리틀엔디언 또는 빅엔디언으로 입력 파일과 같이 기록합니다.  이는 UTF-8로의 변환을 막습니다. UTF-16 BOM은 원본을 따라 대상에 기록합니다. 이 옵션 동작은 C<-ascii> 옵션으로 막을 수 있습니다."
+msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+msgstr "입력 파일의 UTF-16 인코딩 원본을 유지합니다. 출력 파일은 동일한 UTF-16 인코딩을 리틀엔디언 또는 빅엔디언으로 입력 파일과 같이 기록합니다.  이는 UTF-8로의 변환을 막습니다. UTF-16 BOM은 원본을 따라 대상에 기록합니다. 이 옵션 동작은 C<-ascii> 옵션으로 막을 수 있습니다."
 
 #. type: =item
 #: dos2unix.pod:527
@@ -1232,8 +1232,8 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
-msgstr "L<http://czyborra.com/charsets/codepages.html> 링크와 L<http://czyborra.com/charsets/iso8859.html> 링크도 참고하십시오."
+msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
+msgstr "L<https://czyborra.com/charsets/codepages.html> 링크와 L<https://czyborra.com/charsets/iso8859.html> 링크도 참고하십시오."
 
 #. type: =head1
 #: dos2unix.pod:661
@@ -1247,8 +1247,8 @@ msgstr "인코딩"
 
 #. type: textblock
 #: dos2unix.pod:665
-msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
-msgstr "여러가지 유니코드 인코딩이 있습니다. 유닉스와 리뉵스 유니코드 파일은 보통 UTF-8 인코딩 방식으로 인코딩합니다. 윈도우에서는 유니코드 텍스트 파일을 UTF-8, UTF-16, UTF-16 빅엔디언 방식으로 인코딩할 수 있지만 보통 UTF-16 형식으로 인코딩합니다."
+msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
+msgstr "제각기 다른 유니코드 인코딩이 있습니다. 유닉스와 리눅스 유니코드 파일은 보통 UTF-8 인코딩 방식으로 인코딩합니다. 윈도우에서는 유니코드 텍스트 파일을 UTF-8, UTF-16, UTF-16 빅엔디언 방식으로 인코딩할 수 있지만 대부분 UTF-16 형식으로 인코딩합니다."
 
 #. type: =head2
 #: dos2unix.pod:670
@@ -1267,7 +1267,7 @@ msgstr "dos2unix와 unix2dos의 모든 버전에서는 UTF-8이 아스키와의 
 
 #. type: textblock
 #: dos2unix.pod:678
-msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr "유니코드 UTF-16을 지원하는 dos2unix와 unix2dos는 UTF-16 리틀엔디언 및 빅엔디언 인코딩 텍스트 파일을 모두 읽을 수 있습니다. dos2unix에 UTF-16 지원 기능이 들어갔는지 확인하려면 C<dos2unix -V> 명령을 입력하십시오."
 
 #. type: textblock
@@ -1843,8 +1843,8 @@ msgstr "Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (mac2unix 
 
 #. type: textblock
 #: dos2unix.pod:931
-msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
-msgstr "프로젝트 페이지: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+msgid "Project page: L<https://waterlander.net/dos2unix/>"
+msgstr "프로젝트 페이지: L<https://waterlander.net/dos2unix/>"
 
 #. type: textblock
 #: dos2unix.pod:933
@@ -1860,12 +1860,3 @@ msgstr "추가 참조"
 #: dos2unix.pod:937
 msgid "file(1)  find(1)  iconv(1)  locale(1)  xargs(1)"
 msgstr "file(1)  find(1)  iconv(1)  locale(1)  xargs(1)"
-
-#~ msgid "Convert only line breaks. This is the default conversion mode."
-#~ msgstr "줄 바꿈 문자만 변환합니다. 기본 변환 모드입니다."
-
-#~ msgid "In mode C<ascii> only line breaks are converted. This is the default conversion mode."
-#~ msgstr "C<ascii> 모드에서는 개행 문자만 변환합니다. ASCII 모드는 기본 변환 모드입니다."
-
-#~ msgid "Although the name of this mode is ASCII, which is a 7 bit standard, the actual mode is 8 bit. Use always this mode when converting Unicode UTF-8 files."
-#~ msgstr "7비트 표준 모드를 ASCII 라고 칭하지만 실제 모드는 8 비트입니다. 유니코드 UTF-8 파일을 변환할 때 항상 이 모드를 사용하십시오."

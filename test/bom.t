@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 # Requires perl-Test-Simple installation.
-use Test::Simple tests => 8;
+use Test::Simple tests => 12;
 
 $suffix = "";
 if (-e "../dos2unix.exe") {
@@ -37,3 +37,15 @@ ok( $? == 0, 'dos2unix -b keeps GB18030 BOM in none-GB18030 locale' );
 
 system("$UNIX2DOS -v -n unix_gb.txt out_dos.txt; cmp out_dos.txt dos_gb.txt");
 ok( $? == 0, 'unix2dos keeps GB18030 BOM in none-GB18030 locale' );
+
+system("$DOS2UNIX -v -n inval_bom_utf8.txt out_unix.txt; cmp out_unix.txt inval_bom_utf8.txt");
+ok( $? == 0, 'dos2unix succeeds on file with half UTF8 BOM' );
+
+system("$DOS2UNIX -v -n inval_bom_utf16le.txt out_unix.txt; cmp out_unix.txt inval_bom_utf16le.txt");
+ok( $? == 0, 'dos2unix succeeds on file with half UTF16-LE BOM' );
+
+system("$DOS2UNIX -v -n inval_bom_utf16be.txt out_unix.txt; cmp out_unix.txt inval_bom_utf16be.txt");
+ok( $? == 0, 'dos2unix succeeds on file with half UTF16-BE BOM' );
+
+system("$DOS2UNIX -v -n inval_bom_gb.txt out_unix.txt; cmp out_unix.txt inval_bom_gb.txt");
+ok( $? == 0, 'dos2unix succeeds on file with half GB18030 BOM' );

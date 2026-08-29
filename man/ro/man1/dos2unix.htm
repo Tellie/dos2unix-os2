@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>dos2unix 7.5.5 - Convertor de format de fi&#x219;ier text din DOS/Mac &#xee;n Unix &#x219;i viceversa</title>
+<title>dos2unix 7.5.7 - Convertor de format de fi&#x219;ier text din DOS/Mac &#xee;n Unix &#x219;i viceversa</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rev="made" href="mailto:ASSI@walter.nonet" />
 </head>
@@ -481,7 +481,7 @@ unix2dos [op&#x21B;iuni] [FI&#x218;IER ...] [-n FI&#x218;IER_INTRARE FI&#x218;IE
 <dt id="u---keep-utf16"><b>-u, --keep-utf16</b></dt>
 <dd>
 
-<p>P&#x103;streaz&#x103; codificarea UTF-16 original&#x103; a fi&#x219;ierului de intrare. Fi&#x219;ierul de ie&#x219;ire va fi scris &icirc;n aceea&#x219;i codare UTF-16, little sau big endian, ca &#x219;i fi&#x219;ierul de intrare. Acest lucru previne transformarea &icirc;n UTF-8. Un marcaj de ordine a octe&#x21B;ilor UTF-16 va fi scris &icirc;n consecin&#x21B;&#x103;. Aceast&#x103; op&#x21B;iune poate fi dezactivat&#x103; cu op&#x21B;iunea <code>-ascii</code>.</p>
+<p>P&#x103;streaz&#x103; codificarea UTF-16 original&#x103; a fi&#x219;ierului de intrare. Fi&#x219;ierul de ie&#x219;ire va fi scris &icirc;n aceea&#x219;i codare UTF-16, little- sau big-endian, ca &#x219;i fi&#x219;ierul de intrare. Acest lucru previne transformarea &icirc;n UTF-8. Un marcaj de ordine a octe&#x21B;ilor UTF-16 va fi scris &icirc;n consecin&#x21B;&#x103;. Aceast&#x103; op&#x21B;iune poate fi dezactivat&#x103; cu op&#x21B;iunea <code>-ascii</code>.</p>
 
 </dd>
 <dt id="ul---assume-utf16le"><b>-ul, --assume-utf16le</b></dt>
@@ -605,7 +605,7 @@ unix2dos [op&#x21B;iuni] [FI&#x218;IER ...] [-n FI&#x218;IER_INTRARE FI&#x218;IE
 
 <pre><code>unix2dos &lt; fi&#x219;ier_intrare.txt | iconv -f UTF-8 -t CP1252 &gt; fi&#x219;ier_ie&#x219;ire.txt</code></pre>
 
-<p>Consulta&#x21B;i de asemenea <a href="http://czyborra.com/charsets/codepages.html">http://czyborra.com/charsets/codepages.html</a> &#x219;i <a href="http://czyborra.com/charsets/iso8859.html">http://czyborra.com/charsets/iso8859.html</a>.</p>
+<p>Consulta&#x21B;i de asemenea <a href="https://czyborra.com/charsets/codepages.html">https://czyborra.com/charsets/codepages.html</a> &#x219;i <a href="https://czyborra.com/charsets/iso8859.html">https://czyborra.com/charsets/iso8859.html</a>.</p>
 
 </dd>
 </dl>
@@ -622,7 +622,7 @@ unix2dos [op&#x21B;iuni] [FI&#x218;IER ...] [-n FI&#x218;IER_INTRARE FI&#x218;IE
 
 <p>Toate versiunile de &laquo;dos2unix&raquo; &#x219;i &laquo;unix2dos&raquo; pot converti fi&#x219;iere codificate &icirc;n formatul UTF-8, deoarece UTF-8 a fost conceput pentru compatibilitate cu ASCII.</p>
 
-<p>&laquo;dos2unix&raquo; &#x219;i &laquo;unix2dos&raquo; cu suport Unicode UTF-16, pot citi fi&#x219;iere text codificate UTF-16 little &#x219;i big endian. Pentru a vedea dac&#x103; &laquo;dos2unix&raquo; a fost construit cu suport UTF-16, tasta&#x21B;i: <code>dos2unix -V</code>.</p>
+<p>&laquo;dos2unix&raquo; &#x219;i &laquo;unix2dos&raquo; cu suport Unicode UTF-16, pot citi fi&#x219;iere text codificate UTF-16 little- &#x219;i big-endian. Pentru a vedea dac&#x103; &laquo;dos2unix&raquo; a fost construit cu suport UTF-16, tasta&#x21B;i: <code>dos2unix -V</code>.</p>
 
 <p>&Icirc;n Unix/Linux, fi&#x219;ierele codificate UTF-16 sunt convertite &icirc;n codificarea caracterelor locale. Utiliza&#x21B;i comanda locale(1) pentru a afla care este codificarea caracterelor stabilit&#x103; de localizare. Atunci c&acirc;nd conversia nu este posibil&#x103;, va ap&#x103;rea o eroare de conversie &#x219;i fi&#x219;ierul va fi omis.</p>
 
@@ -822,7 +822,7 @@ export LANG=en_GB.UTF-8      Englez&#x103;, UK, codificarea UTF-8</code></pre>
 
 <p>Benjamin Lin - &lt;blin@socs.uts.edu.au&gt;, Bernd Johannes Wuebben (modul mac2unix) - &lt;wuebben@kde.org&gt;, Christian Wurll (ad&#x103;ugarea unei linii noi suplimentare) - &lt;wurll@ira.uka.de&gt;, Erwin Waterlander - &lt;waterlan@xs4all.nl&gt; (men&#x21B;in&#x103;tor)</p>
 
-<p>Pagina principal&#x103; a proiectului: <a href="https://waterlan.home.xs4all.nl/dos2unix.html">https://waterlan.home.xs4all.nl/dos2unix.html</a></p>
+<p>Pagina principal&#x103; a proiectului: <a href="https://waterlander.net/dos2unix/">https://waterlander.net/dos2unix/</a></p>
 
 <p>Pagina din SourceForge a proiectului: <a href="https://sourceforge.net/projects/dos2unix/">https://sourceforge.net/projects/dos2unix/</a></p>
 

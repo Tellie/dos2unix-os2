@@ -477,7 +477,7 @@ Umwandlung von Unix UTF-8 (Unicode) nach Windows CP1252:
 
     unix2dos < eingabe.txt | iconv -f UTF-8 -t CP1252 > ausgabe.txt
 
-Siehe auch L<http://czyborra.com/charsets/codepages.html> und L<http://czyborra.com/charsets/iso8859.html>.
+Siehe auch L<https://czyborra.com/charsets/codepages.html> und L<https://czyborra.com/charsets/iso8859.html>.
 
 =back
 
@@ -693,7 +693,7 @@ L<https://de.wikipedia.org/wiki/Unicode>
 
 Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (Mac2unix-Modus) - <wuebben@kde.org>, Christian Wurll (Extra Zeilenumbruch) - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl> (Betreuer)
 
-Projektseite: L<https://waterlan.home.xs4all.nl/dos2unix.html>
+Projektseite: L<https://waterlander.net/dos2unix/>
 
 SourceForge-Seite: L<https://sourceforge.net/projects/dos2unix/>
 

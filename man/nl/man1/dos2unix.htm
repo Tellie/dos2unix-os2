@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>dos2unix 7.5.5 - DOS/Mac naar Unix en vice versa tekstbestand formaat omzetter</title>
+<title>dos2unix 7.5.7 - DOS/Mac naar Unix en vice versa tekstbestand formaat omzetter</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rev="made" href="mailto:ASSI@walter.nonet" />
 </head>
@@ -211,7 +211,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 <dt id="error-binary"><b>--error-binary</b></dt>
 <dd>
 
-<p>Return an error if a binary file is skipped.</p>
+<p>Een fout rapporteren wanneer een binair bestand wordt overgeslagen.</p>
 
 </dd>
 <dt id="f---force"><b>-f</b>, <b>--force</b></dt>
@@ -232,7 +232,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 <p>Een hulptekst tonen.</p>
 
 </dd>
-<dt id="i-VLAGGEN---info-VLAGGEN-BESTAND"><b>-i[VLAGGEN], --info[=VLAGGEN] BESTAND ...</b></dt>
+<dt id="i-VLAGGEN---info-VLAGGEN-BESTAND"><b>-i[VLAGGEN]</b>, <b>--info[=VLAGGEN] BESTAND ...</b></dt>
 <dd>
 
 <p>Bestandsinformatie tonen. Er wordt niets geconverteerd.</p>
@@ -398,7 +398,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 <p>Gebruik deze optie nooit als de codering van het uitvoerbestand niet UTF-8, UTF-16, of GB18030 is. Zie ook de sectie <b>UNICODE</b>.</p>
 
 </dd>
-<dt id="n---newfile-INVOERBESTAND-UITVOERBESTAND"><b>-n, --newfile INVOERBESTAND UITVOERBESTAND ...</b></dt>
+<dt id="n---newfile-INVOERBESTAND-UITVOERBESTAND"><b>-n</b>, <b>--newfile INVOERBESTAND UITVOERBESTAND ...</b></dt>
 <dd>
 
 <p>Nieuw-bestand-modus. Het bestand INVOERBESTAND converteren en naar bestand UITVOERBESTAND schrijven. Bestandsnamen moeten opgegeven worden in paren. Jokertekens moeten <i>niet</i>gebruikt worden, anders <i>verlies</i> je de bestanden.</p>
@@ -417,16 +417,16 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 <dt id="no-add-eol"><b>--no-add-eol</b></dt>
 <dd>
 
-<p>Do not add a line break to the last line if there isn&#39;t one (default).</p>
+<p>Geen regeleinde toevoegen aan de laatste regel als er geen is (standaard).</p>
 
 </dd>
 <dt id="no-error-binary"><b>--no-error-binary</b></dt>
 <dd>
 
-<p>Do not return an error if a binary file is skipped (default).</p>
+<p>Geen fout rapporteren wanneer een binair bestand wordt overgeslagen (standaard).</p>
 
 </dd>
-<dt id="O---to-stdout"><b>-O, --to-stdout</b></dt>
+<dt id="O---to-stdout"><b>-O</b>, <b>--to-stdout</b></dt>
 <dd>
 
 <p>Naar standaarduitvoer schrijven, zoals een Unix-filter. Gebruik optie <code>-o</code> om terug te gaan naar de oud-bestand-modus (vervangend).</p>
@@ -475,13 +475,13 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 
 <p>Binaire bestanden worden overgeslagen om vergissingen te voorkomen. Het detecteren van binaire bestanden is echter niet 100% betrouwbaar. Invoerbestanden worden gescand op binaire tekens die gewoonlijk niet in tekstbestanden voorkomen. Maar het is mogelijk dat een binair bestand enkel normale teksttekens bevat. Zo&#39;n binair bestand zal dan foutief als een tekstbestand gezien worden.</p>
 
-<p>By default, no error is returned when a binary file is skipped. When the <code>--error-binary</code> option is used, an error is returned.</p>
+<p>Standaard wordt geen fout gerapporteerd als een binair bestand wordt overgeslagen. Hiervoor wordt alleen een fout gerapporteerd wanneer optie <code>--error-binary</code> gegeven is.</p>
 
 </dd>
 <dt id="u---keep-utf16"><b>-u</b>, <b>--keep-utf16</b></dt>
 <dd>
 
-<p>De originele UTF-16-codering van het invoerbestand behouden. Het uitvoerbestand wordt in dezelfde UTF-16-codering (little endian of big endian) geschreven als het invoerbestand. Dit voorkomt conversie naar UTF-8. Er wordt ook een corresponderende UTF-16-BOM geschreven. Deze optie kan uitgeschakeld worden met de optie <code>-ascii</code>.</p>
+<p>De originele UTF-16-codering van het invoerbestand behouden. Het uitvoerbestand wordt in dezelfde UTF-16-codering (little-endian of big-endian) geschreven als het invoerbestand. Dit voorkomt conversie naar UTF-8. Er wordt ook een corresponderende UTF-16-BOM geschreven. Deze optie kan uitgeschakeld worden met de optie <code>-ascii</code>.</p>
 
 </dd>
 <dt id="ul---assume-utf16le"><b>-ul</b>, <b>--assume-utf16le</b></dt>
@@ -605,7 +605,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 
 <pre><code>unix2dos &lt; in.txt | iconv -f UTF-8 -t CP1252 &gt; uit.txt</code></pre>
 
-<p>Zie ook <a href="http://czyborra.com/charsets/codepages.html">http://czyborra.com/charsets/codepages.html</a> en <a href="http://czyborra.com/charsets/iso8859.html">http://czyborra.com/charsets/iso8859.html</a>.</p>
+<p>Zie ook <a href="https://czyborra.com/charsets/codepages.html">https://czyborra.com/charsets/codepages.html</a> en <a href="https://czyborra.com/charsets/iso8859.html">https://czyborra.com/charsets/iso8859.html</a>.</p>
 
 </dd>
 </dl>
@@ -614,7 +614,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 
 <h2 id="Coderingen">Coderingen</h2>
 
-<p>Er bestaan verschillende Unicode-coderingen. Op Unix en Linux zijn Unicode-bestanden typisch gecodeerd in UTF-8. Op Windows kunnen Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16 of UTF-16 big endian, maar ze zijn meestal gecodeerd in UTF-16.</p>
+<p>Er bestaan verschillende Unicode-coderingen. Op Unix en Linux zijn Unicode-bestanden typisch gecodeerd in UTF-8. Op Windows kunnen Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16, of UTF-16 big-endian, maar ze zijn meestal gecodeerd in UTF-16.</p>
 
 <h2 id="Conversie">Conversie</h2>
 
@@ -622,7 +622,7 @@ unix2dos [opties] [BESTAND ...] [-n INVOERBESTAND UITVOERBESTAND ...]</code></pr
 
 <p>Alle versies van dos2unix en unix2dos kunnen UTF-8-gecodeerde bestanden omzetten, want UTF-8 is ontworpen op compatibiliteit met ASCII.</p>
 
-<p>dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little en big endian UTF-16-gecodeerde tekstbestanden lezen. Om er achter te komen of dos2unix gebouwd is met UTF-16- ondersteuning, typt u <code>dos2unix -V</code>.</p>
+<p>dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little- en big-endian UTF-16-gecodeerde tekstbestanden lezen. Om er achter te komen of dos2unix gebouwd is met UTF-16-ondersteuning, typt u <code>dos2unix -V</code>.</p>
 
 <p>Op Unix/Linux worden UTF-16-bestanden geconverteerd naar de codering van de ingestelde taalregio. Gebruik de opdracht <b>locale</b>(1) om te zien wat de ingestelde codering is. Wanneer conversie niet mogelijk is, treedt er een fout op en wordt het bestand overgeslagen.</p>
 
@@ -822,7 +822,7 @@ export LANG=en_GB.UTF-8      Engels, GB, UTF-8-codering</code></pre>
 
 <p>Benjamin Lin - &lt;blin@socs.uts.edu.au&gt;, Bernd Johannes Wuebben (mac2unix-modus) - &lt;wuebben@kde.org&gt;, Christian Wurll (toevoegen van extra regeleindes) - &lt;wurll@ira.uka.de&gt;, Erwin Waterlander - &lt;waterlan@xs4all.nl&gt; (beheerder)</p>
 
-<p>Projectpagina: <a href="https://waterlan.home.xs4all.nl/dos2unix.html">https://waterlan.home.xs4all.nl/dos2unix.html</a></p>
+<p>Projectpagina: <a href="https://waterlander.net/dos2unix/">https://waterlander.net/dos2unix/</a></p>
 
 <p>SourceForge-pagina: <a href="https://sourceforge.net/projects/dos2unix/">https://sourceforge.net/projects/dos2unix/</a></p>
 
