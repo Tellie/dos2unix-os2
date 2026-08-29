@@ -373,7 +373,7 @@ C<--allow-chown> 옵션의 장점은 와일드 카드를 사용할 수 있으며
 
 =item B<-u, --keep-utf16>
 
-입력의 UTF-16 인코딩 원본을 유지합니다. 원본 파일은 동일한 UTF-16 인코딩을 리틀엔디언 또는 빅엔디언으로 입력 파일과 같이 기록합니다.  이는 UTF-8로의 변환을 막습니다. UTF-16 BOM은 원본을 따라 대상에 기록합니다. 이 옵션 동작은 C<-ascii> 옵션으로 막을 수 있습니다.
+입력 파일의 UTF-16 인코딩 원본을 유지합니다. 출력 파일은 동일한 UTF-16 인코딩을 리틀엔디언 또는 빅엔디언으로 입력 파일과 같이 기록합니다.  이는 UTF-8로의 변환을 막습니다. UTF-16 BOM은 원본을 따라 대상에 기록합니다. 이 옵션 동작은 C<-ascii> 옵션으로 막을 수 있습니다.
 
 =item B<-ul, --assume-utf16le>
 
@@ -477,7 +477,7 @@ DOS CP850에서 유닉스 Latin-1으로 변환:
 
     unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > out.txt
 
-L<http://czyborra.com/charsets/codepages.html> 링크와 L<http://czyborra.com/charsets/iso8859.html> 링크도 참고하십시오.
+L<https://czyborra.com/charsets/codepages.html> 링크와 L<https://czyborra.com/charsets/iso8859.html> 링크도 참고하십시오.
 
 =back
 
@@ -485,7 +485,7 @@ L<http://czyborra.com/charsets/codepages.html> 링크와 L<http://czyborra.com/c
 
 =head2 인코딩
 
-여러가지 유니코드 인코딩이 있습니다. 유닉스와 리뉵스 유니코드 파일은 보통 UTF-8 인코딩 방식으로 인코딩합니다. 윈도우에서는 유니코드 텍스트 파일을 UTF-8, UTF-16, UTF-16 빅엔디언 방식으로 인코딩할 수 있지만 보통 UTF-16 형식으로 인코딩합니다.
+제각기 다른 유니코드 인코딩이 있습니다. 유닉스와 리눅스 유니코드 파일은 보통 UTF-8 인코딩 방식으로 인코딩합니다. 윈도우에서는 유니코드 텍스트 파일을 UTF-8, UTF-16, UTF-16 빅엔디언 방식으로 인코딩할 수 있지만 대부분 UTF-16 형식으로 인코딩합니다.
 
 =head2 변환
 
@@ -693,7 +693,7 @@ L<https://en.wikipedia.org/wiki/Unicode>
 
 Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (mac2unix mode) - <wuebben@kde.org>, Christian Wurll (add extra newline) - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl> (maintainer)
 
-프로젝트 페이지: L<https://waterlan.home.xs4all.nl/dos2unix.html>
+프로젝트 페이지: L<https://waterlander.net/dos2unix/>
 
 SourceForge 페이지: L<https://sourceforge.net/projects/dos2unix/>
 

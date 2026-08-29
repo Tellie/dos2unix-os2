@@ -271,39 +271,54 @@ char *dirname(char *path);
 #endif
 FILE* MakeTempFileFrom(const char *OutFN, char **fname_ret);
 int ResolveSymbolicLink(char *lFN, char **rFN, CFlag *ipFlag, const char *progname);
-FILE *read_bom (FILE *f, int *bomtype);
+
+/* Lookahead buffer to be able to do safe consecutive ungetc() calls (max 4).
+   Standard ungetc() may fail when called more than once after each other. */
+#define MAX_LOOKAHEAD 4
+typedef struct {
+    FILE *file;
+    int buffer[MAX_LOOKAHEAD];
+    int count;
+} BufferedStream;
+
+int d2u_getc(BufferedStream *stream);
+int d2u_ungetc(int c, BufferedStream *stream);
+
+BufferedStream *read_bom (BufferedStream *f, int *bomtype);
 FILE *write_bom (FILE *f, CFlag *ipFlag, const char *progname);
 void print_bom (const int bomtype, const char *filename, const char *progname);
-int check_unicode(FILE *InF, FILE *TempF,  CFlag *ipFlag, const char *ipInFN, const char *progname);
+int check_unicode(BufferedStream *InF, FILE *TempF,  CFlag *ipFlag, const char *ipInFN, const char *progname);
 void print_messages_stdio(const CFlag *pFlag, const char *progname);
 void print_messages_newfile(const CFlag *pFlag, const char *infile, const char *outfile, const char *progname, const int RetVal);
 void print_messages_oldfile(const CFlag *pFlag, const char *infile, const char *progname, const int RetVal);
+
 int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progname,
-                   int (*Convert)(FILE*, FILE*, CFlag *, const char *)
+                   int (*Convert)(BufferedStream*, FILE*, CFlag *, const char *)
 #ifdef D2U_UNICODE
-                 , int (*ConvertW)(FILE*, FILE*, CFlag *, const char *)
+                 , int (*ConvertW)(BufferedStream*, FILE*, CFlag *, const char *)
 #endif
                   );
 int ConvertStdio(CFlag *ipFlag, const char *progname,
-                   int (*Convert)(FILE*, FILE*, CFlag *, const char *)
+                   int (*Convert)(BufferedStream*, FILE*, CFlag *, const char *)
 #ifdef D2U_UNICODE
-                 , int (*ConvertW)(FILE*, FILE*, CFlag *, const char *)
+                 , int (*ConvertW)(BufferedStream*, FILE*, CFlag *, const char *)
 #endif
                   );
 int parse_options(int argc, char *argv[],
                   CFlag *pFlag, const char *localedir, const char *progname,
                   void (*PrintLicense)(void),
-                  int (*Convert)(FILE*, FILE*, CFlag *, const char *)
+                  int (*Convert)(BufferedStream*, FILE*, CFlag *, const char *)
 #ifdef D2U_UNICODE
-                , int (*ConvertW)(FILE*, FILE*, CFlag *, const char *)
+                , int (*ConvertW)(BufferedStream*, FILE*, CFlag *, const char *)
 #endif
                   );
 void d2u_getc_error(CFlag *ipFlag, const char *progname);
 void d2u_putc_error(CFlag *ipFlag, const char *progname);
+
 #ifdef D2U_UNICODE
 void d2u_putwc_error(CFlag *ipFlag, const char *progname);
-wint_t d2u_getwc(FILE *f, int bomtype);
-wint_t d2u_ungetwc(wint_t wc, FILE *f, int bomtype);
+wint_t d2u_getwc(BufferedStream *f, int bomtype);
+void d2u_check_surrogate_state(CFlag *ipFlag, const char *progname);
 wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname);
 #endif
 char *d2u_strncpy(char *dest, const char *src, size_t dest_size);

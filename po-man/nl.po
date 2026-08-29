@@ -1,16 +1,16 @@
 # Dutch translations for the dos2unix man page.
-# Copyright (C) 2017 Erwin Waterlander (msgids)
+# Copyright (C) 2026 Erwin Waterlander (msgids)
 # This file is distributed under the same license as the dos2unix package.
 #
 # “Hm!  I can see those old men shake their heads.”
 #
 # Erwin Waterlander <waterlan@xs4all.nl>, 2014, 2025.
-# Benno Schulenberg <vertaling@coevern.nl>, 2014, 2015, 2016, 2020, 2025.
+# Benno Schulenberg <vertaling@coevern.nl>, 2014, 2015, 2016, 2020, 2025, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man-7.5.3-beta8\n"
-"POT-Creation-Date: 2026-03-23 22:38+0100\n"
-"PO-Revision-Date: 2025-05-18 09:27+0200\n"
+"Project-Id-Version: dos2unix-man-7.5.6-beta2\n"
+"POT-Creation-Date: 2026-05-08 21:20+0200\n"
+"PO-Revision-Date: 2026-05-20 14:51+0200\n"
 "Last-Translator: Benno Schulenberg <vertaling@coevern.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "Language: nl\n"
@@ -360,12 +360,12 @@ msgstr "Een bestand dat is geconverteerd van DOS- naar Unix-indeling kan een reg
 #. type: =item
 #: dos2unix.pod:252
 msgid "B<--error-binary>"
-msgstr ""
+msgstr "B<--error-binary>"
 
 #. type: textblock
 #: dos2unix.pod:254
 msgid "Return an error if a binary file is skipped."
-msgstr ""
+msgstr "Een fout rapporteren wanneer een binair bestand wordt overgeslagen."
 
 #. type: =item
 #: dos2unix.pod:256
@@ -400,7 +400,7 @@ msgstr "Een hulptekst tonen."
 #. type: =item
 #: dos2unix.pod:270
 msgid "B<-i[FLAGS], --info[=FLAGS] FILE ...>"
-msgstr "B<-i[VLAGGEN], --info[=VLAGGEN] BESTAND ...>"
+msgstr "B<-i[VLAGGEN]>, B<--info[=VLAGGEN] BESTAND ...>"
 
 #. type: textblock
 #: dos2unix.pod:272
@@ -770,7 +770,7 @@ msgstr "Gebruik deze optie nooit als de codering van het uitvoerbestand niet UTF
 #. type: =item
 #: dos2unix.pod:422
 msgid "B<-n, --newfile INFILE OUTFILE ...>"
-msgstr "B<-n, --newfile INVOERBESTAND UITVOERBESTAND ...>"
+msgstr "B<-n>, B<--newfile INVOERBESTAND UITVOERBESTAND ...>"
 
 #. type: textblock
 #: dos2unix.pod:424
@@ -804,25 +804,23 @@ msgstr "B<--no-add-eol>"
 
 #. type: textblock
 #: dos2unix.pod:444
-#, fuzzy
-#| msgid "Do not add a line break to the last line if there isn't one."
 msgid "Do not add a line break to the last line if there isn't one (default)."
-msgstr "Geen regeleinde toevoegen aan de laatste regel als er geen is."
+msgstr "Geen regeleinde toevoegen aan de laatste regel als er geen is (standaard)."
 
 #. type: =item
 #: dos2unix.pod:446
 msgid "B<--no-error-binary>"
-msgstr ""
+msgstr "B<--no-error-binary>"
 
 #. type: textblock
 #: dos2unix.pod:448
 msgid "Do not return an error if a binary file is skipped (default)."
-msgstr ""
+msgstr "Geen fout rapporteren wanneer een binair bestand wordt overgeslagen (standaard)."
 
 #. type: =item
 #: dos2unix.pod:450
 msgid "B<-O, --to-stdout>"
-msgstr "B<-O, --to-stdout>"
+msgstr "B<-O>, B<--to-stdout>"
 
 #. type: textblock
 #: dos2unix.pod:452
@@ -937,7 +935,7 @@ msgstr "Binaire bestanden worden overgeslagen om vergissingen te voorkomen.  Het
 #. type: textblock
 #: dos2unix.pod:517
 msgid "By default, no error is returned when a binary file is skipped. When the C<--error-binary> option is used, an error is returned."
-msgstr ""
+msgstr "Standaard wordt geen fout gerapporteerd als een binair bestand wordt overgeslagen.  Hiervoor wordt alleen een fout gerapporteerd wanneer optie C<--error-binary> gegeven is."
 
 #. type: =item
 #: dos2unix.pod:520
@@ -946,8 +944,8 @@ msgstr "B<-u>, B<--keep-utf16>"
 
 #. type: textblock
 #: dos2unix.pod:522
-msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
-msgstr "De originele UTF-16-codering van het invoerbestand behouden.  Het uitvoerbestand wordt in dezelfde UTF-16-codering (little endian of big endian) geschreven als het invoerbestand.  Dit voorkomt conversie naar UTF-8.  Er wordt ook een corresponderende UTF-16-BOM geschreven.  Deze optie kan uitgeschakeld worden met de optie C<-ascii>."
+msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+msgstr "De originele UTF-16-codering van het invoerbestand behouden.  Het uitvoerbestand wordt in dezelfde UTF-16-codering (little-endian of big-endian) geschreven als het invoerbestand.  Dit voorkomt conversie naar UTF-8.  Er wordt ook een corresponderende UTF-16-BOM geschreven.  Deze optie kan uitgeschakeld worden met de optie C<-ascii>."
 
 #. type: =item
 #: dos2unix.pod:527
@@ -1236,8 +1234,8 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
-msgstr "Zie ook L<http://czyborra.com/charsets/codepages.html> en L<http://czyborra.com/charsets/iso8859.html>."
+msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
+msgstr "Zie ook L<https://czyborra.com/charsets/codepages.html> en L<https://czyborra.com/charsets/iso8859.html>."
 
 #. type: =head1
 #: dos2unix.pod:661
@@ -1251,8 +1249,8 @@ msgstr "Coderingen"
 
 #. type: textblock
 #: dos2unix.pod:665
-msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
-msgstr "Er bestaan verschillende Unicode-coderingen.  Op Unix en Linux zijn Unicode-bestanden typisch gecodeerd in UTF-8.  Op Windows kunnen Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16 of UTF-16 big endian, maar ze zijn meestal gecodeerd in UTF-16."
+msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
+msgstr "Er bestaan verschillende Unicode-coderingen.  Op Unix en Linux zijn Unicode-bestanden typisch gecodeerd in UTF-8.  Op Windows kunnen Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16, of UTF-16 big-endian, maar ze zijn meestal gecodeerd in UTF-16."
 
 #. type: =head2
 #: dos2unix.pod:670
@@ -1271,8 +1269,8 @@ msgstr "Alle versies van dos2unix en unix2dos kunnen UTF-8-gecodeerde bestanden 
 
 #. type: textblock
 #: dos2unix.pod:678
-msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
-msgstr "dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little en big endian UTF-16-gecodeerde tekstbestanden lezen.  Om er achter te komen of dos2unix gebouwd is met UTF-16- ondersteuning, typt u C<dos2unix -V>."
+msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+msgstr "dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little- en big-endian UTF-16-gecodeerde tekstbestanden lezen.  Om er achter te komen of dos2unix gebouwd is met UTF-16-ondersteuning, typt u C<dos2unix -V>."
 
 #. type: textblock
 #: dos2unix.pod:682
@@ -1844,8 +1842,8 @@ msgstr "Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (mac2unix-
 
 #. type: textblock
 #: dos2unix.pod:931
-msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
-msgstr "Projectpagina: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+msgid "Project page: L<https://waterlander.net/dos2unix/>"
+msgstr "Projectpagina: L<https://waterlander.net/dos2unix/>"
 
 #. type: textblock
 #: dos2unix.pod:933

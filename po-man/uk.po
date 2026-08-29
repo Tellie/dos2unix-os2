@@ -6,9 +6,9 @@
 # Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2017, 2022, 2023, 2025, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man 7.5.5-beta3\n"
-"POT-Creation-Date: 2026-03-23 22:44+0100\n"
-"PO-Revision-Date: 2026-03-26 13:14+0200\n"
+"Project-Id-Version: dos2unix-man 7.5.6-beta2\n"
+"POT-Creation-Date: 2026-05-08 21:20+0200\n"
+"PO-Revision-Date: 2026-05-20 13:34+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -943,7 +943,7 @@ msgstr "B<-u, --keep-utf16>"
 
 #. type: textblock
 #: dos2unix.pod:522
-msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgstr "Зберегти початкове кодування UTF-16. Файл результатів буде записано у тому самому кодуванні UTF-16, із прямим або зворотним порядком байтів, що і початковий файл. Таким чином можна запобігти перетворенню даних у кодування UTF-8. До файла буде записано відповідну позначку порядку байтів UTF-16. Вимкнути цей параметр можна за допомогою параметра C<-ascii>."
 
 #. type: =item
@@ -1233,8 +1233,8 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
-msgstr "Див. також L<http://czyborra.com/charsets/codepages.html> та L<http://czyborra.com/charsets/iso8859.html>."
+msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
+msgstr "Див. також L<https://czyborra.com/charsets/codepages.html>."
 
 #. type: =head1
 #: dos2unix.pod:661
@@ -1248,7 +1248,7 @@ msgstr "Кодування"
 
 #. type: textblock
 #: dos2unix.pod:665
-msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
+msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
 msgstr "Існує декілька різних кодувань Unicode. У Unix та Linux у файлах Unicode здебільшого використовується кодування UTF-8. У Windows для текстових файлів Unicode може бути використано кодування UTF-8, UTF-16 або UTF-16 зі зворотним порядком байтів. Втім, здебільшого, використовується формат UTF-16."
 
 #. type: =head2
@@ -1268,7 +1268,7 @@ msgstr "Усі версії dos2unix та unix2dos здатні виконува
 
 #. type: textblock
 #: dos2unix.pod:678
-msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr "Програми dos2unix та unix2dos, зібрані з підтримкою Unicode UTF-16, можуть читати текстові файли у кодуванні UTF-16 з прямим та зворотним порядком байтів. Щоб дізнатися про те, чи було dos2unix зібрано з підтримкою UTF-16, віддайте команду C<dos2unix -V>."
 
 #. type: textblock
@@ -1841,8 +1841,8 @@ msgstr "Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (режи�
 
 #. type: textblock
 #: dos2unix.pod:931
-msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
-msgstr "Сторінка проєкту: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+msgid "Project page: L<https://waterlander.net/dos2unix/>"
+msgstr "Сторінка проєкту: L<https://waterlander.net/dos2unix/>"
 
 #. type: textblock
 #: dos2unix.pod:933

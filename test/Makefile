@@ -1,4 +1,4 @@
-TESTS = ascii.t iso.t misc.t bom.t noeol.t stdio.t
+TESTS = ascii.t mixed.t iso.t misc.t bom.t noeol.t stdio.t
 
 d2u_os=$(shell uname -s)
 UCS = 1
@@ -66,6 +66,9 @@ test:
 
 
 ascii:
+	prove -v $(PROVE_OPT) $@.t
+
+mixed:
 	prove -v $(PROVE_OPT) $@.t
 
 iso:

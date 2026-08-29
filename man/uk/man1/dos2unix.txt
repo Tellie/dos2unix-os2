@@ -602,8 +602,7 @@
 
             unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > out.txt
 
-        Див. також <http://czyborra.com/charsets/codepages.html> та
-        <http://czyborra.com/charsets/iso8859.html>.
+        Див. також <https://czyborra.com/charsets/codepages.html>.
 
 UNICODE
   Кодування
@@ -900,7 +899,7 @@ GB18030
     - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl>
     (супровідник)
 
-    Сторінка проєкту: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Сторінка проєкту: <https://waterlander.net/dos2unix/>
 
     Сторінка на SourceForge: <https://sourceforge.net/projects/dos2unix/>
 

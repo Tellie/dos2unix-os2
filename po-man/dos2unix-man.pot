@@ -5,7 +5,7 @@
 #
 #, fuzzy
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nPOT-Creation-Date: 2026-04-07 19:43+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nPOT-Creation-Date: 2026-08-27 21:21+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
 
 #. type: =head1
 #: dos2unix.pod:52
@@ -845,7 +845,7 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:522
-msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgstr ""
 
 #. type: =item
@@ -1103,7 +1103,7 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
+msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
 msgstr ""
 
 #. type: =head1
@@ -1118,7 +1118,7 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:665
-msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
+msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
 msgstr ""
 
 #. type: =head2
@@ -1138,7 +1138,7 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:678
-msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr ""
 
 #. type: textblock
@@ -1599,7 +1599,7 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:931
-msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+msgid "Project page: L<https://waterlander.net/dos2unix/>"
 msgstr ""
 
 #. type: textblock

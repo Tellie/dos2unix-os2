@@ -18,7 +18,7 @@ FILE LIST
 
 PROJECT HOME PAGE
 
-        https://waterlan.home.xs4all.nl/dos2unix.html
+        https://waterlander.net/dos2unix/
         https://dos2unix.sourceforge.io/
 
 
@@ -59,7 +59,7 @@ HISTORY
 
 AUTHORS
 
-        Erwin Waterlander       version 3.2 - 7.5.5  2009-2026
+        Erwin Waterlander       version 3.2 - 7.5.7  2009-2026
         Christian Wurll         version 3.1          1998
         Bernd Johannes Wuebben  version 3.0          1998
         Benjamin Lin            version 1.1 - 2.3    1994-1995
@@ -75,7 +75,7 @@ TRANSLATORS
 
         Brazilian Portuguese  Enrico Nicoletto             Version 6.0.5
         Brazilian Portuguese  Rafael Ferreira              Version 6.0.6 - 7.2
-        Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.5.5
+        Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.5.7
         Catalan               Jordi Mas i Hernàndez        Version 7.4.4 - 7.5.2
         Chinese (simplified)  Tianze Wang                  Version 7.3.1 - 7.4.0,
                                                            7.5.1
@@ -85,29 +85,29 @@ TRANSLATORS
         Danish                Thomas Pryds                 Version 6.0.5 - 6.0.6
         Danish                Joe Hansen                   Version 7.2.3 - 7.4.1
         Dutch                 Erwin Waterlander            Version 4.0   - 6.0.4
-        Dutch                 Benno Schulenberg            Version 6.0.5 - 7.5.3
+        Dutch                 Benno Schulenberg            Version 6.0.5 - 7.5.7
         Esperanto             Rugxulo                      Version 5.1   - 6.0.4
         Esperanto             Benno Schulenberg            Version 6.0.5 - 7.3
         Esperanto             Felipe Castro                Version 7.4.3
-        French                Frédéric Marchal             Version 6.0.5 - 7.5.5
+        French                Frédéric Marchal             Version 6.0.5 - 7.5.7
         Friulian              Fabio Tomat                  Version 7.4.2 - 7.5.2
         Georgian              Temuri Doghonadze            Version 7.4.4 - 7.5.3
         German                Philipp Thomas               Version 5.0   - 6.0.3, 7.0,
                                                            7.2.2 - 7.4.1
         German                Lars Wendler                 Version 6.0.4
         German                Mario Blättermann            Version 6.0.6, 7.1 - 7.2,
-                                                           7.5.5
+                                                           7.5.7
         German                Roland Illig                 Version 7.4.2 - 7.5.3
         Hungarian             Balázs Úr                    Version 6.0.5 - 7.2.3,
                                                            7.4.0 - 7.4.1
         Hungarian             Gabor Kelemen                Version 7.3.4
         Japanese              Yasuaki Taniguchi            Version 7.1.1
-        Japanese              Takeshi Hamasaki             Version 7.3.4 - 7.4.1
-        Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.5
+        Japanese              Takeshi Hamasaki             Version 7.3.4 - 7.5.7
+        Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.7
         Norwegian Bokmaal     Åka Sikrom                   Version 6.0.6 - 7.4.0
-        Norwegian Bokmaal     Johnny A. Solbu              Version 7.5.0 - 7.5.5
-        Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.5
-        Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.5
+        Norwegian Bokmaal     Johnny A. Solbu              Version 7.5.0 - 7.5.7
+        Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.7
+        Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.7
         Russian               Андрей Углик (Andrei Uhlik)  Version 6.0.4
         Russian               Yuri Kozlov                  Version 6.0.6 - 7.5.2
         Serbian               Мирослав Николић             Version 6.0.5 - 7.5.5
@@ -115,7 +115,7 @@ TRANSLATORS
         Spanish               Enrique Lazcorreta Puigmartí Version 6.0.6 - 7.3.1
         Swedish               Sebastian Rasmussen          Version 7.3.2 - 7.5.2
         Swedish               Luna Jernberg                Version 7.5.2
-        Ukrainian             Yuri Chornoivan              Version 6.0.5 - 7.5.5
+        Ukrainian             Yuri Chornoivan              Version 6.0.5 - 7.5.7
         Vietnamese            Trần Ngọc Quân               Version 6.0.5 - 7.5.2
 
         Translation of the manual.
@@ -130,18 +130,18 @@ TRANSLATORS
         Dutch                 Erwin Waterlander            Version 5.1.1 - 6.0.4,
                                                            7.5.2
         Dutch                 Benno Schulenberg            Version 6.0.5 - 7.4.0,
-                                                           7.5.2 - 7.5.3
-        French                Frédéric Marchal             Version 6.0.5 - 7.5.5
-        German                Mario Blättermann            Version 6.0.5 - 7.5.5
+                                                           7.5.2 - 7.5.6
+        French                Frédéric Marchal             Version 6.0.5 - 7.5.6
+        German                Mario Blättermann            Version 6.0.5 - 7.5.6
         German                Roland Illig                 Version 7.4.2
-        Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.5
-        Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.5
-        Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.5
+        Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.6
+        Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.6
+        Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.6
         Serbian               Мирослав Николић             Version 7.4.3 - 7.5.5
         Spanish               Julio A. Freyre-Gonzalez     Version 5.3.1 - 6.0.4
         Spanish               Enrique Lazcorreta Puigmartí Version 6.0.6 - 7.2.1
         Swedish               Sebastian Rasmussen          Version 7.3.2 - 7.5.2
-        Ukrainian             Yuri Chornoivan              Version 6.0.5 - 7.5.5
+        Ukrainian             Yuri Chornoivan              Version 6.0.5 - 7.5.6
 
 
 ACKNOWLEDGEMENTS
@@ -205,6 +205,9 @@ ACKNOWLEDGEMENTS
         Joao ERIBERTO Mota Filho  Reported dos2unix exits with zero code when it
                               aborts conversion due to a binary file.
         quyse                 Reported problem with empty input.
+        acts1631kjv           Detect a missing UTF-16 low surrogate at the end of a file.
+        acts1631kjv           Fixed the processing of files containing only half a BOM.
+        acts1631kjv           Fixed conversion of CR-CR-LF in unix2dos.
 
 
 FINDUTILS
@@ -219,12 +222,12 @@ FINDUTILS
 
 CONTACT INFORMATION
 
-        Project home page        : https://waterlan.home.xs4all.nl/dos2unix.html
+        Project home page        : https://waterlander.net/dos2unix/
         SourceForge project page : https://sourceforge.net/projects/dos2unix/
 
         Erwin Waterlander
         waterlan@xs4all.nl
-        https://waterlan.home.xs4all.nl/
+        https://waterlander.net/
 
         If you need support you can email me directly or make a ticket on the
         SourceForge project page. Help in any form is appreciated. A problem

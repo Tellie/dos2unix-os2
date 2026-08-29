@@ -428,8 +428,8 @@ OPCJE
 
     -u, --keep-utf16
         Zachowanie oryginalnego kodowania pliku wejściowego UTF-16. Plik
-        wyjściowy zostanie zapisany w tym samym kodowaniu UTF-16 (little lub
-        big endian), co plik wejściowy. Zapobiega to przekształceniu do
+        wyjściowy zostanie zapisany w tym samym kodowaniu UTF-16 (little-
+        lub big-endian), co plik wejściowy. Zapobiega to przekształceniu do
         UTF-8. Do pliku zostanie zapisany odpowiedni znacznik BOM UTF-16. Tę
         opcję można wyłączyć opcją "-ascii".
 
@@ -554,8 +554,8 @@ TRYBY KONWERSJI
 
             unix2dos < wejście.txt | iconv -f UTF-8 -t CP1252 > wynik.txt
 
-        Więcej pod adresem <http://czyborra.com/charsets/codepages.html>
-        oraz <http://czyborra.com/charsets/iso8859.html>.
+        Więcej pod adresem <https://czyborra.com/charsets/codepages.html>
+        oraz <https://czyborra.com/charsets/iso8859.html>.
 
 UNICODE
   Kodowania
@@ -831,7 +831,7 @@ AUTORZY
     linii) <wurll@ira.uka.de>; Erwin Waterlander <waterlan@xs4all.nl>
     (prowadzący)
 
-    Strona projektu: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Strona projektu: <https://waterlander.net/dos2unix/>
 
     Strona SourceForge: <https://sourceforge.net/projects/dos2unix/>
 

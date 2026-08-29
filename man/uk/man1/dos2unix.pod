@@ -477,7 +477,7 @@ B<unix2dos>: перетворення на дві комбінації розр�
 
     unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > out.txt
 
-Див. також L<http://czyborra.com/charsets/codepages.html> та L<http://czyborra.com/charsets/iso8859.html>.
+Див. також L<https://czyborra.com/charsets/codepages.html>.
 
 =back
 
@@ -693,7 +693,7 @@ L<https://uk.wikipedia.org/wiki/Unicode>
 
 Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (режим mac2unix) - <wuebben@kde.org>, Christian Wurll (додатковий новий рядок) - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl> (супровідник)
 
-Сторінка проєкту: L<https://waterlan.home.xs4all.nl/dos2unix.html>
+Сторінка проєкту: L<https://waterlander.net/dos2unix/>
 
 Сторінка на SourceForge: L<https://sourceforge.net/projects/dos2unix/>
 

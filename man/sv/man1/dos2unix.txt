@@ -429,11 +429,11 @@ FLAGGOR
         the "--error-binary" option is used, an error is returned.
 
     -u, --keep-utf16
-        Behåll infilens original UTF-16-kodning. Utfilen kommer att skrivas
-        med samma UTF-16-kodning som infilen, omvänd eller rak byteordning
-        (little eller big endian). Detta förhindrar transformation till
-        UTF-8. En UTF-16 BOM kommer att skrivas i enlighet med detta. Denna
-        flagga kan inaktiveras med "-ascii"-flaggan.
+        Keep the original UTF-16 encoding of the input file. The output file
+        will be written in the same UTF-16 encoding, little- or big-endian,
+        as the input file. This prevents transformation to UTF-8. An UTF-16
+        BOM will be written accordingly. This option can be disabled with
+        the "-ascii" option.
 
     -ul, --assume-utf16le
         Antag att infilsformatet är UTF-16LE.
@@ -553,15 +553,15 @@ KONVERTERINGSLÄGEN
 
             unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > ut.txt
 
-        Se även <http://czyborra.com/charsets/codepages.html> och
-        <http://czyborra.com/charsets/iso8859.html>.
+        See also <https://czyborra.com/charsets/codepages.html> and
+        <https://czyborra.com/charsets/iso8859.html>.
 
 UNICODE
   Kodningar
-    Det finns flera olika Unicode kodningar. I Unix och Linux kodas filer
-    vanligtvis med UTF-8-kodning. I Windows kan Unicode-textfiler kodas i
-    UTF-8, UTF-16 eller UTF-16 rak byteordning (big endian), men kodas
-    mestadels i UTF-16-format.
+    There exist different Unicode encodings. On Unix and Linux Unicode files
+    are typically encoded in UTF-8 encoding. On Windows Unicode text files
+    can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly
+    encoded in UTF-16 format.
 
   Konvertering
     Unicode-textfiler kan ha DOS, Unix eller Mac-radbrytningar precis som
@@ -570,9 +570,9 @@ UNICODE
     Alla versioner av dos2unix och unix2dos kan konvertera UTF-8-kodade
     filer, eftersom UTF-8 designades för bakåtkompatibilitet med ASCII.
 
-    dos2unix och unix2dos med Unicode-UTF-16-stöd, kan läsa UTF-16-kodade
-    textfiler i omvänd och rak byteordning (little och big endian). För att
-    se om dos2unix byggts med UTF-16-stöd skriv "dos2unix -V".
+    dos2unix and unix2dos with Unicode UTF-16 support, can read little- and
+    big-endian UTF-16 encoded text files. To see if dos2unix was built with
+    UTF-16 support type "dos2unix -V".
 
     Under Unix/Linux kommer UTF-16-kodade filer att konverteras till
     lokalens teckenkodning. Använd kommandot locale(1) för att ta reda på
@@ -824,7 +824,7 @@ FÖRFATTARE
     radbrytning) - <wurll@ira.uka.de>, Erwin Waterlander -
     <waterlan@xs4all.nl> (upphovsman)
 
-    Projektsida: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Project page: <https://waterlander.net/dos2unix/>
 
     SourceForge-sida: <https://sourceforge.net/projects/dos2unix/>
 

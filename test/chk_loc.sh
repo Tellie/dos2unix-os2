@@ -6,6 +6,11 @@ if [ ! "$1" ]; then
     exit 1
 fi
 
+if [ -n "${DJGPP}" ]; then
+  echo "no"
+  exit
+fi
+
 LOC=`echo $1 | sed 's/-//g'`
 
 locale -a | sed 's/-//g' | grep -i "^${LOC}$" 2>&1 > /dev/null

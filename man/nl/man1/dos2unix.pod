@@ -157,7 +157,7 @@ Een bestand dat is geconverteerd van DOS- naar Unix-indeling kan een regeleinde 
 
 =item B<--error-binary>
 
-Return an error if a binary file is skipped.
+Een fout rapporteren wanneer een binair bestand wordt overgeslagen.
 
 =item B<-f>, B<--force>
 
@@ -171,7 +171,7 @@ Op Windows worden UTF-16-bestanden standaard naar UTF-8 geconverteerd, ongeacht 
 
 Een hulptekst tonen.
 
-=item B<-i[VLAGGEN], --info[=VLAGGEN] BESTAND ...>
+=item B<-i[VLAGGEN]>, B<--info[=VLAGGEN] BESTAND ...>
 
 Bestandsinformatie tonen.  Er wordt niets geconverteerd.
 
@@ -309,7 +309,7 @@ Gebruik deze optie nooit als de codering van het uitvoerbestand niet UTF-8, UTF-
 
 
 
-=item B<-n, --newfile INVOERBESTAND UITVOERBESTAND ...>
+=item B<-n>, B<--newfile INVOERBESTAND UITVOERBESTAND ...>
 
 Nieuw-bestand-modus.  Het bestand INVOERBESTAND converteren en naar bestand UITVOERBESTAND schrijven. Bestandsnamen moeten opgegeven worden in paren. Jokertekens moeten I<niet>gebruikt worden, anders I<verlies> je de bestanden.
 
@@ -323,13 +323,13 @@ Conversie afbreken wanneer het gebruikers- en/of groepseigendomsrecht van het or
 
 =item B<--no-add-eol>
 
-Do not add a line break to the last line if there isn't one (default).
+Geen regeleinde toevoegen aan de laatste regel als er geen is (standaard).
 
 =item B<--no-error-binary>
 
-Do not return an error if a binary file is skipped (default).
+Geen fout rapporteren wanneer een binair bestand wordt overgeslagen (standaard).
 
-=item B<-O, --to-stdout>
+=item B<-O>, B<--to-stdout>
 
 Naar standaarduitvoer schrijven, zoals een Unix-filter. Gebruik optie C<-o> om terug te gaan naar de oud-bestand-modus (vervangend).
 
@@ -369,11 +369,11 @@ Binaire bestanden overslaan (standaard).
 
 Binaire bestanden worden overgeslagen om vergissingen te voorkomen.  Het detecteren van binaire bestanden is echter niet 100% betrouwbaar. Invoerbestanden worden gescand op binaire tekens die gewoonlijk niet in tekstbestanden voorkomen.  Maar het is mogelijk dat een binair bestand enkel normale teksttekens bevat.  Zo'n binair bestand zal dan foutief als een tekstbestand gezien worden.
 
-By default, no error is returned when a binary file is skipped. When the C<--error-binary> option is used, an error is returned.
+Standaard wordt geen fout gerapporteerd als een binair bestand wordt overgeslagen.  Hiervoor wordt alleen een fout gerapporteerd wanneer optie C<--error-binary> gegeven is.
 
 =item B<-u>, B<--keep-utf16>
 
-De originele UTF-16-codering van het invoerbestand behouden.  Het uitvoerbestand wordt in dezelfde UTF-16-codering (little endian of big endian) geschreven als het invoerbestand.  Dit voorkomt conversie naar UTF-8.  Er wordt ook een corresponderende UTF-16-BOM geschreven.  Deze optie kan uitgeschakeld worden met de optie C<-ascii>.
+De originele UTF-16-codering van het invoerbestand behouden.  Het uitvoerbestand wordt in dezelfde UTF-16-codering (little-endian of big-endian) geschreven als het invoerbestand.  Dit voorkomt conversie naar UTF-8.  Er wordt ook een corresponderende UTF-16-BOM geschreven.  Deze optie kan uitgeschakeld worden met de optie C<-ascii>.
 
 =item B<-ul>, B<--assume-utf16le>
 
@@ -477,7 +477,7 @@ Omzetten van Unix UTF-8 (Unicode) naar Windows CP1252:
 
     unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > uit.txt
 
-Zie ook L<http://czyborra.com/charsets/codepages.html> en L<http://czyborra.com/charsets/iso8859.html>.
+Zie ook L<https://czyborra.com/charsets/codepages.html> en L<https://czyborra.com/charsets/iso8859.html>.
 
 =back
 
@@ -485,7 +485,7 @@ Zie ook L<http://czyborra.com/charsets/codepages.html> en L<http://czyborra.com/
 
 =head2 Coderingen
 
-Er bestaan verschillende Unicode-coderingen.  Op Unix en Linux zijn Unicode-bestanden typisch gecodeerd in UTF-8.  Op Windows kunnen Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16 of UTF-16 big endian, maar ze zijn meestal gecodeerd in UTF-16.
+Er bestaan verschillende Unicode-coderingen.  Op Unix en Linux zijn Unicode-bestanden typisch gecodeerd in UTF-8.  Op Windows kunnen Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16, of UTF-16 big-endian, maar ze zijn meestal gecodeerd in UTF-16.
 
 =head2 Conversie
 
@@ -493,7 +493,7 @@ Unicode-tekstbestanden kunnen DOS-, Unix- of Mac-regeleindes hebben, net als ASC
 
 Alle versies van dos2unix en unix2dos kunnen UTF-8-gecodeerde bestanden omzetten, want UTF-8 is ontworpen op compatibiliteit met ASCII.
 
-dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little en big endian UTF-16-gecodeerde tekstbestanden lezen.  Om er achter te komen of dos2unix gebouwd is met UTF-16- ondersteuning, typt u C<dos2unix -V>.
+dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little- en big-endian UTF-16-gecodeerde tekstbestanden lezen.  Om er achter te komen of dos2unix gebouwd is met UTF-16-ondersteuning, typt u C<dos2unix -V>.
 
 Op Unix/Linux worden UTF-16-bestanden geconverteerd naar de codering van de ingestelde taalregio.  Gebruik de opdracht B<locale>(1) om te zien wat de ingestelde codering is.  Wanneer conversie niet mogelijk is, treedt er een fout op en wordt het bestand overgeslagen.
 
@@ -693,7 +693,7 @@ L<https://nl.wikipedia.org/wiki/Linefeed>
 
 Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (mac2unix-modus) - <wuebben@kde.org>, Christian Wurll (toevoegen van extra regeleindes) - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl> (beheerder)
 
-Projectpagina: L<https://waterlan.home.xs4all.nl/dos2unix.html>
+Projectpagina: L<https://waterlander.net/dos2unix/>
 
 SourceForge-pagina: L<https://sourceforge.net/projects/dos2unix/>
 

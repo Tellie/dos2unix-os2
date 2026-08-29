@@ -592,8 +592,8 @@ UMWANDLUNGSMODI
 
             unix2dos < eingabe.txt | iconv -f UTF-8 -t CP1252 > ausgabe.txt
 
-        Siehe auch <http://czyborra.com/charsets/codepages.html> und
-        <http://czyborra.com/charsets/iso8859.html>.
+        Siehe auch <https://czyborra.com/charsets/codepages.html> und
+        <https://czyborra.com/charsets/iso8859.html>.
 
 UNICODE
   Zeichenkodierungen
@@ -882,7 +882,7 @@ AUTOREN
     Zeilenumbruch) - <wurll@ira.uka.de>, Erwin Waterlander -
     <waterlan@xs4all.nl> (Betreuer)
 
-    Projektseite: <https://waterlan.home.xs4all.nl/dos2unix.html>
+    Projektseite: <https://waterlander.net/dos2unix/>
 
     SourceForge-Seite: <https://sourceforge.net/projects/dos2unix/>
 

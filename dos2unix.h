@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009-2012 Erwin Waterlander
+ *  Copyright (C) 2009-2026 Erwin Waterlander
  *  Copyright (C) 1994-1995 Benjamin Lin.
  *  All rights reserved.
  *
@@ -27,6 +27,8 @@
 
 #ifndef __DOS2UNIX_H
 #define __DOS2UNIX_H
+
+#include "common.h"
 
 #ifdef __DOS2UNIX_C
 /* ASCII mode. No conversion. */
@@ -217,8 +219,8 @@ static int D2UIso1252Table[256] =
 
 
 #ifdef D2U_UNICODE
-int ConvertDosToUnixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname);
+int ConvertDosToUnixW(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname);
 #endif
-int ConvertDosToUnix(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname);
+int ConvertDosToUnix(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname);
 
 #endif

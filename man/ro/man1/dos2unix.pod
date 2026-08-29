@@ -373,7 +373,7 @@ Omiterea fișierelor binare se face pentru a evita greșelile accidentale. Reți
 
 =item B<-u, --keep-utf16>
 
-Păstrează codificarea UTF-16 originală a fișierului de intrare. Fișierul de ieșire va fi scris în aceeași codare UTF-16, little sau big endian, ca și fișierul de intrare.  Acest lucru previne transformarea în UTF-8. Un marcaj de ordine a octeților UTF-16 va fi scris în consecință. Această opțiune poate fi dezactivată cu opțiunea C<-ascii>.
+Păstrează codificarea UTF-16 originală a fișierului de intrare. Fișierul de ieșire va fi scris în aceeași codare UTF-16, little- sau big-endian, ca și fișierul de intrare. Acest lucru previne transformarea în UTF-8. Un marcaj de ordine a octeților UTF-16 va fi scris în consecință. Această opțiune poate fi dezactivată cu opțiunea C<-ascii>.
 
 =item B<-ul, --assume-utf16le>
 
@@ -477,7 +477,7 @@ Convertește din UTF-8 (Unicode) Unix în CP1252 Windows:
 
     unix2dos < fișier_intrare.txt | iconv -f UTF-8 -t CP1252 > fișier_ieșire.txt
 
-Consultați de asemenea L<http://czyborra.com/charsets/codepages.html> și L<http://czyborra.com/charsets/iso8859.html>.
+Consultați de asemenea L<https://czyborra.com/charsets/codepages.html> și L<https://czyborra.com/charsets/iso8859.html>.
 
 =back
 
@@ -493,7 +493,7 @@ Fișierele text Unicode pot avea întreruperi de linie DOS, Unix sau Mac, ca și
 
 Toate versiunile de «dos2unix» și «unix2dos» pot converti fișiere codificate în formatul UTF-8, deoarece UTF-8 a fost conceput pentru compatibilitate cu ASCII.
 
-«dos2unix» și «unix2dos» cu suport Unicode UTF-16, pot citi fișiere text codificate UTF-16 little și big endian. Pentru a vedea dacă «dos2unix» a fost construit cu suport UTF-16, tastați: C<dos2unix -V>.
+«dos2unix» și «unix2dos» cu suport Unicode UTF-16, pot citi fișiere text codificate UTF-16 little- și big-endian. Pentru a vedea dacă «dos2unix» a fost construit cu suport UTF-16, tastați: C<dos2unix -V>.
 
 În Unix/Linux, fișierele codificate UTF-16 sunt convertite în codificarea caracterelor locale. Utilizați comanda locale(1) pentru a afla care este codificarea caracterelor stabilită de localizare. Atunci când conversia nu este posibilă, va apărea o eroare de conversie și fișierul va fi omis.
 
@@ -693,7 +693,7 @@ L<https://ro.wikipedia.org/wiki/Unicode>
 
 Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (modul mac2unix) - <wuebben@kde.org>, Christian Wurll (adăugarea unei linii noi suplimentare) - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl> (menținător)
 
-Pagina principală a proiectului: L<https://waterlan.home.xs4all.nl/dos2unix.html>
+Pagina principală a proiectului: L<https://waterlander.net/dos2unix/>
 
 Pagina din SourceForge a proiectului: L<https://sourceforge.net/projects/dos2unix/>
 

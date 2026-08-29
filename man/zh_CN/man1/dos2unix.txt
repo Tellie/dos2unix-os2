@@ -311,8 +311,11 @@
         the "--error-binary" option is used, an error is returned.
 
     -u, --keep-utf16
-        保留输入文件的UTF-16编码。输出文件也使用UTF-16编码和相同的尾序。这将阻止转换到UTF-8。相应也会写入UTF-16
-        BOM。可以用 "-ascii"选项来禁止。
+        Keep the original UTF-16 encoding of the input file. The output file
+        will be written in the same UTF-16 encoding, little- or big-endian,
+        as the input file. This prevents transformation to UTF-8. An UTF-16
+        BOM will be written accordingly. This option can be disabled with
+        the "-ascii" option.
 
     -ul, --assume-utf16le
         假定输入文件格式为UTF-16LE。
@@ -408,21 +411,24 @@ Mac模式
 
             unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > out.txt
 
-        参见 <http://czyborra.com/charsets/codepages.html> et
-        <http://czyborra.com/charsets/iso8859.html>。
+        See also <https://czyborra.com/charsets/codepages.html> and
+        <https://czyborra.com/charsets/iso8859.html>.
 
 UNICODE
   编码
-    有几种不同的Unicode编码。对于Unix和Linux中的Unicode文件，通常为UTF-8编码。Windows中的文本文件可以是UTF-8
-    、UTF-16或UTF-16BE编码，但大多采用UTF-16格式。
+    There exist different Unicode encodings. On Unix and Linux Unicode files
+    are typically encoded in UTF-8 encoding. On Windows Unicode text files
+    can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly
+    encoded in UTF-16 format.
 
   转换
     Unicode文本文件可以含有DOS、Unix或Mac断行符，就像ASCII文本文件一样。
 
     所有版本的dos2unix和unix2dos都可以转换UTF-8文件，因为UTF-8向后兼容ASCII。
 
-    含有Unicode UTF-16支持的dos2unix和unix2dos可以读取小尾序或大尾序的UTF-16编码文本。输入 "dos2unix
-    -V" 来确定dos2unix在编译是是否启用了UTF-16支持。
+    dos2unix and unix2dos with Unicode UTF-16 support, can read little- and
+    big-endian UTF-16 encoded text files. To see if dos2unix was built with
+    UTF-16 support type "dos2unix -V".
 
     在Unix/Linux中，UTF-16编码文件将被转换为区域字符编码所指定的编码。可以使用 locale(1)
     命令来查看当前的区域字符编码。若无法转换，程序将报告转换错误并跳过此文件。
@@ -617,7 +623,7 @@ GB18030
     - <wuebben@kde.org>，Christian Wurll（添加额外新行） - <wurll@ira.uka.de>，Erwin
     Waterlander - <waterlan@xs4all.nl>（维护者）
 
-    项目主页：<https://waterlan.home.xs4all.nl/dos2unix.html>
+    Project page: <https://waterlander.net/dos2unix/>
 
     SourceForge主页：<https://sourceforge.net/projects/dos2unix/>
 
